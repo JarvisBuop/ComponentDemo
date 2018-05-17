@@ -34,7 +34,7 @@ android {
         applicationId "com.ostak.justplayteacher"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion  rootProject.ext.targetSdkVersion
-        versionCode gitVersion
+        versionCode getGitVersion()
         versionName rootProject.ext.versionName
 
         multiDexEnabled true
