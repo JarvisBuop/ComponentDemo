@@ -9,7 +9,7 @@ public class MainActivity extends DBaseActivity {
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_main;
+        return R.layout.activity_general;
     }
 
     @Override
