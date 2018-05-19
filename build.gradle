@@ -63,4 +63,5 @@ ext {
     blackVersion='1.15.1'
 
     timberVersion='4.1.2'
+    guava='25.0-android'
 }

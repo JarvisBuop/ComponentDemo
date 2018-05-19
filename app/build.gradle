@@ -98,15 +98,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation "junit:junit:${rootProject.junitVersion}"
-    androidTestImplementation ("com.android.support.test:runner:${rootProject.runnerVersion}"){
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
-    androidTestImplementation ("com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"){
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
-
-    //todo app系统库的依赖;
+    compile project(path: ':uikit')
+//
+//    //todo app系统库的依赖;
     implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintVersion}"
     implementation "com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"
     implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
@@ -118,8 +112,8 @@ dependencies {
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     //分包;
     implementation "com.android.support:multidex:$rootProject.multidexVersion"
-
-    //todo 基本功能库的依赖
+//
+//    //todo 基本功能库的依赖
     //RxJava;
     //RxAndroid;
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
@@ -134,8 +128,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:${rootProject.retrofitVersion}"//对序列化和反序列化的转化;
     implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.retrofitVersion}"//对Call对象的转化为Observe对象
     implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.okhttp_logging_interceptor}"
-
-    //todo 常用工具库的依赖
+//
+//    //todo 常用工具库的依赖
     //butterknife
     implementation "com.jakewharton:butterknife:${rootProject.butterKnifeVersion}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.butterKnifeVersion}"
@@ -147,9 +141,10 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.glideVersion}"
     implementation "com.blankj:utilcode:$rootProject.blackVersion"
     implementation "de.hdodenhof:circleimageview:$rootProject.circleimgVersion"
-
-    //todo EventBus 事件总线;
+//
+//    //todo EventBus 事件总线;
     implementation "org.greenrobot:eventbus:${rootProject.eventBusVersion}"
 
     implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    implementation "com.google.guava:guava:$rootProject.guava"
 }
