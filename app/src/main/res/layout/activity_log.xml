@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_techer"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/login_logo" />
+
+        <EditText
+            style="@style/edit_log"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:drawableLeft="@mipmap/icon_email"
+            android:hint="@string/edit_input_email" />
+
+        <EditText
+            style="@style/edit_log"
+            android:drawableLeft="@mipmap/icon_pwd"
+            android:hint="@string/edit_input_psd" />
+
+        <EditText
+            style="@style/edit_log"
+            android:drawableLeft="@mipmap/icon_code"
+            android:hint="@string/edit_input_psd_again" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:buttonTint="@color/white"
+            android:checked="true"
+            android:text="@string/try_to_play_msg"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/white"
+            android:textSize="@dimen/font_size_normal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:background="@mipmap/bg_big_btn"
+            android:gravity="center"
+            android:minWidth="300dp"
+            android:text="@string/txt_register"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_size_bigger" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_20dp"
+            android:text="@string/txt_register_more"
+            android:textColor="@color/text_validata"
+            android:textSize="@dimen/font_size_small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor">
+
+            <ImageView
+                style="@style/logo_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wx_logo" />
+
+            <ImageView
+                style="@style/logo_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/qq_logo" />
+
+            <ImageView
+                style="@style/logo_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wb_logo" />
+
+            <ImageView
+                style="@style/logo_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wy_logo" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

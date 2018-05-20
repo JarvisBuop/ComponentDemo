@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawpadding">5dp</dimen>
+    <dimen name="padding_nor">10dp</dimen>
+
+    <dimen name="margin_nor">10dp</dimen>
+    <dimen name="margin_nor_20dp">20dp</dimen>
+</resources>
