@@ -1,41 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@mipmap/bg_left_black"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:fillViewport="true">
 
-    <!--android:id="@+id/include_view_head"-->
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:background="@mipmap/icon_head_bg">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_circle"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp" />
+        </FrameLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:id="@+id/txt_show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Mike"
+            android:textColor="@color/text_nor_gray"
+            android:textSize="@dimen/font_size_big" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
 
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
 
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/radio_one"
+                style="@style/radio_main"
+                android:checked="true"
+                android:drawableTop="@drawable/radio_one"
+                android:text="预定课程" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                style="@style/radio_main"
+                android:checked="true"
+                android:drawableTop="@drawable/radio_two"
+                android:text="预定陪练" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                style="@style/radio_main"
+                android:checked="true"
+                android:drawableTop="@drawable/radio_three"
+                android:text="我的时间" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_four"
+                style="@style/radio_main"
+                android:checked="true"
+                android:drawableTop="@drawable/radio_four"
+                android:text="我的钱包" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_five"
+                style="@style/radio_main"
+                android:checked="true"
+                android:drawableTop="@drawable/radio_five"
+                android:text="个人中心" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

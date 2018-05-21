@@ -18,37 +18,43 @@
             android:src="@mipmap/login_logo" />
 
         <EditText
+            android:id="@+id/edit_input_email"
             style="@style/edit_log"
             android:layout_marginTop="@dimen/margin_nor"
             android:drawableLeft="@mipmap/icon_email"
             android:hint="@string/edit_input_email" />
 
         <EditText
+            android:id="@+id/edit_input_psd"
             style="@style/edit_log"
+            android:inputType="textPassword"
             android:drawableLeft="@mipmap/icon_pwd"
             android:hint="@string/edit_input_psd" />
 
         <EditText
+            android:id="@+id/edit_input_psd_again"
             style="@style/edit_log"
+            android:inputType="textPassword"
             android:drawableLeft="@mipmap/icon_code"
             android:hint="@string/edit_input_psd_again" />
 
-        <RadioButton
+        <CheckBox
+            android:id="@+id/checkbox_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:buttonTint="@color/white"
+            android:layout_marginTop="@dimen/margin_nor_20dp"
+            android:button="@drawable/bg_checkbox"
             android:checked="true"
             android:text="@string/try_to_play_msg"
             android:textColor="@color/white"
-            android:textCursorDrawable="@color/white"
             android:textSize="@dimen/font_size_normal" />
 
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor_20dp"
             android:background="@mipmap/bg_big_btn"
             android:gravity="center"
             android:minWidth="300dp"
@@ -57,37 +63,42 @@
             android:textSize="@dimen/font_size_bigger" />
 
         <TextView
+            android:id="@+id/txt_more_way"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor_20dp"
             android:text="@string/txt_register_more"
             android:textColor="@color/text_validata"
-            android:textSize="@dimen/font_size_small" />
+            android:textSize="@dimen/font_size_normal" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor">
+            android:layout_marginTop="@dimen/margin_nor_20dp">
 
             <ImageView
+                android:id="@+id/img_winxin"
                 style="@style/logo_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/wx_logo" />
 
             <ImageView
+                android:id="@+id/img_qq"
                 style="@style/logo_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/qq_logo" />
 
             <ImageView
+                android:id="@+id/img_weibo"
                 style="@style/logo_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/wb_logo" />
 
             <ImageView
+                android:id="@+id/img_wangyi"
                 style="@style/logo_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.jarvisdong.uikit.R;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 
 
@@ -21,7 +20,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     protected DBaseFragment mCurrentFragment;
     private boolean isBackOrStay = false;
     private boolean mCloseWarned = true;
-    private String closeWarningHint = getString(R.string.close_warning);
+    private String closeWarningHint = /*mContext.getString(R.string.close_warning)*/ "";
     private long timeRecord = 0;
 
     @Override

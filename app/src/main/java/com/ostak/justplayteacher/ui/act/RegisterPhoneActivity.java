@@ -1,9 +1,11 @@
 package com.ostak.justplayteacher.ui.act;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplayteacher.R;
@@ -13,26 +15,37 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by JarvisDong on 2018/5/20.
+ * Created by JarvisDong on 2018/5/21.
  *
  * @Description:
  * @see:
  */
 
-public class LogActivity extends DBaseActivity {
-    @BindView(R.id.edt_input_email)
-    EditText edtInputEmail;
-    @BindView(R.id.edt_input_psd)
-    EditText edtInputPsd;
+public class RegisterPhoneActivity extends DBaseActivity {
+    @BindView(R.id.edit_input_phone)
+    EditText editInputPhone;
+    @BindView(R.id.edit_code)
+    EditText editCode;
+    @BindView(R.id.txt_validCode)
+    TextView txtValidCode;
+    @BindView(R.id.edit_psd)
+    EditText editPsd;
+    @BindView(R.id.edit_email)
+    EditText editEmail;
+    @BindView(R.id.checkbox_user)
+    CheckBox checkboxUser;
+    @BindView(R.id.btn_register)
+    Button btnRegister;
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_log_dir;
+        return R.layout.activity_log_register;
     }
 
     @Override
     protected void initView(Bundle savedInstanceState) {
         ButterKnife.bind(this);
+
     }
 
     @Override
@@ -46,18 +59,12 @@ public class LogActivity extends DBaseActivity {
     }
 
 
-    @OnClick({R.id.txt_forget_psd, R.id.btn_login, R.id.txt_goto_regis})
+    @OnClick({R.id.txt_validCode, R.id.btn_register})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.txt_forget_psd:
-                startActivity(new Intent(this,BindPhoneActivity.class));
+            case R.id.txt_validCode:
                 break;
-            case R.id.btn_login:
-                startActivity(new Intent(this,MainActivity.class));
-                break;
-            case R.id.txt_goto_regis:
-                Intent intent = new Intent(this,RegisterActivity.class);
-                startActivity(intent);
+            case R.id.btn_register:
                 break;
         }
     }

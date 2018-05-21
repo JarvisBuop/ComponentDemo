@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_techer"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/login_logo" />
+
+        <EditText
+            android:id="@+id/edt_input_email"
+            style="@style/edit_log"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:drawableLeft="@mipmap/icon_email"
+            android:hint="@string/edit_input_email" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_input_psd"
+                style="@style/edit_log"
+                android:inputType="textPassword"
+                android:drawableLeft="@mipmap/icon_pwd"
+                android:hint="@string/edit_input_psd" />
+
+
+            <TextView
+                android:id="@+id/txt_forget_psd"
+                style="@style/text_nor_style"
+                android:layout_alignRight="@+id/edt_input_psd"
+                android:layout_below="@id/edt_input_psd"
+                android:text="@string/txt_forgetpsd" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            android:background="@mipmap/bg_big_btn"
+            android:gravity="center"
+            android:minWidth="300dp"
+            android:text="@string/txt_log"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_size_bigger" />
+
+        <TextView
+            android:id="@+id/txt_goto_regis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            android:text="@string/txt_goto_register"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_size_big" />
+
+    </LinearLayout>
+</ScrollView>

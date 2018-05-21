@@ -41,6 +41,13 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    dexOptions {
+        dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+
     signingConfigs {
         myConfig {
             storeFile file(properties.getProperty('justplay.signing.file'))

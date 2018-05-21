@@ -13,8 +13,8 @@
         <include
             android:id="@+id/left_tab"
             layout="@layout/include_tab_left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
 
         <FrameLayout
             android:id="@+id/layout_fragment"
@@ -29,6 +29,7 @@
     <include
         android:id="@+id/bottom_pro"
         layout="@layout/include_progressbar_bottom"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
