@@ -13,7 +13,7 @@
         <TextView
             android:id="@+id/course_one"
             style="@style/course_item"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             tools:text="111" />
 
         <TextView

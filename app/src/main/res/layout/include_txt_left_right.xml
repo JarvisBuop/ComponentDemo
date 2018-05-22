@@ -22,7 +22,7 @@
         android:layout_centerVertical="true"
         android:text="@string/apply_lession"
         android:textColor="@color/color_main"
-        android:textSize="@dimen/dimen_size_20sp" />
+        android:textSize="@dimen/dimen_size_18sp" />
 
     <View
         style="@style/horizontal_line_px"
