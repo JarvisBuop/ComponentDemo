@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseExtendFragmentActivty;
@@ -33,6 +34,10 @@ public class MainActivity extends DBaseExtendFragmentActivty {
     RadioButton radioFive;
     @BindView(R.id.layout_fragment)
     FrameLayout layoutFragment;
+    @BindView(R.id.rgp_controller)
+    RadioGroup rgpLeft;
+
+    RadioButton currentRbtn;
 
     @Override
     public int getContentViewId() {
@@ -48,12 +53,18 @@ public class MainActivity extends DBaseExtendFragmentActivty {
     @Override
     protected void initVariable() {
         CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment);
-        switchFragment(courseFragment,false);
+        switchFragment(courseFragment, false);
     }
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-
+        rgpLeft.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = (RadioButton) findViewById(checkedId);
+                radioSetting(radioButton);
+            }
+        });
     }
 
     @OnClick({R.id.img_circle, R.id.radio_one, R.id.radio_two, R.id.radio_three, R.id.radio_four, R.id.radio_five})
@@ -72,5 +83,14 @@ public class MainActivity extends DBaseExtendFragmentActivty {
             case R.id.radio_five:
                 break;
         }
+    }
+
+    private void radioSetting(RadioButton radioButton) {
+        if (currentRbtn != null) {
+            currentRbtn.setTextColor(getResources().getColor(R.color.text_nor_gray_alpha));
+        }
+        radioButton.setTextColor(getResources().getColor(R.color.color_main));
+
+        this.currentRbtn = radioButton;
     }
 }

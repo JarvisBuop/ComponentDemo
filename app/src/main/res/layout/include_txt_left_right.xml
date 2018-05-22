@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_techer"
+    android:padding="@dimen/margin_nor">
+
+    <TextView
+        style="@style/text_nor_style_20padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="共计10次公开课"
+        android:textSize="@dimen/dimen_size_30sp" />
+
+    <TextView
+        style="@style/text_nor_style_20padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/apply_lession"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_20sp" />
+
+    <View
+        style="@style/horizontal_line_px"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

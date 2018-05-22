@@ -11,9 +11,8 @@
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_nor"
         android:layout_weight="1"
-        android:padding="@dimen/margin_nor_15"
+        android:padding="@dimen/margin_nor_20dp"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_title_big"
         tools:text="预定课程" />
@@ -27,24 +26,23 @@
             android:id="@+id/edit_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/nav_search"
             android:layout_marginRight="@dimen/margin_nor_50dp"
-            android:minWidth="300dp" />
+            android:background="@mipmap/nav_search"
+            android:minWidth="300dp"
+            android:paddingLeft="@dimen/margin_nor_40dp" />
 
         <ImageView
             android:id="@+id/img_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_nor"
-            android:padding="@dimen/margin_nor_15"
+            android:padding="@dimen/margin_nor_20dp"
             android:src="@mipmap/icon_messag" />
 
         <ImageView
             android:id="@+id/img_quit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/margin_nor"
-            android:padding="@dimen/margin_nor_15"
+            android:padding="@dimen/margin_nor_20dp"
             android:src="@mipmap/icon_logout" />
 
     </LinearLayout>

@@ -5,6 +5,7 @@
 
     <dimen name="margin_nor">10dp</dimen>
     <dimen name="margin_nor_15">15dp</dimen>
+    <dimen name="margin_nor_25">25dp</dimen>
     <dimen name="margin_nor_20dp">20dp</dimen>
     <dimen name="margin_nor_30dp">30dp</dimen>
     <dimen name="margin_nor_40dp">40dp</dimen>

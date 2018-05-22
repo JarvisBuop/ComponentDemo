@@ -22,4 +22,6 @@
     <string name="txt_forgetpsd">忘记密码</string>
     <string name="txt_log">立 即 登 录</string>
     <string name="txt_goto_register">没有账号,去注册 ></string>
+
+    <string name="apply_lession">申请公开课</string>
 </resources>

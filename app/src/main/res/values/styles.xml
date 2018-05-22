@@ -28,7 +28,7 @@
         <item name="android:layout_marginLeft">25dp</item>
         <item name="android:layout_marginRight">25dp</item>
     </style>
-
+    <!--nor-->
     <style name="text_nor_style">
         <item name="android:textSize">@dimen/font_size_big</item>
         <item name="android:textColor">@color/white</item>
@@ -36,11 +36,15 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
+    <!--course head-->
+    <style name="text_nor_style_20padding" parent="text_nor_style">
+        <item name="android:padding">20dp</item>
+    </style>
+    <!--radio-->
     <style name="radio_main">
         <item name="android:drawablePadding">5dp</item>
         <item name="android:button">@null</item>
-        <item name="android:textColor">@color/color_main</item>
+        <item name="android:textColor">@color/text_nor_gray_alpha</item>
         <item name="android:textSize">@dimen/font_size_normal</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -49,4 +53,64 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
+
+    <!--course_item-->
+    <style name="course_item">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_size_20sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/dimen_size_20sp</item>
+    </style>
+
+    <style name="horizental_line">
+
+    </style>
+
+    <style name="vertical_line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ddd</item>
+    </style>
+
+    <style name="vertical_line_margin_px">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ddd</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+    <style name="horizontal_line_px">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+    <style name="horizontal_line_margin">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+    <style name="horizontal_line_margin_px">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+
 </resources>

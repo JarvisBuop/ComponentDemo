@@ -37,6 +37,7 @@
             android:textSize="@dimen/font_size_big" />
 
         <RadioGroup
+            android:id="@+id/rgp_controller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -50,7 +51,6 @@
             <RadioButton
                 android:id="@+id/radio_one"
                 style="@style/radio_main"
-                android:checked="true"
                 android:drawableTop="@drawable/radio_one"
                 android:text="预定课程" />
 
@@ -62,7 +62,6 @@
             <RadioButton
                 android:id="@+id/radio_two"
                 style="@style/radio_main"
-                android:checked="true"
                 android:drawableTop="@drawable/radio_two"
                 android:text="预定陪练" />
 
@@ -74,7 +73,6 @@
             <RadioButton
                 android:id="@+id/radio_three"
                 style="@style/radio_main"
-                android:checked="true"
                 android:drawableTop="@drawable/radio_three"
                 android:text="我的时间" />
 
@@ -86,7 +84,6 @@
             <RadioButton
                 android:id="@+id/radio_four"
                 style="@style/radio_main"
-                android:checked="true"
                 android:drawableTop="@drawable/radio_four"
                 android:text="我的钱包" />
 
@@ -98,7 +95,6 @@
             <RadioButton
                 android:id="@+id/radio_five"
                 style="@style/radio_main"
-                android:checked="true"
                 android:drawableTop="@drawable/radio_five"
                 android:text="个人中心" />
 

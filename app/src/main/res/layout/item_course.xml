@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/course_one"
+            style="@style/course_item"
+            android:layout_weight="1"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/course_two"
+            style="@style/course_item"
+            android:layout_weight="2"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/course_three"
+            style="@style/course_item"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/course_four"
+            style="@style/course_item"
+            android:textColor="@color/color_main"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/course_five"
+            style="@style/course_item"
+            android:textColor="@color/color_main_second"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/course_six"
+            style="@style/course_item"
+            android:textColor="@color/color_main_second"
+            tools:text="111" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_margin_px" />
+</LinearLayout>

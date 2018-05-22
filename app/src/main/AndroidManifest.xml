@@ -38,6 +38,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.act.MainActivity"
+            android:windowSoftInputMode="stateHidden"
             android:screenOrientation="landscape">
 
         </activity>
