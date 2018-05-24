@@ -52,6 +52,7 @@
                 android:id="@+id/radio_one"
                 style="@style/radio_main"
                 android:drawableTop="@drawable/radio_one"
+                android:tag="0"
                 android:text="预定课程" />
 
             <View
@@ -63,6 +64,7 @@
                 android:id="@+id/radio_two"
                 style="@style/radio_main"
                 android:drawableTop="@drawable/radio_two"
+                android:tag="1"
                 android:text="预定陪练" />
 
             <View
@@ -74,6 +76,7 @@
                 android:id="@+id/radio_three"
                 style="@style/radio_main"
                 android:drawableTop="@drawable/radio_three"
+                android:tag="2"
                 android:text="我的时间" />
 
             <View
@@ -85,6 +88,7 @@
                 android:id="@+id/radio_four"
                 style="@style/radio_main"
                 android:drawableTop="@drawable/radio_four"
+                android:tag="3"
                 android:text="我的钱包" />
 
             <View
@@ -96,6 +100,7 @@
                 android:id="@+id/radio_five"
                 style="@style/radio_main"
                 android:drawableTop="@drawable/radio_five"
+                android:tag="4"
                 android:text="个人中心" />
 
             <View

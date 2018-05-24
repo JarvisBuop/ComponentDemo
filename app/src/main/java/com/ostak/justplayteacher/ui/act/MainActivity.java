@@ -8,8 +8,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseExtendFragmentActivty;
+import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.R;
 import com.ostak.justplayteacher.ui.frg.CourseFragment;
+import com.ostak.justplayteacher.ui.frg.OrderCourseFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +44,8 @@ public class MainActivity extends DBaseExtendFragmentActivty {
 
     RadioButton currentRbtn;
 
+    List<DBaseFragment> mFragments = null;
+
     @Override
     public int getContentViewId() {
         return R.layout.activity_general;
@@ -52,8 +59,19 @@ public class MainActivity extends DBaseExtendFragmentActivty {
 
     @Override
     protected void initVariable() {
+        mFragments = new ArrayList<>();
         CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment);
-        switchFragment(courseFragment, false);
+        OrderCourseFragment orderCourseFragment = OrderCourseFragment.newInstance(R.id.layout_fragment);
+        mFragments.add(courseFragment);
+        mFragments.add(orderCourseFragment);
+
+        showFragment(0);
+    }
+
+    private void showFragment(int i) {
+        if (mFragments.size() > i) {
+            switchFragment(mFragments.get(i), false);
+        }
     }
 
     @Override
@@ -63,6 +81,8 @@ public class MainActivity extends DBaseExtendFragmentActivty {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton radioButton = (RadioButton) findViewById(checkedId);
                 radioSetting(radioButton);
+                int tag = Integer.parseInt((String) radioButton.getTag());
+                showFragment(tag);
             }
         });
     }
