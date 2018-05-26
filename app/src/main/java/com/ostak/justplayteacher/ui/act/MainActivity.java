@@ -12,6 +12,7 @@ import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.R;
 import com.ostak.justplayteacher.ui.frg.CourseFragment;
 import com.ostak.justplayteacher.ui.frg.OrderCourseFragment;
+import com.ostak.justplayteacher.ui.frg.WalletFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,16 +55,22 @@ public class MainActivity extends DBaseExtendFragmentActivty {
     @Override
     protected void initView(Bundle savedInstanceState) {
         ButterKnife.bind(this);
-
+        setBackOrStay(true);
     }
 
     @Override
     protected void initVariable() {
         mFragments = new ArrayList<>();
-        CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment);
+        CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment, 0);
+        CourseFragment playerFragment = CourseFragment.newInstance(R.id.layout_fragment, 1);
         OrderCourseFragment orderCourseFragment = OrderCourseFragment.newInstance(R.id.layout_fragment);
+        WalletFragment walletFragment = WalletFragment.newInstance(R.id.layout_fragment);
+
+
         mFragments.add(courseFragment);
+        mFragments.add(playerFragment);
         mFragments.add(orderCourseFragment);
+        mFragments.add(walletFragment);
 
         showFragment(0);
     }

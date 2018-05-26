@@ -29,7 +29,7 @@
     <include
         android:id="@+id/bottom_pro"
         layout="@layout/include_progressbar_bottom"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="100dp"
+        android:visibility="visible" />
 </LinearLayout>

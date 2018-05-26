@@ -14,7 +14,7 @@
         android:layout_weight="1"
         android:padding="@dimen/margin_nor_20dp"
         android:textColor="@color/white"
-        android:textSize="@dimen/font_size_title_big"
+        android:textSize="@dimen/dimen_size_26sp"
         tools:text="预定课程" />
 
     <LinearLayout

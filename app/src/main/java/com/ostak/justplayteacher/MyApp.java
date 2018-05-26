@@ -25,7 +25,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        appInstance = null;
+        appInstance = this;
         /**
          * 工具类初始化
          */

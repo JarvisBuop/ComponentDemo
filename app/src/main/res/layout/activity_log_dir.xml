@@ -54,7 +54,7 @@
             android:minWidth="300dp"
             android:text="@string/txt_log"
             android:textColor="@color/color_main"
-            android:textSize="@dimen/font_size_bigger" />
+            android:textSize="@dimen/dimen_size_18sp" />
 
         <TextView
             android:id="@+id/txt_goto_regis"

@@ -13,25 +13,32 @@
     <dimen name="dimen_size_9sp">9sp</dimen>
     <dimen name="dimen_size_10sp">10sp</dimen>
     <dimen name="dimen_size_11sp">11sp</dimen>
+    <!--item_small-->
     <dimen name="dimen_size_12sp">12sp</dimen>
     <dimen name="dimen_size_13sp">13sp</dimen>
+    <!--item_radio_txt-->
     <dimen name="dimen_size_14sp">14sp</dimen>
     <dimen name="dimen_size_15sp">15sp</dimen>
+    <!--item_commont_txt-->
     <dimen name="dimen_size_16sp">16sp</dimen>
     <dimen name="dimen_size_17sp">17sp</dimen>
-
+    <!--item_txt-->
     <dimen name="dimen_size_18sp">18sp</dimen>
     <dimen name="dimen_size_19sp">19sp</dimen>
-
+    <!--item_txt_little big-->
     <dimen name="dimen_size_20sp">20sp</dimen>
     <dimen name="dimen_size_21sp">21sp</dimen>
     <dimen name="dimen_size_24sp">24sp</dimen>
     <dimen name="dimen_size_25sp">25sp</dimen>
+    <!--head__title_txt-->
+    <dimen name="dimen_size_26sp">26sp</dimen>
 
     <dimen name="dimen_size_30sp">30sp</dimen>
     <dimen name="dimen_size_32sp">32sp</dimen>
+
     <dimen name="dimen_size_35sp">35sp</dimen>
     <dimen name="dimen_size_37sp">37sp</dimen>
+    <!--huge_txt-->
     <dimen name="dimen_size_40sp">40sp</dimen>
     <dimen name="dimen_size_45sp">45sp</dimen>
     <dimen name="dimen_size_46sp">46sp</dimen>

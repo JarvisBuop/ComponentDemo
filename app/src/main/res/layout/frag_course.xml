@@ -7,5 +7,5 @@
 
     <include layout="@layout/include_search_top" />
 
-    <include layout="@layout/activity_recyclerview" />
+    <include layout="@layout/include_swipe_recyclerview" />
 </LinearLayout>

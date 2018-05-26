@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--custom-series-->
+    <declare-styleable name="CustomSeekViewGroup">
+        <attr name="leftName" format="string"/>
+    </declare-styleable>
+</resources>
+

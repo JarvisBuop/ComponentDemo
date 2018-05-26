@@ -2,6 +2,8 @@
 <resources>
     <dimen name="drawpadding">5dp</dimen>
     <dimen name="padding_nor">10dp</dimen>
+    <dimen name="padding_nor_15">15dp</dimen>
+    <dimen name="padding_nor_30">30dp</dimen>
 
     <dimen name="margin_nor">10dp</dimen>
     <dimen name="margin_nor_15">15dp</dimen>
@@ -10,4 +12,6 @@
     <dimen name="margin_nor_30dp">30dp</dimen>
     <dimen name="margin_nor_40dp">40dp</dimen>
     <dimen name="margin_nor_50dp">50dp</dimen>
+
+    <dimen name="line_extra">5dp</dimen>
 </resources>

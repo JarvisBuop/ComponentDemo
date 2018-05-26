@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_common_top" />
+
+    <LinearLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/layout_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_nor"
+                android:background="@mipmap/icon_head_bg">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_circle"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp"
+                    tools:src="@mipmap/wy_logo" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_img"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Song"
+                android:textColor="@color/text_nor_gray_alpha"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.ostak.justplayteacher.ui.view.CustomSeekViewGroup
+                android:id="@+id/seekbar_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:leftName="@string/total" />
+
+            <com.ostak.justplayteacher.ui.view.CustomSeekViewGroup
+                android:id="@+id/seekbar_skill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:leftName="@string/skill" />
+
+            <com.ostak.justplayteacher.ui.view.CustomSeekViewGroup
+                android:id="@+id/seekbar_proficiency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:leftName="@string/proficient" />
+
+            <com.ostak.justplayteacher.ui.view.CustomSeekViewGroup
+                android:id="@+id/seekbar_emotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:leftName="@string/emotion" />
+
+            <com.ostak.justplayteacher.ui.view.CustomSeekViewGroup
+                android:id="@+id/seekbar_serious"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:leftName="@string/serious" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_averager_label"
+                style="@style/text_nor_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/averager"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_26sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_averager_label"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txt_averager_content"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/dimen_size_40sp"
+                    tools:text="80" />
+
+                <TextView
+                    style="@style/text_nor_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:textColor="@color/color_main" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/line"
+            style="style/main_padding_margin"
+            layout="@layout/include_txt_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_nor_15">
+
+            <TextView
+                android:id="@+id/txt_comment_content"
+                style="@style/text_nor_style_white_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="12\n234\n234\n233" />
+
+            <ImageView
+                android:id="@+id/img_audio_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_comment_content"
+                android:layout_marginTop="@dimen/margin_nor"
+                android:src="@mipmap/bg_oragen" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_audio_play"
+                android:layout_marginLeft="@dimen/margin_nor"
+                android:layout_toRightOf="@id/img_audio_play"
+                android:text="20''"
+                android:textColor="@color/text_nor_gray"
+                android:textSize="@dimen/dimen_size_14sp" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/img_audio_play"
+                android:drawableLeft="@mipmap/icon_audio"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/audio_comment"
+                android:textColor="@color/text_nor_gray" />
+        </RelativeLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/padding_nor_30"
+            android:layout_marginTop="@dimen/padding_nor_30"
+            android:button="@drawable/bg_checkbox_star"
+            android:drawablePadding="5dp"
+            android:text="@string/click_gift_star"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_size_18sp" />
+
+        <Button
+            style="@style/btn_log"
+            android:text="@string/btn_submit_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

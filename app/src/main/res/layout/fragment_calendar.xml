@@ -1,134 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:background="@color/bg_techer"
+    android:fillViewport="true"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include layout="@layout/include_search_top" />
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/bg_techer"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_nor_15">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_person_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/wy_logo" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@mipmap/wy_logo" />
+        <TextView
+            android:id="@+id/txt_person_name"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_toRightOf="@id/img_person_icon"
+            android:textSize="@dimen/dimen_size_20sp"
+            android:text="老师" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mike" />
+        <TextView
+            android:id="@+id/txt_person_age"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_person_name"
+            android:layout_toRightOf="@id/txt_person_name"
+            tools:text="Mike" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mike" />
+        <TextView
+            android:id="@+id/txt_person_country"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_person_age"
+            android:layout_toRightOf="@id/txt_person_age"
+            tools:text="Mike" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mike" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mike" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="剩余可约课时" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="50" />
-                </LinearLayout>
-
-                <View style="@style/vertical_line" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="累计释放的课时数" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="50" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_person_level"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_person_country"
+            android:layout_toRightOf="@id/txt_person_country"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/dimen_size_18sp"
+            tools:text="Mike" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="选择上课时间" />
-
-            <View style="@style/horizontal_line" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
+            android:layout_alignLeft="@id/txt_person_name"
+            android:layout_below="@id/txt_person_name"
             android:orientation="horizontal">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="450dp"
-                android:layout_weight="2" />
-
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="450dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_nor"
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/text_nor_style_nopadding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="已选择 n 课时" />
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/time_remain" />
 
-                <include
-                    layout="@layout/activity_recyclerview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_remain_time"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    tools:text="50"
+                    android:textColor="@color/color_main" />
+            </LinearLayout>
 
+            <View style="@style/vertical_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/time_total" />
+
+                <TextView
+                    android:id="@+id/txt_release_time"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    tools:text="50"
+                    android:textColor="@color/color_main" />
             </LinearLayout>
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
+        <include layout="@layout/include_txt_line"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="保存时间" />
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+            android:layout_below="@id/img_person_icon"/>
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/main_padding_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="450dp"
+                    android:layout_weight="2"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="450dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已选择 n 课时" />
+
+                    <include
+                        layout="@layout/include_swipe_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_20dp"
+                android:text="保存时间" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

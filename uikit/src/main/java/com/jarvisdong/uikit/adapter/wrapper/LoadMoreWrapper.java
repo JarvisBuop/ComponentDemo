@@ -151,7 +151,7 @@ public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHo
                     llEnd.setVisibility(View.GONE);
                     pbView.setVisibility(View.VISIBLE);
                     txtLoading.setText(mContext.getResources().getString(R.string.loading));
-                    txtLoading.setTextColor(mContext.getResources().getColor(R.color.color_grey_666666));
+                    txtLoading.setTextColor(mContext.getResources().getColor(R.color.white));
                     break;
                 case STATUS_END:
                     llStart.setVisibility(View.GONE);

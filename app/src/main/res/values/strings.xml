@@ -24,4 +24,41 @@
     <string name="txt_goto_register">没有账号,去注册 ></string>
 
     <string name="apply_lession">申请公开课</string>
+    <string name="apply_withdraw">申 请 提 现</string>
+
+    <string name="radio_text1">预定课程</string>
+    <string name="radio_text2">预定陪练</string>
+    <string name="radio_text3">我的时间</string>
+    <string name="radio_text4">我的钱包</string>
+    <string name="radio_text5">个人中心</string>
+
+    <string name="time_remain">剩余可约课时</string>
+    <string name="time_total">累计释放的课时数</string>
+
+    <string name="wallet_total_withdraw">累计提现金额:</string>
+    <string name="wallet_withdraw_money">提现中金额:</string>
+    <string name="wallet_withdraw_provider">可提取的金额:</string>
+    <string name="wallet_withdraw_current">本次提现的金额:</string>
+    <string name="wallet_withdraw_way">提现方式:</string>
+    <string name="wallet_withdraw_bank">银行开户行:</string>
+    <string name="wallet_withdraw_bank_name">银行开户名称:</string>
+    <string name="wallet_withdraw_bank_phone">银行开户预留手机号:</string>
+    <string name="wallet_withdraw_card">银行卡号:</string>
+
+    <string name="money">现金</string>
+    <string name="operate_record">操作记录</string>
+    <string name="look_history">查看历史</string>
+    <string name="averager">平均分</string>
+    <string name="score">分</string>
+
+    <string name="total">总体</string>
+    <string name="skill">技巧</string>
+    <string name="proficient">熟练</string>
+    <string name="emotion">感情</string>
+    <string name="serious">认真</string>
+
+    <string name="audio_comment">语音评价</string>
+    <string name="click_gift_star">点击赠送一颗小星星</string>
+
+    <string name="btn_submit_score">提 交 打 分</string>
 </resources>

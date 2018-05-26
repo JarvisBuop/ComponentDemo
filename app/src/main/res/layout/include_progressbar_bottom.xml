@@ -1,23 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@mipmap/bg_player_bg"
     android:gravity="center_vertical">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nor_15"
+        android:padding="@dimen/margin_nor_15">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_circle_big"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="@color/goo_blue"
+            app:civ_border_width="2dp"
+            tools:src="@mipmap/wy_logo" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_circle_middle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            app:civ_border_color="@color/goo_yellow"
+            app:civ_border_width="2dp"
+            tools:src="@mipmap/wy_logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:progress="50" />
+
+        <!--<SeekBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:progress="50"-->
+            <!--android:thumb="@mipmap/icon_pullbar" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1111:1111"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_size_14sp" />
+    </LinearLayout>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/padding_nor_15"
+        android:src="@mipmap/icon_player_like" />
 
-    <SeekBar
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:progress="50" />
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/padding_nor_15"
+        android:src="@mipmap/icon_player_song" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1111:1111" />
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/padding_nor_15"
+        android:src="@mipmap/icon_player_download" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_nor_15"
+        android:padding="@dimen/padding_nor_15"
+        android:src="@mipmap/icon_player_full_screen" />
 </LinearLayout>

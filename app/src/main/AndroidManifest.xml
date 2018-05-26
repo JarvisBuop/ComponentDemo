@@ -38,19 +38,19 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.act.MainActivity"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden">
 
         </activity>
         <activity
             android:name=".ui.act.LogActivity"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity
@@ -61,10 +61,19 @@
             android:name=".ui.act.RegisterPhoneActivity"
             android:screenOrientation="landscape" />
 
-        <activity android:name=".ui.act.BindPhoneActivity"
-            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ui.act.BindPhoneActivity"
+            android:screenOrientation="landscape" />
 
+        <activity
+            android:name=".ui.act.TestAct"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

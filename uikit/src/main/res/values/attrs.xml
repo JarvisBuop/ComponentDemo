@@ -60,4 +60,5 @@
         <!--字母大写-->
         <attr name="pstsTextAllCaps" format="boolean" />
     </declare-styleable>
+
 </resources>

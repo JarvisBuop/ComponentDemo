@@ -2,25 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bg_techer"
     android:padding="@dimen/margin_nor">
 
     <TextView
+        android:id="@+id/txt_left_count"
         style="@style/text_nor_style_20padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="共计10次公开课"
-        android:textSize="@dimen/dimen_size_30sp" />
+        tools:text="共计10次公开课"
+        android:textSize="@dimen/dimen_size_26sp" />
 
     <TextView
+        android:id="@+id/txt_right_cancel"
         style="@style/text_nor_style_20padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:text="@string/apply_lession"
+        tools:text="@string/apply_lession"
         android:textColor="@color/color_main"
         android:textSize="@dimen/dimen_size_18sp" />
 

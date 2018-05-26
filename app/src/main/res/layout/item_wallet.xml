@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_techer">
+
+    <TextView
+        android:id="@+id/course_one"
+        style="@style/course_item"
+        android:layout_width="wrap_content"
+        tools:text="2018-99-99 99:99:99" />
+
+    <TextView
+        android:id="@+id/course_two"
+        style="@style/course_item"
+        android:layout_width="wrap_content"
+        android:gravity="left"
+        tools:text="金额:666" />
+
+    <TextView
+        android:id="@+id/course_three"
+        style="@style/course_item"
+        android:layout_width="wrap_content"
+        android:gravity="left"
+        tools:text="处理中" />
+</LinearLayout>
