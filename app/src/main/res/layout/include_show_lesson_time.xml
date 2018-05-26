@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minWidth="250dp">
+
+    <TextView
+        android:id="@+id/txt_show_label"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已上课时"
+        android:textColor="@color/text_nor_gray"
+        android:textSize="@dimen/dimen_size_18sp" />
+
+    <TextView
+        android:id="@+id/txt_show_time"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_show_label"
+        android:layout_centerInParent="true"
+        android:text="5小时15分"
+        android:textColor="@color/text_nor_gray"
+        android:textSize="@dimen/dimen_size_40sp" />
+
+    <TextView
+        android:id="@+id/txt_show_level"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_show_time"
+        android:layout_centerHorizontal="true"
+        android:text="中级"
+        android:textColor="@color/text_nor_gray"
+        android:textSize="@dimen/dimen_size_18sp" />
+</RelativeLayout>

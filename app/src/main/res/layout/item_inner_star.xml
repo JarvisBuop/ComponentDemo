@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_head_fill">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_circle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            app:civ_border_color="@color/bg_techer"
+            app:civ_border_width="3dp"
+            tools:src="@mipmap/wy_logo" />
+    </FrameLayout>
+
+    <TextView
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_main_red"
+        tools:text="赠一颗" />
+</LinearLayout>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bg_techer"
     android:padding="@dimen/margin_nor">
 
@@ -13,8 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        tools:text="共计10次公开课"
-        android:textSize="@dimen/dimen_size_26sp" />
+        android:textSize="@dimen/dimen_size_26sp"
+        tools:text="共计10次公开课" />
+
+    <TextView
+        android:id="@+id/txt_printf"
+        style="@style/btn_log_min_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_left_count"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/txt_left_count"
+        android:text="打印课表"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/txt_right_cancel"
@@ -23,9 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        tools:text="@string/apply_lession"
         android:textColor="@color/color_main"
-        android:textSize="@dimen/dimen_size_18sp" />
+        android:textSize="@dimen/dimen_size_18sp"
+        tools:text="@string/apply_lession" />
 
     <View
         style="@style/horizontal_line_px"

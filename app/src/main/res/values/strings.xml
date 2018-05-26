@@ -59,6 +59,8 @@
 
     <string name="audio_comment">语音评价</string>
     <string name="click_gift_star">点击赠送一颗小星星</string>
+    <string name="makesure_star">确认赠送小星星吗?</string>
+    <string name="send_star_complete">已将小星星送到该学生账户中,谢谢老师</string>
 
     <string name="btn_submit_score">提 交 打 分</string>
 </resources>

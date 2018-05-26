@@ -9,6 +9,7 @@
 
     <color name="color_main">#B9E81E</color>
     <color name="color_main_second">#FFF001</color>
+    <color name="color_main_red">#FF8808</color>
 
     <color name="text_validata">#AEAEB6</color>
     <color name="text_nor">#2A2A2A</color>

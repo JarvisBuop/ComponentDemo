@@ -29,6 +29,26 @@
         <item name="android:textSize">@dimen/dimen_size_18sp</item>
     </style>
 
+    <style name="btn_log_min_red">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@mipmap/alert_cancel_bt_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main_red</item>
+        <item name="android:textSize">@dimen/dimen_size_18sp</item>
+    </style>
+
+    <style name="btn_log_min_green">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@mipmap/bg_mid_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main</item>
+        <item name="android:textSize">@dimen/dimen_size_18sp</item>
+    </style>
+
     <style name="edit_log">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

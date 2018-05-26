@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_nor_15">
+
+        <ImageView
+            android:id="@+id/img_star_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/wy_logo" />
+
+        <TextView
+            android:id="@+id/txt_star_name"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_toRightOf="@id/img_star_icon"
+            android:text="老师"
+            android:textSize="@dimen/dimen_size_20sp" />
+
+        <TextView
+            android:id="@+id/txt_star_age"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_star_name"
+            android:layout_toRightOf="@id/txt_star_name"
+            tools:text="Mike" />
+
+
+        <TextView
+            android:id="@+id/txt_star_remain"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txt_star_name"
+            android:layout_below="@id/txt_star_name"
+            android:layout_toRightOf="@id/img_star_icon"
+            android:textSize="@dimen/dimen_size_20sp"
+            tools:text="老师" />
+
+        <TextView
+            android:id="@+id/txt_star_time"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_star_remain"
+            android:layout_toRightOf="@id/txt_star_remain"
+            android:textColor="@color/color_main_second"
+            tools:text="过期时间:2018年11月33日" />
+
+        <LinearLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_star_icon"
+            android:layout_marginBottom="@dimen/padding_nor_30"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/include_show_lesson_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_nor" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_techer" />
+
+            <!--<HorizontalScrollView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white">-->
+
+            <!--<include-->
+            <!--layout="@layout/include_show_lesson_time"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="@dimen/padding_nor" />-->
+
+            <!--<View style="@style/vertical_line_margin_px" />-->
+
+            <!--<include-->
+            <!--layout="@layout/include_show_lesson_time"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="@dimen/padding_nor" />-->
+
+            <!--</LinearLayout>-->
+            <!--</HorizontalScrollView>-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/white">
+
+                <include
+                    layout="@layout/include_show_lesson_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_nor" />
+
+                <View style="@style/vertical_line_margin_px" />
+
+                <include
+                    layout="@layout/include_show_lesson_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_nor" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_line"
+            layout="@layout/include_txt_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_detail" />
+
+        <include
+            layout="@layout/include_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_line" />
+    </RelativeLayout>
+</LinearLayout>
