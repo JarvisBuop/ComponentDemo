@@ -63,4 +63,32 @@
     <string name="send_star_complete">已将小星星送到该学生账户中,谢谢老师</string>
 
     <string name="btn_submit_score">提 交 打 分</string>
+
+    <string name="txt_reverse">预定:</string>
+    <string name="txt_level">级别:</string>
+
+    <string name="txt_send_remind">发送提醒给上传资料学生</string>
+    <string name="txt_storage_pic">保存资料到相册</string>
+    <string name="txt_print_file">打印资料</string>
+    <string name="txt_print_lesson">打印课表</string>
+
+    <string name="txt_cancel_course">取消课程</string>
+
+    <string name="btn_time_45_mode">45分钟模式</string>
+    <string name="btn_time_30_mode">30分钟模式</string>
+
+    <string name="txt_select_course">可选课时</string>
+    <string name="txt_select_coursetime">选择上课时间</string>
+
+    <string name="txt_not_submit_msg">您还没有提交教师资料</string>
+    <string name="txt_submit_msg_updata">更新资料进行审核</string>
+    <string name="txt_submit_msg_teachtime_setting">设置授课时间</string>
+    <string name="txt_submit_msg_playtime_setting">设置陪练时间</string>
+
+    <string name="txt_all">全部</string>
+
+    <string name="txt_time_already_lesson">已上课时:</string>
+    <string name="txt_total_score">总体分数:</string>
+
+    <string name="txt_edit_msg">编辑资料</string>
 </resources>

@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_nor_30dp"
-        android:drawablePadding="5dp"
+        android:drawablePadding="@dimen/drawpadding"
         android:text="@string/send_star_complete"
         android:textColor="@color/text_nor"
         android:textSize="@dimen/dimen_size_20sp" />

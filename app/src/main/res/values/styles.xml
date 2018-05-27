@@ -49,6 +49,16 @@
         <item name="android:textSize">@dimen/dimen_size_18sp</item>
     </style>
 
+    <style name="btn_log_min_yellow">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@mipmap/bg_course_cancel</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main_second</item>
+        <item name="android:textSize">@dimen/dimen_size_18sp</item>
+    </style>
+
     <style name="edit_log">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -80,6 +90,7 @@
         <item name="android:padding">20dp</item>
     </style>
 
+
     <!--course head-->
     <style name="text_nor_style_nopadding">
         <item name="android:textSize">@dimen/dimen_size_16sp</item>
@@ -87,6 +98,10 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_nor_style_18size_nopadding" parent="text_nor_style_nopadding">
+        <item name="android:textSize">@dimen/dimen_size_18sp</item>
     </style>
     <!--white_input-->
     <style name="text_nor_style_white_input">
@@ -99,7 +114,7 @@
     </style>
     <!--radio-->
     <style name="radio_main">
-        <item name="android:drawablePadding">5dp</item>
+        <item name="android:drawablePadding">@dimen/drawpadding</item>
         <item name="android:button">@null</item>
         <item name="android:textColor">@color/text_nor_gray_alpha</item>
         <item name="android:textSize">@dimen/dimen_size_14sp</item>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/padding_nor_15">
+
+        <ImageView
+            android:id="@+id/img_coursefile_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/wy_logo" />
+
+        <TextView
+            android:id="@+id/txt_coursefile_name"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_20dp"
+            android:layout_toRightOf="@id/img_coursefile_icon"
+            android:text="AIM Song"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/dimen_size_26sp" />
+
+        <TextView
+            android:id="@+id/txt_coursefile_level_label"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_coursefile_name"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_toRightOf="@id/img_coursefile_icon"
+            android:text="@string/txt_level"
+            android:textSize="@dimen/dimen_size_20sp" />
+
+        <TextView
+            android:id="@+id/txt_coursefile_level"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_coursefile_level_label"
+            android:layout_toRightOf="@id/txt_coursefile_level_label"
+            android:textSize="@dimen/dimen_size_20sp"
+            tools:text="Mike" />
+
+        <TextView
+            android:id="@+id/txt_coursefile_reserve_label"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txt_coursefile_level_label"
+            android:layout_below="@id/txt_coursefile_level_label"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:text="@string/txt_reverse"
+            android:textSize="@dimen/dimen_size_20sp" />
+
+        <TextView
+            android:id="@+id/txt_coursefile_reserve"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_coursefile_reserve_label"
+            android:layout_marginLeft="@dimen/margin_nor_20dp"
+            android:layout_toRightOf="@id/txt_coursefile_reserve_label"
+            android:textSize="@dimen/dimen_size_20sp"
+            tools:text="Mike" />
+
+
+        <include
+            android:id="@+id/view_line"
+            layout="@layout/include_txt_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_coursefile_icon"
+            android:layout_marginTop="@dimen/margin_nor" />
+
+        <include
+            layout="@layout/include_swipe_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_nor"
+        android:paddingTop="@dimen/margin_nor">
+
+        <Button
+            android:id="@+id/btn_left_remind"
+            style="@style/btn_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_send_remind" />
+
+        <Button
+            android:id="@+id/btn_right_printf"
+            style="@style/btn_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/txt_print_file" />
+
+        <Button
+            android:id="@+id/btn_right_storage"
+            style="@style/btn_log"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_right_printf"
+            android:text="@string/txt_storage_pic" />
+    </RelativeLayout>
+
+</LinearLayout>

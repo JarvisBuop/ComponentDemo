@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/color_main"
                     android:textSize="@dimen/dimen_size_40sp"
-                    tools:text="80" />
+                    android:text="0" />
 
                 <TextView
                     style="@style/text_nor_style"
@@ -190,7 +190,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/img_audio_play"
                 android:drawableLeft="@mipmap/icon_audio"
-                android:drawablePadding="5dp"
+                android:drawablePadding="@dimen/drawpadding"
                 android:gravity="center"
                 android:text="@string/audio_comment"
                 android:textColor="@color/text_nor_gray" />
@@ -203,7 +203,7 @@
             android:layout_marginBottom="@dimen/padding_nor_30"
             android:layout_marginTop="@dimen/padding_nor_30"
             android:button="@drawable/bg_checkbox_star"
-            android:drawablePadding="5dp"
+            android:drawablePadding="@dimen/drawpadding"
             android:text="@string/click_gift_star"
             android:textColor="@color/white"
             android:textSize="@dimen/dimen_size_18sp" />

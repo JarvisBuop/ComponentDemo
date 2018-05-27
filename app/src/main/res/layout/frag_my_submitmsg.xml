@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/txt_not_submit_msg"
+        android:textColor="@color/color_main_second"
+        android:textSize="@dimen/dimen_size_40sp" />
+
+    <Button
+        style="@style/btn_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_nor_30dp"
+        android:text="@string/txt_submit_msg_updata" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/include_bottom_btn" />
+
+</LinearLayout>

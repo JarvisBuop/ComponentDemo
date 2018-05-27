@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <include layout="@layout/include_calendar_head" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            style="@style/main_padding_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <com.ostak.justplayteacher.ui.view.CustomDataView
+                        android:id="@+id/date_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_nor" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomDataView
+                        android:id="@+id/date_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:layout_toRightOf="@id/date_one" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="450dp"
+                        android:layout_below="@id/date_one"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.ostak.justplayteacher.ui.view.CustomDataView
+                        android:id="@+id/date_right_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_nor" />
+
+                    <TextView
+                        android:id="@+id/txt_dateright_two"
+                        style="@style/text_nor_style_nopadding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_size_18sp"
+                        android:layout_alignBottom="@id/date_right_one"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:layout_toRightOf="@id/date_right_one"
+                        android:text="已选择[3]课时" />
+
+                    <include
+                        layout="@layout/include_swipe_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/date_right_one" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_20dp"
+                android:text="保存时间" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

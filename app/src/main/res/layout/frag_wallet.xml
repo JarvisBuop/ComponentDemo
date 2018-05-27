@@ -124,7 +124,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
 
             <TextView
                 style="@style/text_nor_style"
@@ -134,14 +135,31 @@
                 android:text="@string/wallet_withdraw_way"
                 android:textSize="@dimen/dimen_size_20sp" />
 
-            <TextView
-                android:id="@+id/txt_wallet_way"
-                style="@style/text_nor_style"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_nor"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_rect_white_nopadding"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_nor"
+                android:paddingRight="@dimen/padding_nor">
+
+                <TextView
+                    android:id="@+id/txt_wallet_way"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_nor"
+                    android:textSize="@dimen/dimen_size_20sp"
+                    tools:text="2000" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/margin_nor_30dp"
+                    android:src="@mipmap/gray_small_down_arrow" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout

@@ -24,7 +24,7 @@
         android:layout_alignBaseline="@+id/txt_left_count"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/txt_left_count"
-        android:text="打印课表"
+        android:text="@string/txt_print_lesson"
         android:visibility="gone" />
 
     <TextView

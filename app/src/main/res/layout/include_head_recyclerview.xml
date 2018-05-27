@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_padding_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_techer"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_left_count"
+            style="@style/text_nor_style_20padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            tools:text="@string/txt_cancel_course"
+            android:textColor="@color/color_main_second"
+            android:textSize="@dimen/dimen_size_26sp" />
+
+        <TextView
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/txt_all" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_line_px"
+        android:layout_marginBottom="@dimen/margin_nor" />
+
+    <include layout="@layout/include_swipe_recyclerview" />
+</LinearLayout>

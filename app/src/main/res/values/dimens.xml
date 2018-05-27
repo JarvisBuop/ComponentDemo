@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="drawpadding">5dp</dimen>
+    <dimen name="padding_nor_5dp">5dp</dimen>
     <dimen name="padding_nor">10dp</dimen>
+    <dimen name="padding_nor_8dp">8dp</dimen>
     <dimen name="padding_nor_15">15dp</dimen>
     <dimen name="padding_nor_30">30dp</dimen>
 
+    <dimen name="margin_nor_5dp">5dp</dimen>
     <dimen name="margin_nor">10dp</dimen>
     <dimen name="margin_nor_15">15dp</dimen>
     <dimen name="margin_nor_25">25dp</dimen>
@@ -12,6 +15,8 @@
     <dimen name="margin_nor_30dp">30dp</dimen>
     <dimen name="margin_nor_40dp">40dp</dimen>
     <dimen name="margin_nor_50dp">50dp</dimen>
+    <dimen name="margin_nor_80dp">80dp</dimen>
+    <dimen name="margin_nor_100dp">100dp</dimen>
 
     <dimen name="line_extra">5dp</dimen>
 </resources>

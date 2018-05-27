@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_techer"
+    android:minHeight="300dp">
+
+    <TextView
+        android:id="@+id/txt_course_time"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_course_time"
+        android:drawablePadding="@dimen/drawpadding"
+        tools:text="2018-6-6 9:8:3~ 13:88" />
+
+    <TextView
+        android:id="@+id/txt_course_remain_time"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/icon_distance_time"
+        android:drawablePadding="@dimen/drawpadding"
+        tools:text="距离上课 : 33:33" />
+
+    <Button
+        style="@style/btn_log_min_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_course_remain_time"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_nor"
+        android:text="@string/txt_cancel_course" />
+
+    <View style="@style/horizontal_line_px" />
+
+    <View
+        style="@style/horizontal_line_px"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        style="@style/vertical_line_margin_px"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        style="@style/vertical_line_margin_px"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

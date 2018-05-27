@@ -168,7 +168,7 @@ public class CourseFragment extends DBaseFragment {
             }
         });
 
-        View headView = LayoutInflater.from(mContext).inflate(R.layout.include_txt_left_right, recyclerView, false);
+        View headView = LayoutInflater.from(mContext).inflate(R.layout.head_txt_left_right, recyclerView, false);
         txtHeadLeft = (TextView) headView.findViewById(R.id.txt_left_count);
         txtHeadRight = (TextView) headView.findViewById(R.id.txt_right_cancel);
         mAdapter.addHeaderView(headView);

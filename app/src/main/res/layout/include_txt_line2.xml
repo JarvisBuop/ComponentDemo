@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_nor"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_nor_15"
+        android:layout_weight="2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_line1"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:paddingBottom="@dimen/padding_nor"
+            android:paddingTop="@dimen/padding_nor"
+            android:text="@string/txt_select_course"
+            android:textColor="@color/color_grey_888888" />
+
+        <View style="@style/horizontal_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_line2"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:paddingBottom="@dimen/padding_nor"
+            android:paddingTop="@dimen/padding_nor"
+            android:text="@string/txt_select_coursetime"
+            android:textColor="@color/color_grey_888888" />
+
+        <View style="@style/horizontal_line" />
+    </LinearLayout>
+
+</LinearLayout>
