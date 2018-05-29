@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/bg_techer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding_nor_15">
+
+        <ImageView
+            android:id="@+id/img_left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_mine_course" />
+
+        <TextView
+            android:id="@+id/txt_middle_content"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_15"
+            android:layout_toRightOf="@id/img_left_icon"
+            android:textSize="@dimen/dimen_size_18sp"
+            tools:text="预定课程" />
+
+        <ImageView
+            android:id="@+id/img_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_nor_15"
+            android:src="@mipmap/icon_right_arrow" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_line_margin_px" />
+</LinearLayout>

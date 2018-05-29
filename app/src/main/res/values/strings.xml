@@ -91,4 +91,40 @@
     <string name="txt_total_score">总体分数:</string>
 
     <string name="txt_edit_msg">编辑资料</string>
+
+    <string name="txt_my_item_course">预定课程</string>
+    <string name="txt_my_item_mytime">我的时间</string>
+    <string name="txt_my_item_completedcourse">已上课程</string>
+    <string name="txt_my_item_score">我的评分</string>
+    <string name="txt_my_item_prepractice">预定陪练</string>
+    <string name="txt_my_item_wallet">钱包</string>
+    <string name="txt_my_item_star">小星星</string>
+    <string name="txt_my_item_publiccourse">公开课</string>
+
+    <string name="txt_delete">删除</string>
+    <string name="txt_person_name">姓名 :</string>
+    <string name="txt_person_phone">电话 :</string>
+    <string name="txt_person_email">邮箱 :</string>
+    <string name="txt_person_age">年龄 :</string>
+    <string name="txt_person_tech_school">执教学校 :</string>
+    <string name="txt_person_gra_school">毕业学校 :</string>
+    <string name="txt_person_country">国家 :</string>
+    <string name="txt_person_tech_time">任教时长 :</string>
+    <string name="txt_person_ifnot_has_tech_license">是否有教师执照 :</string>
+    <string name="txt_person_upload_license">上传执照</string>
+    <string name="txt_updata">更新</string>
+    <string name="txt_person_edit_head">编辑头像</string>
+    <string name="txt_person_ifnot_tech_license">是否教师执照</string>
+    <string name="txt_person_ifnot_person_perform">是否个人独奏</string>
+    <string name="txt_person_upload_video">上传视频</string>
+    <string name="txt_person_recommend_name">推荐人姓名 :</string>
+    <string name="txt_person_upload_recommend_letter">上传推荐信 :</string>
+    <string name="txt_person_select_file">选择文件</string>
+    <string name="txt_person_upload_thing">上传事例?</string>
+    <string name="txt_person_upload_idcard">上传身份证 :</string>
+    <string name="txt_person_idcard_num">身份证号码 :</string>
+    <string name="txt_person_passport_num">护照号码 :</string>
+    <string name="txt_person_upload_passport">上传护照 :</string>
+    <string name="txt_person_input_idcard">请输入身份证号码</string>
+    <string name="txt_person_input_passport">请输入护照号码</string>
 </resources>
