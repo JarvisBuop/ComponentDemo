@@ -12,6 +12,8 @@
     </style>
 
     <style name="main_padding_margin">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">@dimen/margin_nor_15</item>
         <item name="android:layout_marginRight">@dimen/margin_nor_15</item>
         <item name="android:paddingLeft">@dimen/padding_nor_15</item>
@@ -103,6 +105,21 @@
     <style name="text_nor_style_18size_nopadding" parent="text_nor_style_nopadding">
         <item name="android:textSize">@dimen/dimen_size_18sp</item>
     </style>
+
+
+    <style name="text_nor_style_nopadding_input">
+        <item name="android:textSize">@dimen/dimen_size_16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left</item>
+        <!--<item name="android:background">@null</item>-->
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_nor</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+    </style>
     <!--white_input-->
     <style name="text_nor_style_white_input">
         <item name="android:textSize">@dimen/dimen_size_14sp</item>
@@ -161,7 +178,7 @@
 
     <style name="horizontal_line_px">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">1px</item>
+        <item name="android:layout_height">2px</item>
         <item name="android:background">#eee</item>
     </style>
 

@@ -14,5 +14,28 @@
         <attr name="middleTxt_color" format="color" />
         <attr name="middleTxt_dimen" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="CustomUploadFile">
+        <attr name="txt_topline" format="string" />
+        <attr name="txt_toptitle" format="string" />
+        <attr name="btn_middleUpload" format="string" />
+
+        <attr name="layout_ifnot" format="boolean"/>
+        <attr name="layout_first" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomUploadFileStyle2">
+        <attr name="txt_topline" format="string" />
+        <attr name="txt_edit_label" format="string" />
+        <attr name="edit_hint" format="string" />
+
+        <attr name="txt_btn_label" format="string"/>
+        <attr name="txt_thing" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomGroupTxtImg">
+        <attr name="txt_bottom" format="string" />
+        <attr name="img_top" format="reference" />
+    </declare-styleable>
 </resources>
 

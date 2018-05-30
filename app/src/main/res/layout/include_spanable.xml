@@ -6,6 +6,7 @@
     android:layout_gravity="center"
     android:background="@drawable/bg_rect_white_nopadding"
     android:gravity="center"
+    android:layout_marginLeft="@dimen/margin_nor"
     android:paddingLeft="@dimen/padding_nor"
     android:paddingRight="@dimen/padding_nor">
 

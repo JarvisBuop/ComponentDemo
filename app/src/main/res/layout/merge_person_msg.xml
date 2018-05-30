@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/frag_person_msg">
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_nor"
+        android:paddingTop="@dimen/padding_nor">
+
+        <ImageView
+            android:id="@+id/img_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_female"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_5dp"
+            android:layout_toRightOf="@id/img_female"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_name" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_phone" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_email" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_age" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_tech_school" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_gra_school" />
+
+                <EditText
+                    style="@style/text_nor_style_nopadding_input"
+                    tools:text="Mike" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_country" />
+
+                <include layout="@layout/include_spanable" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:text="@string/txt_person_tech_time" />
+
+                <include layout="@layout/include_spanable" />
+            </LinearLayout>
+
+            <View
+                style="@style/horizontal_line_px"
+                android:layout_marginBottom="@dimen/margin_nor" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

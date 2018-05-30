@@ -41,19 +41,19 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    dexOptions {
-        dexInProcess true
-        preDexLibraries true
-        javaMaxHeapSize "4g"
-        incremental true
-    }
+//    dexOptions {
+//        dexInProcess true
+//        preDexLibraries true
+//        javaMaxHeapSize "4g"
+//        incremental true
+//    }
 
     signingConfigs {
         myConfig {
-            storeFile file(properties.getProperty('justplay.signing.file'))
-            storePassword properties.getProperty('justplay.signing.password')
-            keyAlias properties.getProperty('justplay.signing.alias')
-            keyPassword properties.getProperty('justplay.signing.key.password')
+//            storeFile file(properties.getProperty('justplay.signing.file'))
+//            storePassword properties.getProperty('justplay.signing.password')
+//            keyAlias properties.getProperty('justplay.signing.alias')
+//            keyPassword properties.getProperty('justplay.signing.key.password')
         }
     }
 
@@ -63,7 +63,6 @@ android {
             shrinkResources false
             zipAlignEnabled false
             debuggable true
-            signingConfig signingConfigs.myConfig
         }
         release {
             minifyEnabled false //开启混淆

@@ -110,7 +110,6 @@
     <string name="txt_person_gra_school">毕业学校 :</string>
     <string name="txt_person_country">国家 :</string>
     <string name="txt_person_tech_time">任教时长 :</string>
-    <string name="txt_person_ifnot_has_tech_license">是否有教师执照 :</string>
     <string name="txt_person_upload_license">上传执照</string>
     <string name="txt_updata">更新</string>
     <string name="txt_person_edit_head">编辑头像</string>
@@ -127,4 +126,13 @@
     <string name="txt_person_upload_passport">上传护照 :</string>
     <string name="txt_person_input_idcard">请输入身份证号码</string>
     <string name="txt_person_input_passport">请输入护照号码</string>
+    
+    
+    <!--line_txt-->
+    <string name="line_txt_centificate">证书</string>
+    <string name="line_txt_file_video">作品视频</string>
+    <string name="line_txt_file_other">其他作品视频</string>
+    <string name="line_txt_msg_recommend">推荐人信息</string>
+    <string name="line_txt_msg_card">证件信息</string>
+    <string name="line_txt_msg_passport">护照信息</string>
 </resources>
