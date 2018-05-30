@@ -62,7 +62,7 @@ public class CustomUploadFileStyle2 extends LinearLayout {
         String string2 = typedArray.getString(R.styleable.CustomUploadFileStyle2_txt_btn_label);
         txtLabel2.setText(string2);
 
-        String string3 = typedArray.getString(R.styleable.CustomUploadFileStyle2_txt_topline);
+        String string3 = typedArray.getString(R.styleable.CustomUploadFileStyle2_txt_topline2);
         txtLine.setText(string3);
 
         boolean bool = typedArray.getBoolean(R.styleable.CustomUploadFileStyle2_txt_thing, false);
