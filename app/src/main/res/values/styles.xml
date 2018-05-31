@@ -120,6 +120,20 @@
         <item name="android:focusableInTouchMode">true</item>
         <item name="android:focusable">true</item>
     </style>
+
+    <style name="text_nor_style_nopadding_input_nobackground" parent="text_nor_style_nopadding_input">
+        <item name="android:textSize">@dimen/dimen_size_16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left</item>
+        <item name="android:background">@null</item>
+        <!--<item name="android:backgroundTint">@color/white</item>-->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_nor</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+    </style>
     <!--white_input-->
     <style name="text_nor_style_white_input">
         <item name="android:textSize">@dimen/dimen_size_14sp</item>

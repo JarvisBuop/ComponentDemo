@@ -19,4 +19,7 @@
     <dimen name="margin_nor_100dp">100dp</dimen>
 
     <dimen name="line_extra">5dp</dimen>
+
+    <dimen name="title_msg_icon">80dp</dimen>
+    <dimen name="title_msg_icon_circle">25dp</dimen>
 </resources>

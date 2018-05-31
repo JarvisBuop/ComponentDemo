@@ -51,7 +51,7 @@
             android:layout_marginBottom="@dimen/margin_nor_20dp"
             android:layout_marginTop="@dimen/margin_nor"
             android:text="@string/txt_bind_phone_tips"
-            android:textColor="@color/color_main_second"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/font_size_small" />
 
         <RelativeLayout

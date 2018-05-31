@@ -37,7 +37,7 @@
                     android:text="@string/txt_person_name" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -56,7 +56,7 @@
                     android:text="@string/txt_person_phone" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -75,7 +75,7 @@
                     android:text="@string/txt_person_email" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -94,7 +94,7 @@
                     android:text="@string/txt_person_age" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -113,7 +113,7 @@
                     android:text="@string/txt_person_tech_school" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -132,7 +132,7 @@
                     android:text="@string/txt_person_gra_school" />
 
                 <EditText
-                    style="@style/text_nor_style_nopadding_input"
+                    style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
 
@@ -151,7 +151,10 @@
                     style="@style/text_nor_style_18size_nopadding"
                     android:text="@string/txt_person_country" />
 
-                <include layout="@layout/include_spanable" />
+
+                <com.ostak.justplayteacher.ui.view.CustomSpannable
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <View
@@ -169,7 +172,10 @@
                     style="@style/text_nor_style_18size_nopadding"
                     android:text="@string/txt_person_tech_time" />
 
-                <include layout="@layout/include_spanable" />
+
+                <com.ostak.justplayteacher.ui.view.CustomSpannable
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <View

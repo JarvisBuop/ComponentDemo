@@ -55,8 +55,8 @@ public class WalletFragment extends DBaseFragment {
     TextView txtWalletProvider;
     @BindView(R.id.txt_wallet_current)
     TextView txtWalletCurrent;
-    @BindView(R.id.txt_wallet_way)
-    TextView txtWalletWay;
+//    @BindView(R.id.txt_wallet_way)
+//    TextView txtWalletWay;
     @BindView(R.id.txt_wallet_bank)
     TextView txtWalletBank;
     @BindView(R.id.txt_wallet_bank_name)
@@ -108,16 +108,16 @@ public class WalletFragment extends DBaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.img_msg, R.id.img_quit, R.id.txt_wallet_way, R.id.btn_apply, R.id.txt_history})
+    @OnClick({R.id.img_msg, R.id.img_quit, /*R.id.txt_wallet_way,*/ R.id.btn_apply, R.id.txt_history})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_msg:
                 break;
             case R.id.img_quit:
                 break;
-            case R.id.txt_wallet_way:
-                //弹下拉框;
-                break;
+//            case R.id.txt_wallet_way:
+//                //弹下拉框;
+//                break;
             case R.id.btn_apply:
                 break;
             case R.id.txt_history:

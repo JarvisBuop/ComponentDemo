@@ -11,6 +11,7 @@ import com.jarvisdong.uikit.baseui.DBaseExtendFragmentActivty;
 import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.R;
 import com.ostak.justplayteacher.ui.frg.CourseFragment;
+import com.ostak.justplayteacher.ui.frg.MyFragment;
 import com.ostak.justplayteacher.ui.frg.OrderCourseFragment;
 import com.ostak.justplayteacher.ui.frg.WalletFragment;
 
@@ -65,12 +66,14 @@ public class MainActivity extends DBaseExtendFragmentActivty {
         CourseFragment playerFragment = CourseFragment.newInstance(R.id.layout_fragment, 1);
         OrderCourseFragment orderCourseFragment = OrderCourseFragment.newInstance(R.id.layout_fragment);
         WalletFragment walletFragment = WalletFragment.newInstance(R.id.layout_fragment);
+        MyFragment myfragment = MyFragment.newInstance(R.id.layout_fragment);
 
 
         mFragments.add(courseFragment);
         mFragments.add(playerFragment);
         mFragments.add(orderCourseFragment);
         mFragments.add(walletFragment);
+        mFragments.add(myfragment);
 
         showFragment(0);
     }

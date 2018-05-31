@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/margin_nor"
@@ -17,6 +16,5 @@
         android:text="选择上课时间"
         android:textColor="@color/color_grey_888888" />
 
-    <View style="@style/horizontal_line"
-        />
+    <View style="@style/horizontal_line" />
 </LinearLayout>

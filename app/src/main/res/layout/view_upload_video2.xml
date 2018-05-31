@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_nor"
         android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin_nor"
         android:paddingLeft="@dimen/padding_nor"
         android:paddingRight="@dimen/padding_nor">
 
@@ -19,9 +19,9 @@
             style="@style/text_nor_style_nopadding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginRight="@dimen/margin_nor"
-            android:paddingBottom="@dimen/padding_nor"
-            android:paddingTop="@dimen/padding_nor"
+            android:gravity="center_vertical"
             android:text="选择上课时间"
             android:textColor="@color/color_grey_888888" />
 
@@ -54,7 +54,9 @@
                     android:id="@+id/edt_upload_num"
                     style="@style/text_nor_style_nopadding_input"
                     android:layout_weight="1"
-                    tools:text="Mike" />
+                    android:textColorHint="@color/color_grey_888888"
+                    tools:hint="1111"
+                    tools:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,12 +102,12 @@
             android:gravity="right">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/txt_upload_thing"
                 style="@style/text_nor_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_person_upload_thing" />
+                android:text="@string/txt_person_upload_thing"
+                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>
