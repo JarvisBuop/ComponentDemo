@@ -7,112 +7,128 @@
 
     <include layout="@layout/include_search_top" />
 
-    <android.support.v4.widget.NestedScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/bg_techer"
-        android:fillViewport="true">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="@color/bg_techer"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    <include layout="@layout/merge_person_msg" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/merge_person_msg" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.ostak.justplayteacher.ui.view.CustomGroupTxtImg
+                            android:id="@+id/upload_file_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|top"
+                            android:layout_margin="@dimen/margin_nor_20dp"
+                            app:img_top="@mipmap/upload_info"
+                            app:txt_bottom="@string/txt_person_edit_head" />
+                    </FrameLayout>
                 </LinearLayout>
 
-                <FrameLayout
-                    android:layout_width="0dp"
+                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                    android:id="@+id/upload_file_teacher"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:btn_middleUpload="@string/txt_person_upload_license"
+                    app:txt_topline="@string/line_txt_centificate"
+                    app:txt_toptitle="@string/txt_person_ifnot_tech_license" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomGroupTxtImg
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right|top"
-                        android:layout_margin="@dimen/margin_nor_20dp"
-                        app:img_top="@mipmap/upload_info"
-                        app:txt_bottom="@string/txt_person_edit_head" />
-                </FrameLayout>
+                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                    android:id="@+id/upload_file_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:btn_middleUpload="@string/txt_person_upload_video"
+                    app:txt_topline="@string/line_txt_file_video"
+                    app:txt_toptitle="@string/txt_person_ifnot_person_perform" />
+
+                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                    android:id="@+id/upload_file_otherfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:btn_middleUpload="@string/txt_person_upload_video"
+                    app:layout_first="false"
+                    app:layout_ifnot="false"
+                    app:txt_topline="@string/line_txt_file_other" />
+
+                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                    android:id="@+id/upload_style2_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:edit_hint=""
+                    app:txt_btn_label="@string/txt_person_upload_recommend_letter"
+                    app:txt_edit_label="@string/txt_person_recommend_name"
+                    app:txt_thing="false"
+                    app:txt_topline2="@string/line_txt_msg_recommend" />
+
+                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                    android:id="@+id/upload_style2_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:edit_hint="@string/txt_person_input_idcard"
+                    app:txt_btn_label="@string/txt_person_upload_idcard"
+                    app:txt_edit_label="@string/txt_person_idcard_num"
+                    app:txt_thing="true"
+                    app:txt_topline2="@string/line_txt_msg_card" />
+
+                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                    android:id="@+id/upload_style2_passport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_marginRight="@dimen/margin_nor_20dp"
+                    app:edit_hint="@string/txt_person_input_passport"
+                    app:txt_btn_label="@string/txt_person_upload_passport"
+                    app:txt_edit_label="@string/txt_person_input_passport"
+                    app:txt_thing="false"
+                    app:txt_topline2="@string/line_txt_msg_passport" />
+
             </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
 
-            <com.ostak.justplayteacher.ui.view.CustomUploadFile
-                android:id="@+id/upload_file_teacher"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:btn_middleUpload="@string/txt_person_upload_license"
-                app:txt_topline="@string/line_txt_centificate"
-                app:txt_toptitle="@string/txt_person_ifnot_tech_license" />
+        <Button
+            android:id="@+id/btn_updata"
+            style="@style/btn_log_min_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/margin_nor_40dp"
+            android:text="@string/txt_updata" />
+    </FrameLayout>
 
-            <com.ostak.justplayteacher.ui.view.CustomUploadFile
-                android:id="@+id/upload_file_person"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:btn_middleUpload="@string/txt_person_upload_video"
-                app:txt_topline="@string/line_txt_file_video"
-                app:txt_toptitle="@string/txt_person_ifnot_person_perform" />
-
-            <com.ostak.justplayteacher.ui.view.CustomUploadFile
-                android:id="@+id/upload_file_otherfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:btn_middleUpload="@string/txt_person_upload_video"
-                app:layout_first="false"
-                app:layout_ifnot="false"
-                app:txt_topline="@string/line_txt_file_other" />
-
-            <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
-                android:id="@+id/upload_style2_recommend"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:edit_hint=""
-                app:txt_btn_label="@string/txt_person_upload_recommend_letter"
-                app:txt_edit_label="@string/txt_person_recommend_name"
-                app:txt_thing="false"
-                app:txt_topline2="@string/line_txt_msg_recommend" />
-
-            <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
-                android:id="@+id/upload_style2_idcard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:edit_hint="@string/txt_person_input_idcard"
-                app:txt_btn_label="@string/txt_person_upload_idcard"
-                app:txt_edit_label="@string/txt_person_idcard_num"
-                app:txt_thing="true"
-                app:txt_topline2="@string/line_txt_msg_card" />
-
-            <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
-                android:id="@+id/upload_style2_passport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor_20dp"
-                android:layout_marginRight="@dimen/margin_nor_20dp"
-                app:edit_hint="@string/txt_person_input_passport"
-                app:txt_btn_label="@string/txt_person_upload_passport"
-                app:txt_edit_label="@string/txt_person_input_passport"
-                app:txt_thing="false"
-                app:txt_topline2="@string/line_txt_msg_passport" />
-
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

@@ -54,6 +54,7 @@ public class LogActivity extends DBaseActivity {
                 break;
             case R.id.btn_login:
                 startActivity(new Intent(this,MainActivity.class));
+                finish();
                 break;
             case R.id.txt_goto_regis:
                 Intent intent = new Intent(this,RegisterActivity.class);

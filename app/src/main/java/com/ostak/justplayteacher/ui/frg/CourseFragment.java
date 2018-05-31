@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.jarvisdong.uikit.adapter.QuickFuncAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.jarvisdong.uikit.adapter.wrapper.LoadMoreWrapper;
-import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.MyApp;
 import com.ostak.justplayteacher.R;
 
@@ -38,7 +37,7 @@ import butterknife.Unbinder;
  * @see:
  */
 
-public class CourseFragment extends DBaseFragment {
+public class CourseFragment extends MainBaseFragment {
 
     @BindView(R.id.txt_title)
     TextView txtTitle;
@@ -60,13 +59,11 @@ public class CourseFragment extends DBaseFragment {
     private TextView txtHeadLeft;
     private TextView txtHeadRight;
 
-    public static CourseFragment newInstance(int containId, int i) {
+    public static CourseFragment newInstance(int containId) {
 
         Bundle args = new Bundle();
-        args.putInt("pos", i);
         CourseFragment fragment = new CourseFragment();
         fragment.setContainerId(containId);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -85,11 +82,18 @@ public class CourseFragment extends DBaseFragment {
     @Override
     protected void processLogic(Bundle savedInstanceState) {
         editSearch.clearFocus();
-        txtTitle.setText(MyApp.getAppInstansce().getString(getArguments().getInt("pos") == 1 ? R.string.radio_text2 : R.string.radio_text1));
         initRecycler();
+        if (getmDataIn() != null && getmDataIn() instanceof String) {
+            String tag = (String) getmDataIn();
+            txtTitle.setText(MyApp.getAppInstansce().getString(tag.equals("1") ? R.string.radio_text2 : R.string.radio_text1));
+        }
         loadDatas(false);
     }
 
+    @Override
+    public void onEnter(Object data) {
+        super.onEnter(data);
+    }
 
     private void loadDatas(boolean clear) {
         recyclerView.postDelayed(() -> {
@@ -115,7 +119,7 @@ public class CourseFragment extends DBaseFragment {
         }, 1500);
 
         txtHeadRight.setText("取消课程 >");
-        String count = mDataLists.size()+"";
+        String count = mDataLists.size() + "";
         SpannableStringBuilder ssb = new SpannableStringBuilder("共计" + count + "次公开课");
         ssb.setSpan(new ForegroundColorSpan(MyApp.getAppInstansce().getResources().getColor(R.color.color_main)),
                 2, count.length() + 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);

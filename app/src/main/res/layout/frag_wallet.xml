@@ -8,257 +8,270 @@
 
     <include layout="@layout/include_search_top" />
 
-    <RelativeLayout
-        style="@style/main_padding_margin"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_nor_15">
-
-        <ImageView
-            android:id="@+id/img_wallet_icon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@mipmap/wy_logo" />
-
-        <TextView
-            android:id="@+id/txt_wallet_total_label"
-            style="@style/text_nor_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor"
-            android:layout_toRightOf="@id/img_wallet_icon"
-            android:text="@string/wallet_total_withdraw"
-            android:textSize="@dimen/dimen_size_20sp" />
-
-        <TextView
-            android:id="@+id/txt_wallet_total"
-            style="@style/text_nor_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txt_wallet_total_label"
-            android:layout_toRightOf="@id/txt_wallet_total_label"
-            android:textColor="@color/color_main_second"
-            android:textSize="@dimen/dimen_size_20sp"
-            tools:text="2000" />
-
-        <TextView
-            android:id="@+id/txt_wallet_withdraw_label"
-            style="@style/text_nor_style_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/txt_wallet_total_label"
-            android:layout_below="@id/txt_wallet_total"
-            android:layout_marginLeft="@dimen/margin_nor"
-            android:text="@string/wallet_withdraw_money"
-            android:textSize="@dimen/dimen_size_20sp" />
-
-        <TextView
-            android:id="@+id/txt_wallet_withdraw"
-            style="@style/text_nor_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txt_wallet_withdraw_label"
-            android:layout_toRightOf="@id/txt_wallet_withdraw_label"
-            android:textColor="@color/color_main_second"
-            android:textSize="@dimen/dimen_size_20sp"
-            tools:text="2000" />
-
-        <include
-            android:id="@+id/line1"
-            layout="@layout/include_txt_line"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_wallet_icon"
-            android:layout_marginTop="@dimen/margin_nor" />
-    </RelativeLayout>
-
-    <LinearLayout
-        style="@style/main_padding_margin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_provider"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_provider"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_main"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_current"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_current"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/color_main"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/main_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_nor_15">
+
+                <ImageView
+                    android:id="@+id/img_wallet_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/wy_logo" />
+
+                <TextView
+                    android:id="@+id/txt_wallet_total_label"
+                    style="@style/text_nor_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/img_wallet_icon"
+                    android:text="@string/wallet_total_withdraw"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <TextView
+                    android:id="@+id/txt_wallet_total"
+                    style="@style/text_nor_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_wallet_total_label"
+                    android:layout_toRightOf="@id/txt_wallet_total_label"
+                    android:textColor="@color/color_main_second"
+                    android:textSize="@dimen/dimen_size_20sp"
+                    tools:text="2000" />
+
+                <TextView
+                    android:id="@+id/txt_wallet_withdraw_label"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_wallet_total_label"
+                    android:layout_below="@id/txt_wallet_total"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:text="@string/wallet_withdraw_money"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <TextView
+                    android:id="@+id/txt_wallet_withdraw"
+                    style="@style/text_nor_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_wallet_withdraw_label"
+                    android:layout_toRightOf="@id/txt_wallet_withdraw_label"
+                    android:textColor="@color/color_main_second"
+                    android:textSize="@dimen/dimen_size_20sp"
+                    tools:text="2000" />
+
+                <include
+                    android:id="@+id/line1"
+                    layout="@layout/include_txt_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_wallet_icon"
+                    android:layout_marginTop="@dimen/margin_nor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/main_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_provider"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_provider"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_current"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_current"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_way"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <include layout="@layout/include_spanable" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_15">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_bank"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_bank"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_15">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_bank_name"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_bank_name"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_15">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_bank_phone"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_bank_phone"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_15">
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="@string/wallet_withdraw_card"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_wallet_bank_card"
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen_size_20sp"
+                        tools:text="2000" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    style="@style/btn_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/margin_nor_30dp"
+                    android:layout_marginTop="@dimen/margin_nor"
+                    android:text="@string/apply_withdraw" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line2"
+                layout="@layout/include_txt_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_30dp"
+                android:layout_marginRight="@dimen/margin_nor_30dp"
+                android:layout_marginTop="@dimen/margin_nor" />
 
             <TextView
-                style="@style/text_nor_style"
+                android:id="@+id/txt_history"
+                style="@style/text_nor_style_nopadding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_way"
-                android:textSize="@dimen/dimen_size_20sp" />
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin_nor_30dp"
+                android:text="@string/look_history" />
 
-            <include layout="@layout/include_spanable" />
+            <include
+                layout="@layout/include_swipe_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_30dp"
+                android:layout_marginRight="@dimen/margin_nor_30dp" />
         </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor_15">
 
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_bank"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_bank"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor_15">
-
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_bank_name"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_bank_name"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor_15">
-
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_bank_phone"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_bank_phone"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor_15">
-
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="@string/wallet_withdraw_card"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <TextView
-                android:id="@+id/txt_wallet_bank_card"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_size_20sp"
-                tools:text="2000" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_apply"
-            style="@style/btn_log"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="@dimen/margin_nor_30dp"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:text="@string/apply_withdraw" />
-    </LinearLayout>
-
-    <include
-        android:id="@+id/line2"
-        layout="@layout/include_txt_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_nor_30dp"
-        android:layout_marginRight="@dimen/margin_nor_30dp"
-        android:layout_marginTop="@dimen/margin_nor" />
-
-    <TextView
-        android:id="@+id/txt_history"
-        style="@style/text_nor_style_nopadding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="@dimen/margin_nor_30dp"
-        android:text="@string/look_history" />
-
-    <include
-        layout="@layout/include_swipe_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_nor_30dp"
-        android:layout_marginRight="@dimen/margin_nor_30dp" />
 </LinearLayout>

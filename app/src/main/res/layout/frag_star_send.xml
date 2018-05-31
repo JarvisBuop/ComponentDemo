@@ -35,6 +35,7 @@
             style="@style/text_nor_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_alignBaseline="@id/txt_star_name"
             android:layout_toRightOf="@id/txt_star_name"
             tools:text="Mike" />

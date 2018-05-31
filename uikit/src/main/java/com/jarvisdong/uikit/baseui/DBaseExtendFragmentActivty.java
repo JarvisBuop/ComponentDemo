@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.Utils;
+import com.jarvisdong.uikit.R;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 
 
@@ -20,7 +22,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     protected DBaseFragment mCurrentFragment;
     private boolean isBackOrStay = false;
     private boolean mCloseWarned = true;
-    private String closeWarningHint = /*mContext.getString(R.string.close_warning)*/ "";
+    private String closeWarningHint = Utils.getApp().getResources().getString(R.string.close_warning);
     private long timeRecord = 0;
 
     @Override
@@ -50,13 +52,28 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
 
     /**
      * 放入回退栈中,fragment类,存放数据;
+     *
      * @param cls
      * @param data
      */
-    public void pushFragmentToBackStack(Class<?> cls, Object data) {
+    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from) {
         FragmentParam param = new FragmentParam();
         param.cls = cls;
         param.data = data;
+        param.from = from;
+        goToThisFragment(param);
+    }
+
+    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from, String extra) {
+        FragmentParam param = new FragmentParam();
+        param.cls = cls;
+        param.data = data;
+        param.from = from;
+        param.extraMark = extra;
+        goToThisFragment(param);
+    }
+
+    public void pushFragmentToBackStack(FragmentParam param) {
         goToThisFragment(param);
     }
 
@@ -80,10 +97,17 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         }
         try {
             String fragmentTag = getFragmentTag(param);
+            if (!TextUtils.isEmpty(param.extraMark)) {
+                fragmentTag += param.extraMark;
+            }
             FragmentManager fm = getSupportFragmentManager();
             DBaseFragment fragment = (DBaseFragment) fm.findFragmentByTag(fragmentTag);
             if (fragment == null) {
-                fragment = (DBaseFragment) cls.newInstance();
+                if (param.from != null) {
+                    fragment = param.from;
+                } else {
+                    fragment = (DBaseFragment) cls.newInstance();
+                }
             }
             if (mCurrentFragment != null && mCurrentFragment != fragment) {
                 mCurrentFragment.onLeave();
@@ -92,6 +116,9 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
 
             FragmentTransaction ft = fm.beginTransaction();
             if (fragment.isAdded()) {
+                if (mCurrentFragment != null && mCurrentFragment != fragment) {
+                    ft.hide(mCurrentFragment);
+                }
                 ft.show(fragment);
             } else {
                 ft.add(containerId, fragment, fragmentTag);
@@ -109,6 +136,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
 
     /**
      * 显示fragment,调用onBackWithData方法;
+     *
      * @param cls
      * @param data
      */
@@ -124,8 +152,26 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         getSupportFragmentManager().popBackStackImmediate(cls.toString(), 0);
     }
 
+    public void goToFragment(Class<?> cls, Object data, String extra) {
+        if (cls == null) {
+            return;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(cls.toString());
+        if (!TextUtils.isEmpty(extra)) {
+            sb.append(extra);
+        }
+        DBaseFragment fragment = (DBaseFragment) getSupportFragmentManager().findFragmentByTag(sb.toString());
+        if (fragment != null) {
+            mCurrentFragment = fragment;
+            fragment.onBackWithData(data);
+        }
+        getSupportFragmentManager().popBackStackImmediate(sb.toString(), 0);
+    }
+
     /**
      * 弹出最顶部的fragment;显示下一个fragment,运行onBackWithData;
+     *
      * @param data
      */
     public void popTopFragment(Object data) {
@@ -152,6 +198,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
 
     /**
      * 弹出所有fragment,显示rootfragment;
+     *
      * @param data
      */
     public void popToRoot(Object data) {
@@ -168,8 +215,12 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     protected void doReturnBack() {
         int count = getSupportFragmentManager().getBackStackEntryCount();
         if (count <= 1 && isTaskRoot()) {
-            if (mCloseWarned && !TextUtils.isEmpty(closeWarningHint) && isDoubleClick()) {
-                Toast.makeText(this, closeWarningHint, Toast.LENGTH_SHORT).show();
+            if (mCloseWarned && !TextUtils.isEmpty(closeWarningHint)) {
+                if (isDoubleClick()) {
+                    finish();
+                } else {
+                    Toast.makeText(this, closeWarningHint, Toast.LENGTH_SHORT).show();
+                }
             } else {
                 finish();
             }
@@ -184,10 +235,10 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     private boolean isDoubleClick() {
         long longTime = System.currentTimeMillis();
         if (longTime - timeRecord <= 2000) {
-            return false;
+            return true;
         }
         timeRecord = longTime;
-        return true;
+        return false;
     }
 
     /**

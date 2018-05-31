@@ -135,4 +135,6 @@
     <string name="line_txt_msg_recommend">推荐人信息</string>
     <string name="line_txt_msg_card">证件信息</string>
     <string name="line_txt_msg_passport">护照信息</string>
+    <string name="line_txt_msg_comment">老师评价学生</string>
+    <string name="line_txt_msg_gift">赠予情况</string>
 </resources>

@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.MyApp;
 import com.ostak.justplayteacher.R;
 
@@ -27,7 +26,7 @@ import butterknife.Unbinder;
  * @see:
  */
 
-public class OrderCourseFragment extends DBaseFragment {
+public class OrderCourseFragment extends MainBaseFragment {
 
     @BindView(R.id.txt_title)
     TextView txtTitle;

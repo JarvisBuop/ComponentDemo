@@ -9,212 +9,221 @@
 
     <include layout="@layout/include_search_top" />
 
-    <RelativeLayout
-        style="@style/main_padding_margin"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_nor_15">
-
-        <ImageView
-            android:id="@+id/img_my_icon"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/wy_logo" />
-
-        <TextView
-            android:id="@+id/txt_my_name"
-            style="@style/text_nor_style_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_nor_20dp"
-            android:layout_toRightOf="@id/img_my_icon"
-            android:drawablePadding="@dimen/drawpadding"
-            android:drawableRight="@mipmap/icon_men"
-            android:text="AIM Song"
-            android:textColor="@color/color_main"
-            android:textSize="@dimen/dimen_size_26sp" />
-
-        <TextView
-            android:id="@+id/txt_head_warnning"
-            style="@style/text_nor_style_18size_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txt_my_name"
-            android:layout_marginLeft="@dimen/margin_nor"
-            android:layout_toRightOf="@id/txt_my_name"
-            android:textColor="@color/color_main_second"
-            tools:text="[警告! 您有一次违规行为]" />
-
-        <TextView
-            android:id="@+id/txt_my_level_label"
-            style="@style/text_nor_style_18size_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/txt_my_name"
-            android:layout_below="@id/txt_my_name"
-            android:layout_marginTop="@dimen/margin_nor_15"
-            android:text="@string/txt_time_already_lesson"
-            android:textSize="@dimen/dimen_size_20sp" />
-
-        <TextView
-            android:id="@+id/txt_my_level"
-            style="@style/text_nor_style_18size_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txt_my_level_label"
-            android:layout_marginLeft="@dimen/margin_nor"
-            android:layout_toRightOf="@id/txt_my_level_label"
-            android:textSize="@dimen/dimen_size_20sp"
-            tools:text="Mike" />
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/layout_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/txt_my_name"
-            android:layout_below="@id/txt_my_level_label"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/txt_my_reserve_label"
-                style="@style/text_nor_style_18size_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_total_score"
-                android:textSize="@dimen/dimen_size_20sp" />
-
-            <SeekBar
-                android:id="@+id/seekbar_my"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/txt_my_reserve_label"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:layout_toRightOf="@id/txt_my_reserve_label"
-                android:thumb="@mipmap/icon_pullbar"
-                tools:progress="50" />
-
-            <TextView
-                android:id="@+id/txt_my_reserve"
-                style="@style/text_nor_style_18size_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/txt_my_reserve_label"
-                android:textColor="@color/color_main"
-                tools:text="Mike" />
-
-            <TextView
-                android:id="@+id/txt_my_total_score"
-                style="@style/text_nor_style_18size_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_nor"
-                android:text="[当前系统总评分80分]"
-                android:textColor="@color/color_main_second" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_edit_msg"
-            style="@style/btn_log_min_green"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/txt_my_name"
-            android:layout_below="@id/layout_score"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:text="@string/txt_edit_msg" />
-    </RelativeLayout>
-
-    <View
-        style="@style/horizontal_line_margin_px"
-        android:layout_marginTop="@dimen/margin_nor_15" />
-
-
-    <LinearLayout
-        style="@style/main_padding_margin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_pre_course"
+            <RelativeLayout
+                style="@style/main_padding_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_course"
-                app:middleName="@string/txt_my_item_course" />
+                android:paddingTop="@dimen/padding_nor_15">
 
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_time"
-                app:middleName="@string/txt_my_item_mytime" />
+                <ImageView
+                    android:id="@+id/img_my_icon"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/wy_logo" />
 
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_already_course"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_already_course"
-                app:middleName="@string/txt_my_item_completedcourse" />
+                <TextView
+                    android:id="@+id/txt_my_name"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor_20dp"
+                    android:layout_toRightOf="@id/img_my_icon"
+                    android:drawablePadding="@dimen/drawpadding"
+                    android:drawableRight="@mipmap/icon_men"
+                    android:text="AIM Song"
+                    android:textColor="@color/color_main"
+                    android:textSize="@dimen/dimen_size_26sp" />
 
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_comment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_comment_score"
-                app:middleName="@string/txt_my_item_score" />
+                <TextView
+                    android:id="@+id/txt_head_warnning"
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_my_name"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/txt_my_name"
+                    android:textColor="@color/color_main_second"
+                    tools:text="[警告! 您有一次违规行为]" />
 
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_pre_pratice"
+                <TextView
+                    android:id="@+id/txt_my_level_label"
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_my_name"
+                    android:layout_below="@id/txt_my_name"
+                    android:layout_marginTop="@dimen/margin_nor_15"
+                    android:text="@string/txt_time_already_lesson"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <TextView
+                    android:id="@+id/txt_my_level"
+                    style="@style/text_nor_style_18size_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_my_level_label"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/txt_my_level_label"
+                    android:textSize="@dimen/dimen_size_20sp"
+                    tools:text="Mike" />
+
+                <LinearLayout
+                    android:id="@+id/layout_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_my_name"
+                    android:layout_below="@id/txt_my_level_label"
+                    android:layout_marginTop="@dimen/margin_nor"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_nor_style_18size_nopadding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_total_score"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar_my"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:thumb="@mipmap/icon_pullbar"
+                        tools:progress="50" />
+
+                    <TextView
+                        android:id="@+id/txt_my_reserve"
+                        style="@style/text_nor_style_18size_nopadding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main"
+                        tools:text="Mike" />
+
+                    <TextView
+                        android:id="@+id/txt_my_total_score"
+                        style="@style/text_nor_style_18size_nopadding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_nor"
+                        android:text="[当前系统总评分80分]"
+                        android:textColor="@color/color_main_second" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_edit_msg"
+                    style="@style/btn_log_min_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/txt_my_name"
+                    android:layout_below="@id/layout_score"
+                    android:layout_marginTop="@dimen/margin_nor"
+                    android:text="@string/txt_edit_msg" />
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontal_line_margin_px"
+                android:layout_marginTop="@dimen/margin_nor_15" />
+
+
+            <LinearLayout
+                style="@style/main_padding_margin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_practic"
-                app:middleName="@string/txt_my_item_prepractice" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_pre_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_course"
+                        app:middleName="@string/txt_my_item_course" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_time"
+                        app:middleName="@string/txt_my_item_mytime" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_already_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_already_course"
+                        app:middleName="@string/txt_my_item_completedcourse" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_comment_score"
+                        app:middleName="@string/txt_my_item_score" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_pre_pratice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_practic"
+                        app:middleName="@string/txt_my_item_prepractice" />
+                </LinearLayout>
+
+                <View style="@style/vertical_line_margin_px" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_wallet"
+                        app:middleName="@string/txt_my_item_wallet" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_star"
+                        app:middleName="@string/txt_my_item_star" />
+
+                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_publiclesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/icon_mine_star"
+                        app:middleName="@string/txt_my_item_publiccourse" />
+                </LinearLayout>
+
+                <!--<View style="@style/vertical_line_margin_px" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
-        <View style="@style/vertical_line_margin_px" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_wallet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_wallet"
-                app:middleName="@string/txt_my_item_wallet" />
-
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_star"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_star"
-                app:middleName="@string/txt_my_item_star" />
-
-            <com.ostak.justplayteacher.ui.view.CustomMyItem
-                android:id="@+id/cm_my_publiclesson"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:leftIcon="@mipmap/icon_mine_star"
-                app:middleName="@string/txt_my_item_publiccourse" />
-        </LinearLayout>
-
-        <!--<View style="@style/vertical_line_margin_px" />-->
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

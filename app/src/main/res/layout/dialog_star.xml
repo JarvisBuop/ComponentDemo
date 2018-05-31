@@ -15,6 +15,7 @@
         style="@style/text_nor_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_course_time"
         android:layout_marginTop="@dimen/margin_nor_30dp"
         android:drawablePadding="@dimen/drawpadding"
         android:text="@string/makesure_star"

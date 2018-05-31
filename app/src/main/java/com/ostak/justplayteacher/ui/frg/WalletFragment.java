@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.ostak.justplayteacher.R;
 
 import butterknife.BindView;
@@ -27,7 +26,7 @@ import butterknife.Unbinder;
  * @see:
  */
 
-public class WalletFragment extends DBaseFragment {
+public class WalletFragment extends MainBaseFragment {
 
     @BindView(R.id.txt_title)
     TextView txtTitle;
@@ -48,9 +47,9 @@ public class WalletFragment extends DBaseFragment {
     @BindView(R.id.txt_wallet_withdraw)
     TextView txtWalletWithdraw;
     @BindView(R.id.line1)
-    TextView viewLine1;
+    View viewLine1;
     @BindView(R.id.line2)
-    TextView viewLine2;
+    View viewLine2;
     @BindView(R.id.txt_wallet_provider)
     TextView txtWalletProvider;
     @BindView(R.id.txt_wallet_current)

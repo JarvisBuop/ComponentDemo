@@ -37,6 +37,7 @@
                     android:text="@string/txt_person_name" />
 
                 <EditText
+                    android:id="@+id/edit_input_name"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -56,6 +57,7 @@
                     android:text="@string/txt_person_phone" />
 
                 <EditText
+                    android:id="@+id/edit_input_phone"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -75,6 +77,7 @@
                     android:text="@string/txt_person_email" />
 
                 <EditText
+                    android:id="@+id/edit_input_email"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -94,6 +97,7 @@
                     android:text="@string/txt_person_age" />
 
                 <EditText
+                    android:id="@+id/edit_input_age"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -113,6 +117,7 @@
                     android:text="@string/txt_person_tech_school" />
 
                 <EditText
+                    android:id="@+id/edit_input_techschool"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -132,6 +137,7 @@
                     android:text="@string/txt_person_gra_school" />
 
                 <EditText
+                    android:id="@+id/edit_input_graduteschool"
                     style="@style/text_nor_style_nopadding_input_nobackground"
                     tools:text="Mike" />
             </LinearLayout>
@@ -153,6 +159,7 @@
 
 
                 <com.ostak.justplayteacher.ui.view.CustomSpannable
+                    android:id="@+id/spannable_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -174,6 +181,7 @@
 
 
                 <com.ostak.justplayteacher.ui.view.CustomSpannable
+                    android:id="@+id/spannable_time_tech"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>

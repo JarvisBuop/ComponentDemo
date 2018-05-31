@@ -9,8 +9,11 @@ import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseExtendFragmentActivty;
 import com.jarvisdong.uikit.baseui.DBaseFragment;
+import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplayteacher.R;
+import com.ostak.justplayteacher.domain.impl.MainActController;
 import com.ostak.justplayteacher.ui.frg.CourseFragment;
+import com.ostak.justplayteacher.ui.frg.MainBaseFragment;
 import com.ostak.justplayteacher.ui.frg.MyFragment;
 import com.ostak.justplayteacher.ui.frg.OrderCourseFragment;
 import com.ostak.justplayteacher.ui.frg.WalletFragment;
@@ -23,7 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainActivity extends DBaseExtendFragmentActivty {
+public class MainActivity extends DBaseExtendFragmentActivty implements MainActController {
 
     @BindView(R.id.img_circle)
     CircleImageView imgCircle;
@@ -56,14 +59,14 @@ public class MainActivity extends DBaseExtendFragmentActivty {
     @Override
     protected void initView(Bundle savedInstanceState) {
         ButterKnife.bind(this);
-        setBackOrStay(true);
+//        setBackOrStay(true);
     }
 
     @Override
     protected void initVariable() {
         mFragments = new ArrayList<>();
-        CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment, 0);
-        CourseFragment playerFragment = CourseFragment.newInstance(R.id.layout_fragment, 1);
+        CourseFragment courseFragment = CourseFragment.newInstance(R.id.layout_fragment);
+        CourseFragment playerFragment = CourseFragment.newInstance(R.id.layout_fragment);
         OrderCourseFragment orderCourseFragment = OrderCourseFragment.newInstance(R.id.layout_fragment);
         WalletFragment walletFragment = WalletFragment.newInstance(R.id.layout_fragment);
         MyFragment myfragment = MyFragment.newInstance(R.id.layout_fragment);
@@ -75,12 +78,18 @@ public class MainActivity extends DBaseExtendFragmentActivty {
         mFragments.add(walletFragment);
         mFragments.add(myfragment);
 
-        showFragment(0);
+        for (int i = 0; i < mFragments.size(); i++) {
+            MainBaseFragment mainBaseFragment = (MainBaseFragment) mFragments.get(i);
+            mainBaseFragment.setMainActController(this);
+        }
+
+        showFragment(0, "0", "0");
     }
 
-    private void showFragment(int i) {
+    private void showFragment(int i, Object object, String uniqueKey) {
         if (mFragments.size() > i) {
-            switchFragment(mFragments.get(i), false);
+            DBaseFragment dBaseFragment = mFragments.get(i);
+            pushFragmentToBackStack(dBaseFragment.getClass(), object, dBaseFragment, uniqueKey);
         }
     }
 
@@ -92,7 +101,7 @@ public class MainActivity extends DBaseExtendFragmentActivty {
                 RadioButton radioButton = (RadioButton) findViewById(checkedId);
                 radioSetting(radioButton);
                 int tag = Integer.parseInt((String) radioButton.getTag());
-                showFragment(tag);
+                showFragment(tag, String.valueOf(tag), String.valueOf(tag));
             }
         });
     }
@@ -122,5 +131,11 @@ public class MainActivity extends DBaseExtendFragmentActivty {
         radioButton.setTextColor(getResources().getColor(R.color.color_main));
 
         this.currentRbtn = radioButton;
+    }
+
+
+    @Override
+    public void switchOtherFrag(int i, String s, FragmentParam o) {
+        pushFragmentToBackStack(o);
     }
 }

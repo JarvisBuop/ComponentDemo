@@ -31,5 +31,5 @@
         layout="@layout/include_progressbar_bottom"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:visibility="visible" />
+        android:visibility="gone" />
 </LinearLayout>
