@@ -2,7 +2,7 @@ package com.ostak.justplayteacher.ui.frg;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +12,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jarvisdong.uikit.adapter.CommonAdapter;
+import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
+import com.ostak.justplayteacher.MyApp;
 import com.ostak.justplayteacher.R;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by JarvisDong on 2018/5/26.
@@ -54,8 +58,6 @@ public class WalletFragment extends MainBaseFragment {
     TextView txtWalletProvider;
     @BindView(R.id.txt_wallet_current)
     TextView txtWalletCurrent;
-//    @BindView(R.id.txt_wallet_way)
-//    TextView txtWalletWay;
     @BindView(R.id.txt_wallet_bank)
     TextView txtWalletBank;
     @BindView(R.id.txt_wallet_bank_name)
@@ -70,9 +72,9 @@ public class WalletFragment extends MainBaseFragment {
     TextView txtHistory;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.swipe)
-    SwipeRefreshLayout swipe;
-    Unbinder unbinder;
+
+    CommonAdapter mAdapter;
+    ArrayList mDataList = new ArrayList();
 
     public static WalletFragment newInstance(int containId) {
 
@@ -87,7 +89,7 @@ public class WalletFragment extends MainBaseFragment {
     @Override
     protected View createView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_wallet, container, false);
-        unbinder = ButterKnife.bind(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -98,25 +100,40 @@ public class WalletFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
+        ((TextView)viewLine1.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_cash));
+        ((TextView)viewLine2.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_operate_record));
+        initRecycler();
 
+        initFakeData();
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
+    private void initFakeData() {
+        mDataList.add(new Object());
+        mDataList.add(new Object());
+        mDataList.add(new Object());
+        mAdapter.notifyDataSetChanged();
     }
 
-    @OnClick({R.id.img_msg, R.id.img_quit, /*R.id.txt_wallet_way,*/ R.id.btn_apply, R.id.txt_history})
+    private void initRecycler() {
+        recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mAdapter = new CommonAdapter(mContext,R.layout.item_wallet,mDataList) {
+            @Override
+            protected void convert(ViewHolder holder, Object o, int position) {
+                holder.setText(R.id.course_one,"2018-19-19 17:33:33");
+                holder.setText(R.id.course_two,"金额:222");
+                holder.setText(R.id.course_three,"处理中");
+            }
+        };
+        recyclerView.setAdapter(mAdapter);
+    }
+
+    @OnClick({R.id.img_msg, R.id.img_quit, R.id.btn_apply, R.id.txt_history})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_msg:
                 break;
             case R.id.img_quit:
                 break;
-//            case R.id.txt_wallet_way:
-//                //弹下拉框;
-//                break;
             case R.id.btn_apply:
                 break;
             case R.id.txt_history:

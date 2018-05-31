@@ -158,6 +158,7 @@ public class MyFragment extends MainBaseFragment {
             case R.id.cm_my_time:
                 break;
             case R.id.cm_my_already_course:
+                enterLogic(new FragmentParam(MyAlreadyCourseFragment.newInstance(getContainerId()), MyAlreadyCourseFragment.class, null));
                 break;
             case R.id.cm_my_comment:
                 enterLogic(new FragmentParam(MyCommentStuFragment.newInstance(getContainerId()), MyCommentStuFragment.class, null));
@@ -175,7 +176,7 @@ public class MyFragment extends MainBaseFragment {
     }
 
     private void enterLogic(FragmentParam t) {
-        mController.switchOtherFrag(0, "",t);
+        mController.switchOtherFrag(0, "", t);
     }
 
 

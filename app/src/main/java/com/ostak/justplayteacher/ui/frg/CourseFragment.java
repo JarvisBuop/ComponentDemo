@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.jarvisdong.uikit.adapter.QuickFuncAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.jarvisdong.uikit.adapter.wrapper.LoadMoreWrapper;
+import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplayteacher.MyApp;
 import com.ostak.justplayteacher.R;
 
@@ -153,6 +154,14 @@ public class CourseFragment extends MainBaseFragment {
                 holder.setText(R.id.course_four, "审核通过");
                 holder.setText(R.id.course_five, "未开始");
                 holder.setText(R.id.course_six, "查看 >");
+
+                holder.setOnClickListener(R.id.course_six, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mController.switchOtherFrag(0, "",
+                                new FragmentParam(LookCourseFragment.newInstance(getContainerId()), LookCourseFragment.class, null));
+                    }
+                });
             }
         };
         mAdapter.setOnEmptyClickListener(v -> {

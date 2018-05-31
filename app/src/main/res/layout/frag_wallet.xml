@@ -10,7 +10,8 @@
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,7 +145,10 @@
                         android:text="@string/wallet_withdraw_way"
                         android:textSize="@dimen/dimen_size_20sp" />
 
-                    <include layout="@layout/include_spanable" />
+                    <com.ostak.justplayteacher.ui.view.CustomSpannable
+                        android:id="@+id/spannale_withdraw_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -265,7 +269,7 @@
                 android:text="@string/look_history" />
 
             <include
-                layout="@layout/include_swipe_recyclerview"
+                layout="@layout/include_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_nor_30dp"

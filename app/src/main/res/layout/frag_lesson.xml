@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/txt_star_name"
             android:layout_toRightOf="@id/txt_star_name"
+            android:visibility="gone"
             tools:text="Mike" />
 
 
@@ -49,6 +50,7 @@
             android:layout_below="@id/txt_star_name"
             android:layout_toRightOf="@id/img_star_icon"
             android:textSize="@dimen/dimen_size_20sp"
+            android:visibility="gone"
             tools:text="老师" />
 
         <TextView
@@ -59,6 +61,7 @@
             android:layout_alignBaseline="@id/txt_star_remain"
             android:layout_toRightOf="@id/txt_star_remain"
             android:textColor="@color/color_main_second"
+            android:visibility="gone"
             tools:text="过期时间:2018年11月33日" />
 
         <LinearLayout
@@ -66,75 +69,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_star_icon"
-            android:layout_marginBottom="@dimen/padding_nor_30"
+            android:layout_marginBottom="@dimen/padding_nor_15"
             android:layout_marginTop="@dimen/margin_nor"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_nor">
 
-            <include
-                layout="@layout/include_show_lesson_time"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="@dimen/padding_nor" />
+            <com.ostak.justplayteacher.ui.view.CustomCourseTime
+                android:id="@+id/custom_course_time_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <View
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:background="@color/bg_techer" />
 
-            <!--<HorizontalScrollView-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="2">-->
-
-            <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@color/white">-->
-
-            <!--<include-->
-            <!--layout="@layout/include_show_lesson_time"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="@dimen/padding_nor" />-->
-
-            <!--<View style="@style/vertical_line_margin_px" />-->
-
-            <!--<include-->
-            <!--layout="@layout/include_show_lesson_time"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"-->
-            <!--android:padding="@dimen/padding_nor" />-->
-
-            <!--</LinearLayout>-->
-            <!--</HorizontalScrollView>-->
-
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="@color/white">
+                android:layout_weight="2">
 
-                <include
-                    layout="@layout/include_show_lesson_time"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="@dimen/padding_nor" />
+                    android:background="@color/white">
 
-                <View style="@style/vertical_line_margin_px" />
+                    <com.ostak.justplayteacher.ui.view.CustomCourseTime
+                        android:id="@+id/custom_course_time_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-                <include
-                    layout="@layout/include_show_lesson_time"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="@dimen/padding_nor" />
+                    <View style="@style/vertical_line_margin_px" />
 
-            </LinearLayout>
+                    <com.ostak.justplayteacher.ui.view.CustomCourseTime
+                        android:id="@+id/custom_course_time_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
         </LinearLayout>
 
         <include

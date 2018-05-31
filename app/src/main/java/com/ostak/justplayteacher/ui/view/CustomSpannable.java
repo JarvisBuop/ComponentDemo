@@ -125,11 +125,9 @@ public class CustomSpannable extends LinearLayout {
     public void toggle() {
         if (popupWindow != null && popupWindow.isShowing()) {
             popupWindow.dismiss();
-            ObjectAnimator.ofInt(imgSpan, "rotationY", 0, -180).start();
         } else {
             showPop();
-
-            ObjectAnimator.ofInt(imgSpan, "rotationY", 0, 180).start();
+            ObjectAnimator.ofFloat(imgSpan, "rotationX", 0f, 180f).start();
         }
     }
 
@@ -142,7 +140,7 @@ public class CustomSpannable extends LinearLayout {
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
-
+                ObjectAnimator.ofFloat(imgSpan, "rotationX", 180f, 0f).start();
             }
         });
         popupWindow.showAsDropDown(txtSpan);
