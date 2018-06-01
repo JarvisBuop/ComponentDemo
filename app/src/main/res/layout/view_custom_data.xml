@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:gravity="center"
-        android:minWidth="180dp"
+        android:minWidth="120dp"
         android:padding="@dimen/padding_nor_8dp"
         android:textColor="@color/text_nor"
         android:textSize="@dimen/dimen_size_18sp"

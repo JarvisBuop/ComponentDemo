@@ -141,4 +141,6 @@
     <string name="line_txt_cash">现金</string>
     <string name="line_txt_operate_record">操作记录</string>
     <string name="line_txt_stu_book">学生曲谱</string>
+    <string name="line_txt_selectecd_time">选择上课时间</string>
+    <string name="line_txt_selectecd_coursetime">可选课时</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_techer"
@@ -57,6 +56,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_nor_5dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -71,11 +71,13 @@
                         style="@style/text_nor_style_nopadding"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/dimen_size_18sp"
                         android:layout_alignBottom="@id/date_right_one"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
                         android:layout_marginLeft="@dimen/margin_nor"
                         android:layout_toRightOf="@id/date_right_one"
-                        android:text="已选择[3]课时" />
+                        android:text="已选择[3]课时"
+                        android:textSize="@dimen/dimen_size_18sp" />
 
                     <include
                         layout="@layout/include_swipe_recyclerview"

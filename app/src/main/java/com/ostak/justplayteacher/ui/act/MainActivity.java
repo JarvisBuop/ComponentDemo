@@ -89,7 +89,7 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
     private void showFragment(int i, Object object, String uniqueKey) {
         if (mFragments.size() > i) {
             DBaseFragment dBaseFragment = mFragments.get(i);
-            pushFragmentToBackStack(dBaseFragment.getClass(), object, dBaseFragment, uniqueKey);
+            pushFragmentToBackStack(dBaseFragment.getClass(), object, dBaseFragment, uniqueKey,true);
         }
     }
 

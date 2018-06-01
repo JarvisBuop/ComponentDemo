@@ -171,6 +171,9 @@ public class MyFragment extends MainBaseFragment {
                 enterLogic(new FragmentParam(MyStarDetailFragment.newInstance(getContainerId()), MyStarDetailFragment.class, null));
                 break;
             case R.id.cm_my_publiclesson:
+                WaitMsgFragment waitMsgFragment = WaitMsgFragment.newInstance(getContainerId());
+                waitMsgFragment.setMainActController(mController);
+                enterLogic(new FragmentParam(waitMsgFragment, WaitMsgFragment.class, null));
                 break;
         }
     }

@@ -7,9 +7,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.Utils;
 import com.jarvisdong.uikit.R;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
+
+import java.util.List;
 
 
 /**
@@ -24,6 +27,9 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     private boolean mCloseWarned = true;
     private String closeWarningHint = Utils.getApp().getResources().getString(R.string.close_warning);
     private long timeRecord = 0;
+
+    private static final String TAG = DBaseExtendFragmentActivty.class.getClass().getSimpleName();
+    private boolean isDebug = true;
 
     @Override
     public abstract int getContentViewId();
@@ -64,12 +70,13 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         goToThisFragment(param);
     }
 
-    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from, String extra) {
+    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from, String extra, boolean isAdd2BackStack) {
         FragmentParam param = new FragmentParam();
         param.cls = cls;
         param.data = data;
         param.from = from;
         param.extraMark = extra;
+        param.isAdd2BackStack = isAdd2BackStack;
         goToThisFragment(param);
     }
 
@@ -118,19 +125,39 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
             if (fragment.isAdded()) {
                 if (mCurrentFragment != null && mCurrentFragment != fragment) {
                     ft.hide(mCurrentFragment);
+                    hideOtherStackFrag(ft);
                 }
                 ft.show(fragment);
             } else {
                 ft.add(containerId, fragment, fragmentTag);
+                if (param.isAdd2BackStack) {
+                    ft.addToBackStack(fragmentTag);
+                }
             }
             mCurrentFragment = fragment;
 
-            ft.addToBackStack(fragmentTag);
             ft.commitAllowingStateLoss();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+        }
+
+        if (isDebug) {
+            int count = getSupportFragmentManager().getBackStackEntryCount();
+            LogUtils.eTag(TAG, "frag::" + count);
+            List<Fragment> fragments = getSupportFragmentManager().getFragments();
+            StringBuilder sb = new StringBuilder();
+            for (Fragment fragment : fragments) {
+                sb.append(fragment.getTag() + "\n");
+            }
+            LogUtils.eTag(TAG, "child::" + sb.toString());
+        }
+    }
+
+    private void hideOtherStackFrag(FragmentTransaction ft) {
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            ft.hide(fragment);
         }
     }
 

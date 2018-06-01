@@ -8,12 +8,14 @@
     <include layout="@layout/include_search_top" />
 
     <include
+        android:id="@+id/part_one"
         layout="@layout/include_head_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <include
+        android:id="@+id/part_two"
         layout="@layout/include_head_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"

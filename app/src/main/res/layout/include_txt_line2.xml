@@ -14,7 +14,7 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/txt_line1"
+            android:id="@+id/txt_line_mark1"
             style="@style/text_nor_style_nopadding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/txt_line2"
+            android:id="@+id/txt_line_mark2"
             style="@style/text_nor_style_nopadding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

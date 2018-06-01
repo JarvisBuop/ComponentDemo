@@ -32,7 +32,7 @@ import butterknife.Unbinder;
  * @see:
  */
 
-public class OrderCourseFragment extends MainBaseFragment {
+public class OrderCourseFragment2 extends MainBaseFragment {
 
     @BindView(R.id.txt_title)
     TextView txtTitle;
@@ -74,11 +74,11 @@ public class OrderCourseFragment extends MainBaseFragment {
     ArrayList mDataList = new ArrayList();
     CommonAdapter mAdapter;
 
-    public static OrderCourseFragment newInstance(int containId) {
+    public static OrderCourseFragment2 newInstance(int containId) {
 
         Bundle args = new Bundle();
 
-        OrderCourseFragment fragment = new OrderCourseFragment();
+        OrderCourseFragment2 fragment = new OrderCourseFragment2();
         fragment.setContainerId(containId);
         fragment.setArguments(args);
         return fragment;
@@ -99,7 +99,7 @@ public class OrderCourseFragment extends MainBaseFragment {
     @Override
     protected void processLogic(Bundle savedInstanceState) {
         txtTitle.setText(MyApp.getAppInstansce().getResources().getString(R.string.radio_text3));
-        lineSetting(true);
+        lineSetting(false);
 
 
         initRecycler();
@@ -114,8 +114,8 @@ public class OrderCourseFragment extends MainBaseFragment {
 
     public void lineSetting(boolean isSingle) {
         ((TextView) lineView1.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_time));
-        ((TextView) lineView2.findViewById(R.id.txt_line_mark1)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_coursetime));
-        ((TextView) lineView2.findViewById(R.id.txt_line_mark2)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_time));
+        ((TextView) lineView2.findViewById(R.id.txt_line1)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_coursetime));
+        ((TextView) lineView2.findViewById(R.id.txt_line2)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_time));
         if (isSingle) {
             lineView1.setVisibility(View.VISIBLE);
             lineView2.setVisibility(View.GONE);

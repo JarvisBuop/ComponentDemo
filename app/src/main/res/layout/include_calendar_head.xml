@@ -119,12 +119,14 @@
         android:orientation="vertical">
 
         <include
+            android:id="@+id/txt_line1"
             layout="@layout/include_txt_line"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible" />
 
         <include
+            android:id="@+id/txt_line2"
             layout="@layout/include_txt_line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
