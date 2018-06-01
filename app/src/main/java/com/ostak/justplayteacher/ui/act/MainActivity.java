@@ -1,6 +1,7 @@
 package com.ostak.justplayteacher.ui.act;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -50,6 +51,7 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
     RadioButton currentRbtn;
 
     List<DBaseFragment> mFragments = null;
+    String[] arr = new String[5];
 
     @Override
     public int getContentViewId() {
@@ -81,15 +83,19 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
         for (int i = 0; i < mFragments.size(); i++) {
             MainBaseFragment mainBaseFragment = (MainBaseFragment) mFragments.get(i);
             mainBaseFragment.setMainActController(this);
+            arr[i] = mFragments.get(i).getClass().toString() + i;
         }
 
-        showFragment(0, "0", "0");
+        showFragment(0, "0", arr[0]);
     }
 
     private void showFragment(int i, Object object, String uniqueKey) {
         if (mFragments.size() > i) {
+            //每次去除除保留的其他的fragment;
+            popToFragmentsExceptArrays(arr);
+
             DBaseFragment dBaseFragment = mFragments.get(i);
-            pushFragmentToBackStack(dBaseFragment.getClass(), object, dBaseFragment, uniqueKey,true);
+            pushFragmentToBackStack(dBaseFragment.getClass(), uniqueKey, object, dBaseFragment);
         }
     }
 
@@ -101,7 +107,7 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
                 RadioButton radioButton = (RadioButton) findViewById(checkedId);
                 radioSetting(radioButton);
                 int tag = Integer.parseInt((String) radioButton.getTag());
-                showFragment(tag, String.valueOf(tag), String.valueOf(tag));
+                showFragment(tag, String.valueOf(tag), arr[tag]);
             }
         });
     }
@@ -112,16 +118,25 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
             case R.id.img_circle:
                 break;
             case R.id.radio_one:
+                showPointFrag(0);
                 break;
             case R.id.radio_two:
+                showPointFrag(1);
                 break;
             case R.id.radio_three:
+                showPointFrag(2);
                 break;
             case R.id.radio_four:
+                showPointFrag(3);
                 break;
             case R.id.radio_five:
+                showPointFrag(4);
                 break;
         }
+    }
+
+    private void showPointFrag(int tag){
+//        showFragment(tag, String.valueOf(tag), arr[tag]);
     }
 
     private void radioSetting(RadioButton radioButton) {
@@ -138,4 +153,25 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
     public void switchOtherFrag(int i, String s, FragmentParam o) {
         pushFragmentToBackStack(o);
     }
+
+
+    public void popToFragmentsExceptArrays(String[] notPopFragTags) {
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        for (Fragment fragment : fragments) {
+            int length = notPopFragTags.length;
+            int count = 0;
+            for (int i = 0; i < length; i++) {
+                if (!notPopFragTags[i].equals(fragment.getTag())) {
+                    count++;
+                } else {
+                    break;
+                }
+                if (count == length) {
+                    popToFragment(fragment.getTag());
+                }
+            }
+
+        }
+    }
+
 }

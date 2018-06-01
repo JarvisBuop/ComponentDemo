@@ -83,7 +83,7 @@ android {
                     outDirectory = properties.getProperty("app.output.dir")
                 }
                 if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                    def fileName = "justPlay-"
+                    def fileName = "justPlay-teacher"
                     fileName += getBuildTime() + "-"
                     if (!(variant.flavorName != null && variant.flavorName.equals(""))) {
                         fileName += variant.flavorName

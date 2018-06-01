@@ -9,5 +9,7 @@ import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 
 public interface MainActController {
 
+    //切换frag;
     void switchOtherFrag(int i,String s,FragmentParam t);
+
 }

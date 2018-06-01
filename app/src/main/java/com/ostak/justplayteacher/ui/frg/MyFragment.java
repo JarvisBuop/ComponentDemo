@@ -151,24 +151,32 @@ public class MyFragment extends MainBaseFragment {
                 break;
             case R.id.btn_edit_msg:
                 //编辑资料
-                enterLogic(new FragmentParam(MyPersonMsgFragment.newInstance(getContainerId()), MyPersonMsgFragment.class, null));
+                MyPersonMsgFragment myPersonMsgFragment = MyPersonMsgFragment.newInstance(getContainerId());
+                myPersonMsgFragment.setMainActController(mController);
+                enterLogic(new FragmentParam(myPersonMsgFragment, MyPersonMsgFragment.class, null));
                 break;
             case R.id.cm_my_pre_course:
                 break;
             case R.id.cm_my_time:
                 break;
             case R.id.cm_my_already_course:
-                enterLogic(new FragmentParam(MyAlreadyCourseFragment.newInstance(getContainerId()), MyAlreadyCourseFragment.class, null));
+                MyAlreadyCourseFragment myAlreadyCourseFragment = MyAlreadyCourseFragment.newInstance(getContainerId());
+                myAlreadyCourseFragment.setMainActController(mController);
+                enterLogic(new FragmentParam(myAlreadyCourseFragment, MyAlreadyCourseFragment.class, null));
                 break;
             case R.id.cm_my_comment:
-                enterLogic(new FragmentParam(MyCommentStuFragment.newInstance(getContainerId()), MyCommentStuFragment.class, null));
+                MyCommentStuFragment myCommentStuFragment = MyCommentStuFragment.newInstance(getContainerId());
+                myCommentStuFragment.setMainActController(mController);
+                enterLogic(new FragmentParam(myCommentStuFragment, MyCommentStuFragment.class, null));
                 break;
             case R.id.cm_my_pre_pratice:
                 break;
             case R.id.cm_my_wallet:
                 break;
             case R.id.cm_my_star:
-                enterLogic(new FragmentParam(MyStarDetailFragment.newInstance(getContainerId()), MyStarDetailFragment.class, null));
+                MyStarDetailFragment myStarDetailFragment = MyStarDetailFragment.newInstance(getContainerId());
+                myStarDetailFragment.setMainActController(mController);
+                enterLogic(new FragmentParam(myStarDetailFragment, MyStarDetailFragment.class, null));
                 break;
             case R.id.cm_my_publiclesson:
                 WaitMsgFragment waitMsgFragment = WaitMsgFragment.newInstance(getContainerId());

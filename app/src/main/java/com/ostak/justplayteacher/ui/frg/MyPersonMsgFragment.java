@@ -99,7 +99,6 @@ public class MyPersonMsgFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-
     }
 
     @OnClick({R.id.img_msg, R.id.img_quit, R.id.btn_updata})
@@ -113,4 +112,6 @@ public class MyPersonMsgFragment extends MainBaseFragment {
                 break;
         }
     }
+
+
 }

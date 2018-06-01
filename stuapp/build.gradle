@@ -1,5 +1,22 @@
 apply plugin: 'com.android.application'
 
+def static getGitVersion() {
+    def cmd = 'git rev-list HEAD --count'
+    try {
+        return cmd.execute().text.trim().toInteger()
+    } catch (Throwable th) {
+        return "";
+    }
+}
+
+def static getBuildTime() {
+    try {
+        return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"));
+    } catch (Throwable th) {
+        return new Date().toLocaleString();
+    }
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -20,24 +37,69 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    signingConfigs {
+        myConfig {
+//            storeFile file(properties.getProperty('justplay.signing.file'))
+//            storePassword properties.getProperty('justplay.signing.password')
+//            keyAlias properties.getProperty('justplay.signing.alias')
+//            keyPassword properties.getProperty('justplay.signing.key.password')
         }
     }
 
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+        }
+        release {
+            minifyEnabled false //开启混淆
+            shrinkResources false //压缩资源
+            zipAlignEnabled false //是否优化apk文件，将apk文件中未压缩的数据在4个字节边界上对齐
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        //todo 3.0之后;each , outputFile -> all,outputFileName
+        android.applicationVariants.all { variant ->    //批量修改Apk名字
+            variant.outputs.all { output ->
+                def outputFile = output.outputFile
+                def outDirectory = outputFile.parent
+
+                if ("true".equals(IS_JENKINS)) {
+                    //配合jenkins的打包路径;
+                    outDirectory = properties.getProperty("app.output.dir")
+                }
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def fileName = "justPlay-student"
+                    fileName += getBuildTime() + "-"
+                    if (!(variant.flavorName != null && variant.flavorName.equals(""))) {
+                        fileName += variant.flavorName
+                    }
+                    if (!"release".equals(variant.buildType.name)) {
+                        fileName += variant.buildType.name + "-"
+                    }
+                    if (!(variant.versionName != null && variant.versionName.equals(""))) {
+                        fileName += variant.versionName
+                    }
+                    fileName += ".apk"
+                    outputFileName = fileName;
+                }
+            }
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':app')
+    compile project(path: ':uikit')
 
     testImplementation "junit:junit:${rootProject.junitVersion}"
-    androidTestImplementation ("com.android.support.test:runner:${rootProject.runnerVersion}"){
+    androidTestImplementation("com.android.support.test:runner:${rootProject.runnerVersion}") {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation ("com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"){
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}") {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
 
@@ -53,5 +115,38 @@ dependencies {
     //分包;
     implementation "com.android.support:multidex:$rootProject.multidexVersion"
 
+//    //todo 基本功能库的依赖
+    //RxJava;
+    //RxAndroid;
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    //gson解析
+    implementation "com.google.code.gson:gson:${rootProject.gsonVersion}"
+    //dagger
+//    compile 'com.google.dagger:dagger:2.14.1'
+//    annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
+    //下载框架retrofit;
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.retrofitVersion}"//对序列化和反序列化的转化;
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.retrofitVersion}"//对Call对象的转化为Observe对象
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.okhttp_logging_interceptor}"
+//
+//    //todo 常用工具库的依赖
+    //butterknife
+    implementation "com.jakewharton:butterknife:${rootProject.butterKnifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.butterKnifeVersion}"
+    implementation "com.jakewharton:disklrucache:${rootProject.cacheVersion}"
 
+    implementation("com.github.bumptech.glide:glide:${rootProject.glideVersion}") {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.glideVersion}"
+    implementation "com.blankj:utilcode:$rootProject.blackVersion"
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleimgVersion"
+//
+//    //todo EventBus 事件总线;
+    implementation "org.greenrobot:eventbus:${rootProject.eventBusVersion}"
+
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    implementation "com.google.guava:guava:$rootProject.guava"
 }

@@ -14,4 +14,6 @@ public abstract class MainBaseFragment extends DBaseFragment {
     public final void setMainActController(MainActController mController) {
         this.mController = mController;
     }
+
+
 }
