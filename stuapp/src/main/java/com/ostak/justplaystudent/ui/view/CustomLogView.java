@@ -137,14 +137,11 @@ public class CustomLogView extends RelativeLayout {
                 if (o instanceof String) {
                     String str = (String) o;
                     holder.setText(R.id.txt_span_item, str);
-                    holder.setOnClickListener(R.id.layout_txt_item, new OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            current = str;
-                            editInput.setText(str);
-                            if (popupWindow != null) {
-                                popupWindow.dismiss();
-                            }
+                    holder.setOnClickListener(R.id.layout_txt_item, v -> {
+                        current = str;
+                        editInput.setText(str);
+                        if (popupWindow != null) {
+                            popupWindow.dismiss();
                         }
                     });
                 }

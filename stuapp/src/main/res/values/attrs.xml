@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--custom-series-->
     <declare-styleable name="CustomLogView" >
         <attr name="editHint" format="string" />
         <attr name="editFocus" format="boolean" />
         <attr name="left_icon" format="reference" />
+        <attr name="right_txt" format="string" />
         <attr name="input_mode" format="enum">
             <enum name="text" value="0" />
             <enum name="icon" value="1" />
         </attr>
-
-        <attr name="right_txt" format="string"/>
     </declare-styleable>
 
 

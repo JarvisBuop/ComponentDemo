@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:log="http://schemas.android.com/apk/com.ostak.justplaystudent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -49,30 +49,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor"
-            log:editFocus="true"
-            log:editHint="@string/edit_input_name"
-            log:input_mode="text"
-            log:left_icon="@mipmap/icon_phone" />
+            app:editFocus="true"
+            app:editHint="@string/edit_input_name"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_phone" />
 
 
         <com.ostak.justplaystudent.ui.view.CustomLogView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor"
-            log:editFocus="false"
-            log:editHint="@string/edit_select_timeage"
-            log:input_mode="icon"
-            log:left_icon="@mipmap/timelengh" />
+            app:editFocus="false"
+            app:editHint="@string/edit_select_timeage"
+            app:input_mode="icon"
+            app:left_icon="@mipmap/timelengh" />
 
         <com.ostak.justplaystudent.ui.view.CustomLogView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor"
-            log:editFocus="true"
-            log:editHint="@string/edit_input_recommend_phone"
-            log:input_mode="text"
-            log:left_icon="@mipmap/referrer"
-            log:right_txt="@string/edit_input_whatever" />
+            app:editFocus="true"
+            app:editHint="@string/edit_input_recommend_phone"
+            app:input_mode="text"
+            app:left_icon="@mipmap/referrer"
+            app:right_txt="@string/edit_input_whatever" />
 
         <Button
             android:id="@+id/btn_login"
