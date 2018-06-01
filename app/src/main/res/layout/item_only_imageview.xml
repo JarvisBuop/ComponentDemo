@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="600dp"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/img_display"
-        android:layout_width="600dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:padding="@dimen/margin_nor_15"
-        android:scaleType="fitCenter"
-        tools:src="@mipmap/m_normal_info" />
-</FrameLayout>
+    android:id="@+id/img_display"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:layout_marginRight="@dimen/margin_nor_15"
+    android:layout_gravity="center"
+    android:scaleType="fitXY"
+    tools:src="@mipmap/m_normal_info" />

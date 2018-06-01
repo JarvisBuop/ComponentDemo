@@ -8,5 +8,45 @@
 
     <include layout="@layout/include_common_top" />
 
-    <include layout="@layout/include_head_recyclerview" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_left_count"
+            style="@style/text_nor_style_20padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_main_second"
+            android:textSize="@dimen/dimen_size_26sp"
+            android:visibility="visible"
+            tools:text="@string/txt_cancel_course" />
+
+        <TextView
+            android:id="@+id/txt_right_total"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:text="@string/txt_all" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_line_px"
+        android:layout_marginBottom="@dimen/margin_nor"
+        android:layout_marginLeft="@dimen/margin_nor_15"
+        android:layout_marginRight="@dimen/margin_nor_15" />
+
+    <include
+        layout="@layout/include_swipe_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nor_15"
+        android:layout_marginRight="@dimen/margin_nor_15" />
 </LinearLayout>

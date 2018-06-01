@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/JustPlayTeacher.iml" filepath="$PROJECT_DIR$/JustPlayTeacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/stuapp/stuapp.iml" filepath="$PROJECT_DIR$/stuapp/stuapp.iml" />
-      <module fileurl="file://D:\MyAsProject\JustPlayTeacher\stuapp\stuapp.iml" filepath="D:\MyAsProject\JustPlayTeacher\stuapp\stuapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/uikit/uikit.iml" filepath="$PROJECT_DIR$/uikit/uikit.iml" />
     </modules>
   </component>

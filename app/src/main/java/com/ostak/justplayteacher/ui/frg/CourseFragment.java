@@ -103,13 +103,6 @@ public class CourseFragment extends MainBaseFragment {
             if (clear) {
                 mDataLists.clear();
             }
-            mDataLists.add(page);
-            mDataLists.add(page);
-            mDataLists.add(page);
-            mDataLists.add(page);
-            mDataLists.add(page);
-            mAdapter.notifyDataSetChangedWrapper();
-            page++;
             if (page == 5) {
                 mAdapter.resetEmptyDefault();
                 mAdapter.loadMoreComplete();
@@ -117,6 +110,13 @@ public class CourseFragment extends MainBaseFragment {
                 mAdapter.resetEmptyRetry();
                 mAdapter.loadMoreSuccess();
             }
+            mDataLists.add(page);
+            mDataLists.add(page);
+            mDataLists.add(page);
+            mDataLists.add(page);
+            mDataLists.add(page);
+            mAdapter.notifyDataSetChangedWrapper();
+            page++;
         }, 1500);
 
         txtHeadRight.setText("取消课程 >");
@@ -126,6 +126,13 @@ public class CourseFragment extends MainBaseFragment {
                 2, count.length() + 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtHeadLeft.setText(ssb);
 
+        txtHeadRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mController.switchOtherFrag(0, "",
+                        new FragmentParam(MineCourseFragment.newInstance(getContainerId()), MineCourseFragment.class, null));
+            }
+        });
     }
 
     private void initRecycler() {
