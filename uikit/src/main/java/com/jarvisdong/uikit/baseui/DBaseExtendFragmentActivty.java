@@ -24,6 +24,7 @@ import java.util.List;
 public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
     protected DBaseFragment mCurrentFragment;
     private boolean isBackOrStay = false;
+    private int stayFragment = 1;
     private boolean mCloseWarned = true;
     private String closeWarningHint = Utils.getApp().getResources().getString(R.string.close_warning);
     private long timeRecord = 0;
@@ -62,21 +63,12 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
      * @param cls
      * @param data
      */
-    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from) {
+    public void pushFragmentToBackStack(Class<?> cls, String fragTag, Object data, DBaseFragment from) {
         FragmentParam param = new FragmentParam();
         param.cls = cls;
         param.data = data;
         param.from = from;
-        goToThisFragment(param);
-    }
-
-    public void pushFragmentToBackStack(Class<?> cls, Object data, DBaseFragment from, String extra, boolean isAdd2BackStack) {
-        FragmentParam param = new FragmentParam();
-        param.cls = cls;
-        param.data = data;
-        param.from = from;
-        param.extraMark = extra;
-        param.isAdd2BackStack = isAdd2BackStack;
+        param.fragTag = fragTag;
         goToThisFragment(param);
     }
 
@@ -84,8 +76,22 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         goToThisFragment(param);
     }
 
-    protected String getFragmentTag(FragmentParam param) {
-        StringBuilder sb = new StringBuilder(param.cls.toString());
+    public String getFragmentTag(FragmentParam param) {
+//        StringBuilder sb = new StringBuilder(param.cls.toString());
+        StringBuilder sb = new StringBuilder();
+        if (!TextUtils.isEmpty(param.fragTag)) {
+            sb.append(param.fragTag);
+        }else {
+            sb.append(param.cls.toString());
+        }
+        return sb.toString();
+    }
+
+    public String getFragmentTag(Class cls, String fragTag) {
+        StringBuilder sb = new StringBuilder(cls.toString());
+        if (!TextUtils.isEmpty(fragTag)) {
+            sb.append(fragTag);
+        }
         return sb.toString();
     }
 
@@ -104,9 +110,6 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         }
         try {
             String fragmentTag = getFragmentTag(param);
-            if (!TextUtils.isEmpty(param.extraMark)) {
-                fragmentTag += param.extraMark;
-            }
             FragmentManager fm = getSupportFragmentManager();
             DBaseFragment fragment = (DBaseFragment) fm.findFragmentByTag(fragmentTag);
             if (fragment == null) {
@@ -125,14 +128,12 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
             if (fragment.isAdded()) {
                 if (mCurrentFragment != null && mCurrentFragment != fragment) {
                     ft.hide(mCurrentFragment);
-                    hideOtherStackFrag(ft);
                 }
+                hideOtherStackFrag(ft);
                 ft.show(fragment);
             } else {
                 ft.add(containerId, fragment, fragmentTag);
-                if (param.isAdd2BackStack) {
-                    ft.addToBackStack(fragmentTag);
-                }
+                ft.addToBackStack(fragmentTag);
             }
             mCurrentFragment = fragment;
 
@@ -167,33 +168,30 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
      * @param cls
      * @param data
      */
-    public void goToFragment(Class<?> cls, Object data) {
+    public void goToFragment(Class<?> cls, String fragTag, Object data) {
         if (cls == null) {
             return;
         }
-        DBaseFragment fragment = (DBaseFragment) getSupportFragmentManager().findFragmentByTag(cls.toString());
+        String fragmentTag = getFragmentTag(cls, fragTag);
+        DBaseFragment fragment = (DBaseFragment) getSupportFragmentManager().findFragmentByTag(fragmentTag);
         if (fragment != null) {
             mCurrentFragment = fragment;
             fragment.onBackWithData(data);
         }
-        getSupportFragmentManager().popBackStackImmediate(cls.toString(), 0);
+        getSupportFragmentManager().popBackStackImmediate(fragmentTag, 0);
     }
 
-    public void goToFragment(Class<?> cls, Object data, String extra) {
-        if (cls == null) {
+    /**
+     * pop指定的frag,用于临时的frag清除;
+     */
+    public void popToFragment(String fragTag) {
+        if (TextUtils.isEmpty(fragTag)) {
             return;
         }
-        StringBuilder sb = new StringBuilder();
-        sb.append(cls.toString());
-        if (!TextUtils.isEmpty(extra)) {
-            sb.append(extra);
-        }
-        DBaseFragment fragment = (DBaseFragment) getSupportFragmentManager().findFragmentByTag(sb.toString());
+        DBaseFragment fragment = (DBaseFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
         if (fragment != null) {
-            mCurrentFragment = fragment;
-            fragment.onBackWithData(data);
+            getSupportFragmentManager().popBackStackImmediate(fragTag, 0);
         }
-        getSupportFragmentManager().popBackStackImmediate(sb.toString(), 0);
     }
 
     /**
@@ -208,6 +206,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
             mCurrentFragment.onBackWithData(data);
         }
     }
+
 
     private boolean tryToUpdateCurrentAfterPop() {
         FragmentManager fm = getSupportFragmentManager();

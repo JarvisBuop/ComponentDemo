@@ -1,19 +1,23 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
-
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
+    }
 
     defaultConfig {
         applicationId "com.ostak.justplaystudent"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode getGitVersion()
+        versionName rootProject.ext.versionName
 
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -27,10 +31,27 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(path: ':app')
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:0.5'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    testImplementation "junit:junit:${rootProject.junitVersion}"
+    androidTestImplementation ("com.android.support.test:runner:${rootProject.runnerVersion}"){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation ("com.android.support.test.espresso:espresso-core:${rootProject.espressoVersion}"){
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintVersion}"
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"
+    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:palette-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:transition:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    //分包;
+    implementation "com.android.support:multidex:$rootProject.multidexVersion"
+
+
 }
