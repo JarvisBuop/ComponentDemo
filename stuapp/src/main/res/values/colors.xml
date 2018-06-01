@@ -2,5 +2,19 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#B9E81E</color>
+
+    <color name="screen_rootbg_white">@color/white</color>
+    <color name="bg_student">#666666</color>
+
+    <color name="color_main">#FF8808</color>
+    <color name="color_main_second">#FFF001</color>
+    <color name="color_main_red">#FF8808</color>
+
+    <color name="text_validata">#AEAEB6</color>
+    <color name="text_nor">#2A2A2A</color>
+    <color name="text_nor_gray">#727272</color>
+    <color name="text_nor_gray_alpha">#999999</color>
+
+    <color name="bg_gray">#aaa</color>
 </resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:log="http://schemas.android.com/apk/com.ostak.justplaystudent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_stu"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/head2" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_nor_15"
+                android:button="@drawable/bg_checkbox"
+                android:padding="@dimen/padding_nor"
+                android:text="@string/radio_sex1"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radio_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_nor_15"
+                android:button="@drawable/bg_checkbox"
+                android:padding="@dimen/padding_nor"
+                android:text="@string/radio_sex2"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            log:editFocus="true"
+            log:editHint="@string/edit_input_name"
+            log:input_mode="text"
+            log:left_icon="@mipmap/icon_phone" />
+
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            log:editFocus="false"
+            log:editHint="@string/edit_select_timeage"
+            log:input_mode="icon"
+            log:left_icon="@mipmap/timelengh" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            log:editFocus="true"
+            log:editHint="@string/edit_input_recommend_phone"
+            log:input_mode="text"
+            log:left_icon="@mipmap/referrer"
+            log:right_txt="@string/edit_input_whatever" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            android:background="@mipmap/bg_btn2"
+            android:gravity="center"
+            android:minWidth="300dp"
+            android:text="@string/txt_log"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/dimen_size_18sp" />
+
+        <TextView
+            android:id="@+id/txt_goto_regis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            android:text="@string/txt_goto_register"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/font_size_big" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

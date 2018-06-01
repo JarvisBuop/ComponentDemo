@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_rootbg_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/left_tab"
+            layout="@layout/include_tab_left"
+            android:layout_width="160dp"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/layout_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/left_tab">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/bottom_pro"
+        layout="@layout/include_progressbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_input"
+    android:layout_width="@dimen/input_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:gravity="center"
+    tools:background="@color/bg_student">
+
+    <ImageView
+        android:id="@+id/img_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_code" />
+
+    <EditText
+        android:id="@+id/edit_input"
+        style="@style/edit_log"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/img_log"
+        android:padding="@dimen/padding_nor_15"
+        tools:text="12321" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/txt_validCode"
+            style="@style/text_nor_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="验证码" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_nor"
+            android:src="@mipmap/drop_down_arrow"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</RelativeLayout>

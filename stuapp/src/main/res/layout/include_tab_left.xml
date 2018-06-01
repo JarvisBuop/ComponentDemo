@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:background="@mipmap/icon_head_bg">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_circle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                tools:src="@mipmap/wy_logo" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Mike"
+            android:textColor="@color/text_nor_gray_alpha"
+            android:textSize="@dimen/font_size_big" />
+
+        <RadioGroup
+            android:id="@+id/rgp_controller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                style="@style/radio_main"
+                android:drawableTop="@drawable/radio_one"
+                android:tag="0"
+                android:text="@string/radio_text1" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                style="@style/radio_main"
+                android:drawableTop="@drawable/radio_two"
+                android:tag="1"
+                android:text="@string/radio_text2" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                style="@style/radio_main"
+                android:drawableTop="@drawable/radio_three"
+                android:tag="2"
+                android:text="@string/radio_text3" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_four"
+                style="@style/radio_main"
+                android:drawableTop="@drawable/radio_four"
+                android:tag="3"
+                android:text="@string/radio_text4" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+            <RadioButton
+                android:id="@+id/radio_five"
+                style="@style/radio_main"
+                android:drawableTop="@drawable/radio_five"
+                android:tag="4"
+                android:text="@string/radio_text5" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@mipmap/menu_line" />
+
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>
