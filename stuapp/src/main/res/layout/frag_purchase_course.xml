@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/include_head_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            app:line_txt="@string/line_txt_teacher" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/line_extra"
+            android:minLines="4"
+            android:textColor="@color/text_nor"
+            tools:text="dfasfsdfaasf\nsadfas\ndfsdfsa\ndfasdf\nasdfsadfdsafasdfsdf" />
+
+        <include layout="@layout/include_recyclerview" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

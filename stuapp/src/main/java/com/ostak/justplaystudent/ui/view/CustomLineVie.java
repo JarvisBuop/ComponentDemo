@@ -26,6 +26,8 @@ public class CustomLineVie extends LinearLayout {
     TextView txtLine;
     @BindView(R.id.line_horizental)
     View lineHorizental;
+    @BindView(R.id.layout_view)
+    LinearLayout mLayout;
 
     public CustomLineVie(Context context) {
         this(context, null);
@@ -47,10 +49,13 @@ public class CustomLineVie extends LinearLayout {
         txtLine.setText(string);
 
         int color = typedArray.getColor(R.styleable.CustomLineVie_line_color, 0);
-        if(color!=0){
+        if (color != 0) {
             lineHorizental.setBackgroundColor(color);
             txtLine.setTextColor(color);
         }
+
+        int anInt = typedArray.getInt(R.styleable.CustomLineVie_line_oritation, 0);
+        mLayout.setOrientation(anInt == 0 ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
         typedArray.recycle();
     }
 }

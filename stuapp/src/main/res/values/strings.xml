@@ -49,5 +49,10 @@
 
 
     <string name="line_txt_course">演奏级</string>
+    <string name="line_txt_teacher">老师介绍</string>
 
+    <string name="txt_detail_label1">剩余可约课时</string>
+    <string name="txt_detail_label2">关注他的学生</string>
+    <string name="txt_detail_label3">累计小星星</string>
+    <string name="txt_detail_label4">累计授课课时</string>
 </resources>

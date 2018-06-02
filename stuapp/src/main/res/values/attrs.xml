@@ -37,6 +37,10 @@
     <declare-styleable name="CustomLineVie">
         <attr name="line_txt" format="string" />
         <attr name="line_color" format="color" />
+        <attr name="line_oritation" format="enum">
+            <enum name="horizental" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
     </declare-styleable>
 </resources>
 
