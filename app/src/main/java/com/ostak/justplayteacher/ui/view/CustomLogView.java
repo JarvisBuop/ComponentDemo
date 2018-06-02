@@ -1,4 +1,4 @@
-package com.ostak.justplaystudent.ui.view;
+package com.ostak.justplayteacher.ui.view;
 
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
@@ -20,8 +20,8 @@ import android.widget.TextView;
 
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
-import com.ostak.justplaystudent.R;
-import com.ostak.justplaystudent.util.JustPlayUtils;
+import com.ostak.justplayteacher.R;
+import com.ostak.justplayteacher.util.JustPlayUtils;
 
 import java.util.ArrayList;
 
@@ -80,7 +80,7 @@ public class CustomLogView extends RelativeLayout {
         LayoutInflater.from(context).inflate(R.layout.view_log_func, this, true);
         ButterKnife.bind(this, this);
 
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.CustomLogView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLogView);
 
         boolean aBoolean = typedArray.getBoolean(R.styleable.CustomLogView_editFocus, true);
         String string = typedArray.getString(R.styleable.CustomLogView_editHint);

@@ -72,7 +72,8 @@
             app:editHint="@string/edit_input_recommend_phone"
             app:input_mode="text"
             app:left_icon="@mipmap/referrer"
-            app:right_txt="@string/edit_input_whatever" />
+            app:right_txt="@string/edit_input_whatever"
+            app:right_txt_color="@color/white" />
 
         <Button
             android:id="@+id/btn_login"
@@ -82,18 +83,9 @@
             android:background="@mipmap/bg_btn2"
             android:gravity="center"
             android:minWidth="300dp"
-            android:text="@string/txt_log"
+            android:text="@string/txt_complete"
             android:textColor="@color/color_main"
             android:textSize="@dimen/dimen_size_18sp" />
-
-        <TextView
-            android:id="@+id/txt_goto_regis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor_30dp"
-            android:text="@string/txt_goto_register"
-            android:textColor="@color/color_main"
-            android:textSize="@dimen/font_size_big" />
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

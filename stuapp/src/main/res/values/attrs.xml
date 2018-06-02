@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CustomLogView" >
+    <declare-styleable name="CustomLogView">
         <attr name="editHint" format="string" />
         <attr name="editFocus" format="boolean" />
         <attr name="left_icon" format="reference" />
@@ -9,8 +9,34 @@
             <enum name="text" value="0" />
             <enum name="icon" value="1" />
         </attr>
+
+        <attr name="inputType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="psd" value="1" />
+        </attr>
+
+        <attr name="right_txt_color" format="color" />
     </declare-styleable>
 
 
+    <declare-styleable name="CustomTabView">
+        <attr name="log_tab_bg" format="enum">
+            <enum name="log_bg" value="0" />
+            <enum name="content_bg" value="1" />
+        </attr>
+
+        <attr name="log_txt_left" format="string" />
+        <attr name="log_txt_right" format="string" />
+        <attr name="log_txt_middle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTitleNavView">
+        <!--<attr name="nav_"-->
+    </declare-styleable>
+
+    <declare-styleable name="CustomLineVie">
+        <attr name="line_txt" format="string" />
+        <attr name="line_color" format="color" />
+    </declare-styleable>
 </resources>
 

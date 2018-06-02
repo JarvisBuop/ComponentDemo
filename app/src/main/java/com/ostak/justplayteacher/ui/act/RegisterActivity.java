@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplayteacher.R;
+import com.ostak.justplayteacher.ui.view.CustomLogView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,11 +22,11 @@ import butterknife.OnClick;
 
 public class RegisterActivity extends DBaseActivity {
     @BindView(R.id.edit_input_email)
-    EditText editInputEmail;
+    CustomLogView editInputEmail;
     @BindView(R.id.edit_input_psd)
-    EditText editInputPsd;
+    CustomLogView editInputPsd;
     @BindView(R.id.edit_input_psd_again)
-    EditText editInputPsdAgain;
+    CustomLogView editInputPsdAgain;
     @BindView(R.id.checkbox_user)
     CheckBox checkboxUser;
 

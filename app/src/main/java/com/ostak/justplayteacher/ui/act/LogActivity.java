@@ -3,10 +3,10 @@ package com.ostak.justplayteacher.ui.act;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplayteacher.R;
+import com.ostak.justplayteacher.ui.view.CustomLogView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,9 +21,9 @@ import butterknife.OnClick;
 
 public class LogActivity extends DBaseActivity {
     @BindView(R.id.edt_input_email)
-    EditText edtInputEmail;
+    CustomLogView edtInputEmail;
     @BindView(R.id.edt_input_psd)
-    EditText edtInputPsd;
+    CustomLogView edtInputPsd;
 
     @Override
     public int getContentViewId() {

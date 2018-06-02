@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <LinearLayout
@@ -19,31 +20,55 @@
             android:textColor="@color/color_main_second"
             android:textSize="@dimen/font_size_title_big" />
 
-        <EditText
-            style="@style/edit_log"
-            android:layout_marginTop="@dimen/margin_nor_20dp"
-            android:drawableLeft="@mipmap/icon_phone"
-            android:hint="@string/edit_input_phone_again" />
+        <!--<EditText-->
+            <!--style="@style/edit_log"-->
+            <!--android:layout_marginTop="@dimen/margin_nor_20dp"-->
+            <!--android:drawableLeft="@mipmap/icon_phone"-->
+            <!--android:hint="@string/edit_input_phone_again" />-->
 
-        <RelativeLayout
+        <com.ostak.justplayteacher.ui.view.CustomLogView
+            android:id="@+id/edit_input_psd_again"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_phone_again"
+            app:inputType="text"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_phone" />
 
-            <EditText
-                android:id="@+id/edit_code"
-                style="@style/edit_log"
-                android:drawableLeft="@mipmap/icon_code"
-                android:hint="@string/edit_input_code_again" />
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
 
-            <TextView
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/edit_code"
-                android:layout_centerVertical="true"
-                android:text="@string/txt_get_code"
-                android:textColor="@color/color_main" />
-        </RelativeLayout>
+            <!--<EditText-->
+                <!--android:id="@+id/edit_code"-->
+                <!--style="@style/edit_log"-->
+                <!--android:drawableLeft="@mipmap/icon_code"-->
+                <!--android:hint="@string/edit_input_code_again" />-->
+
+            <!--<TextView-->
+                <!--style="@style/text_nor_style"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignRight="@+id/edit_code"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="@string/txt_get_code"-->
+                <!--android:textColor="@color/color_main" />-->
+        <!--</RelativeLayout>-->
+
+        <com.ostak.justplayteacher.ui.view.CustomLogView
+            android:id="@+id/edit_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_code_again"
+            app:inputType="text"
+            app:input_mode="text"
+            app:right_txt_color="@color/color_main"
+            app:right_txt="@string/txt_get_code"
+            app:left_icon="@mipmap/icon_code" />
 
         <TextView
             android:layout_width="wrap_content"

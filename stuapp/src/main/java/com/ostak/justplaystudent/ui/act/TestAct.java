@@ -16,7 +16,7 @@ public class TestAct extends DBaseActivity {
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_log_register2;
+        return R.layout.frag_main_course;
     }
 
     @Override

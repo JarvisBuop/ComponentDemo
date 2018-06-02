@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -17,26 +18,59 @@
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/login_logo" />
 
-        <EditText
+        <!--<EditText-->
+        <!--android:id="@+id/edit_input_email"-->
+        <!--style="@style/edit_log"-->
+        <!--android:layout_marginTop="@dimen/margin_nor"-->
+        <!--android:drawableLeft="@mipmap/icon_email"-->
+        <!--android:hint="@string/edit_input_email" />-->
+
+        <com.ostak.justplayteacher.ui.view.CustomLogView
             android:id="@+id/edit_input_email"
-            style="@style/edit_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor"
-            android:drawableLeft="@mipmap/icon_email"
-            android:hint="@string/edit_input_email" />
+            app:editFocus="true"
+            app:editHint="@string/edit_input_email"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_email" />
 
-        <EditText
+        <!--<EditText-->
+        <!--android:id="@+id/edit_input_psd"-->
+        <!--style="@style/edit_log"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:drawableLeft="@mipmap/icon_pwd"-->
+        <!--android:hint="@string/edit_input_psd" />-->
+
+
+        <com.ostak.justplayteacher.ui.view.CustomLogView
             android:id="@+id/edit_input_psd"
-            style="@style/edit_log"
-            android:inputType="textPassword"
-            android:drawableLeft="@mipmap/icon_pwd"
-            android:hint="@string/edit_input_psd" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_psd"
+            app:inputType="psd"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_pwd" />
 
-        <EditText
+        <!--<EditText-->
+        <!--android:id="@+id/edit_input_psd_again"-->
+        <!--style="@style/edit_log"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:drawableLeft="@mipmap/icon_code"-->
+        <!--android:hint="@string/edit_input_psd_again" />-->
+
+        <com.ostak.justplayteacher.ui.view.CustomLogView
             android:id="@+id/edit_input_psd_again"
-            style="@style/edit_log"
-            android:inputType="textPassword"
-            android:drawableLeft="@mipmap/icon_code"
-            android:hint="@string/edit_input_psd_again" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_psd_again"
+            app:inputType="psd"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_code" />
 
         <CheckBox
             android:id="@+id/checkbox_user"
@@ -106,4 +140,4 @@
         </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>

@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,40 +18,74 @@
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/login_logo" />
 
-        <EditText
-            android:id="@+id/edit_input_email"
-            style="@style/edit_log"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:drawableLeft="@mipmap/icon_phone"
-            android:hint="@string/edit_input_phone" />
+        <!--<EditText-->
+            <!--android:id="@+id/edit_input_email"-->
+            <!--style="@style/edit_log"-->
+            <!--android:layout_marginTop="@dimen/margin_nor"-->
+            <!--android:drawableLeft="@mipmap/icon_phone"-->
+            <!--android:hint="@string/edit_input_phone" />-->
 
-        <EditText
-            android:id="@+id/edit_input_psd"
-            style="@style/edit_log"
-            android:drawableLeft="@mipmap/icon_pwd"
-            android:hint="@string/edit_input_psd"
-            android:inputType="textPassword" />
-
-        <RelativeLayout
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_input_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_phone"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_phone" />
 
-            <EditText
-                android:id="@+id/edit_input_psd_again"
-                style="@style/edit_log"
-                android:drawableLeft="@mipmap/icon_code"
-                android:hint="@string/edit_input_code_again"
-                android:inputType="textPassword" />
+        <!--<EditText-->
+            <!--android:id="@+id/edit_input_psd"-->
+            <!--style="@style/edit_log"-->
+            <!--android:drawableLeft="@mipmap/icon_pwd"-->
+            <!--android:hint="@string/edit_input_psd"-->
+            <!--android:inputType="textPassword" />-->
 
-            <TextView
-                android:id="@+id/txt_validCode"
-                style="@style/text_nor_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/edit_input_psd_again"
-                android:layout_centerVertical="true"
-                android:text="@string/txt_get_code"/>
-        </RelativeLayout>
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_input_psd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:inputType="psd"
+            app:editHint="@string/edit_input_psd"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_pwd" />
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/edit_input_psd_again"-->
+                <!--style="@style/edit_log"-->
+                <!--android:drawableLeft="@mipmap/icon_code"-->
+                <!--android:hint="@string/edit_input_code_again"-->
+                <!--android:inputType="textPassword" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txt_validCode"-->
+                <!--style="@style/text_nor_style"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignRight="@+id/edit_input_psd_again"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="@string/txt_get_code"/>-->
+        <!--</RelativeLayout>-->
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_input_psd_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:inputType="psd"
+            app:editHint="@string/edit_input_code_again"
+            app:input_mode="text"
+            app:right_txt="@string/txt_get_code"
+            app:right_txt_color="@color/white"
+            app:left_icon="@mipmap/icon_code" />
 
         <CheckBox
             android:id="@+id/checkbox_user"

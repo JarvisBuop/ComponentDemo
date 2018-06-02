@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bg_techer"
+        android:background="@mipmap/bg_stu"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -18,15 +18,8 @@
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/login_logo" />
 
-        <!--<EditText-->
-        <!--android:id="@+id/edit_input_phone"-->
-        <!--style="@style/edit_log"-->
-        <!--android:layout_marginTop="@dimen/margin_nor"-->
-        <!--android:drawableLeft="@mipmap/icon_phone"-->
-        <!--android:hint="@string/edit_input_phone_again" />-->
 
-
-        <com.ostak.justplayteacher.ui.view.CustomLogView
+        <com.ostak.justplaystudent.ui.view.CustomLogView
             android:id="@+id/edit_input_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,29 +30,8 @@
             app:input_mode="text"
             app:left_icon="@mipmap/icon_phone" />
 
-        <!--<RelativeLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
 
-        <!--&lt;!&ndash;<EditText&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/edit_code"&ndash;&gt;-->
-        <!--&lt;!&ndash;style="@style/edit_log"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:drawableLeft="@mipmap/icon_code"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:hint="@string/edit_input_code_again" />&ndash;&gt;-->
-
-
-        <!--<TextView-->
-        <!--android:id="@+id/txt_validCode"-->
-        <!--style="@style/text_nor_style"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignRight="@+id/edit_code"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:text="@string/txt_get_code"-->
-        <!--android:textColor="@color/color_main" />-->
-        <!--</RelativeLayout>-->
-
-        <com.ostak.justplayteacher.ui.view.CustomLogView
+        <com.ostak.justplaystudent.ui.view.CustomLogView
             android:id="@+id/edit_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,14 +44,7 @@
             app:right_txt="@string/txt_get_code"
             app:right_txt_color="@color/color_main" />
 
-        <!--<EditText-->
-        <!--android:id="@+id/edit_psd"-->
-        <!--style="@style/edit_log"-->
-        <!--android:drawableLeft="@mipmap/icon_pwd"-->
-        <!--android:hint="@string/edit_input_psd"-->
-        <!--android:inputType="textPassword" />-->
-
-        <com.ostak.justplayteacher.ui.view.CustomLogView
+        <com.ostak.justplaystudent.ui.view.CustomLogView
             android:id="@+id/edit_psd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,13 +55,8 @@
             app:input_mode="text"
             app:left_icon="@mipmap/icon_pwd" />
 
-        <!--<EditText-->
-        <!--android:id="@+id/edit_email"-->
-        <!--style="@style/edit_log"-->
-        <!--android:drawableLeft="@mipmap/icon_email"-->
-        <!--android:hint="@string/edit_input_email" />-->
 
-        <com.ostak.justplayteacher.ui.view.CustomLogView
+        <com.ostak.justplaystudent.ui.view.CustomLogView
             android:id="@+id/edit_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor_30dp"
-            android:background="@mipmap/bg_big_btn"
+            android:background="@mipmap/bg_btn2"
             android:gravity="center"
             android:minWidth="300dp"
             android:text="@string/txt_register"

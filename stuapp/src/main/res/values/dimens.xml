@@ -5,6 +5,7 @@
     <dimen name="padding_nor">10dp</dimen>
     <dimen name="padding_nor_8dp">8dp</dimen>
     <dimen name="padding_nor_15">15dp</dimen>
+    <dimen name="padding_nor_20">20dp</dimen>
     <dimen name="padding_nor_30">30dp</dimen>
 
     <dimen name="margin_nor_5dp">5dp</dimen>
@@ -28,4 +29,8 @@
     <dimen name="bottom_img_small">30dp</dimen>
 
     <dimen name="input_width">450dp</dimen>
+    <dimen name="tab_width">550dp</dimen>
+    <dimen name="tab_log_content_height">320dp</dimen>
+
+    <dimen name="img_course_size">180dp</dimen>
 </resources>

@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,23 +18,47 @@
             android:layout_gravity="center_horizontal"
             android:src="@mipmap/login_logo" />
 
-        <EditText
+        <!--<EditText-->
+            <!--android:id="@+id/edt_input_email"-->
+            <!--style="@style/edit_log"-->
+            <!--android:layout_marginTop="@dimen/margin_nor"-->
+            <!--android:drawableLeft="@mipmap/icon_email"-->
+            <!--android:hint="@string/edit_input_email" />-->
+
+        <com.ostak.justplayteacher.ui.view.CustomLogView
             android:id="@+id/edt_input_email"
-            style="@style/edit_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_nor"
-            android:drawableLeft="@mipmap/icon_email"
-            android:hint="@string/edit_input_email" />
+            app:editFocus="true"
+            app:editHint="@string/edit_input_email"
+            app:inputType="text"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_email" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <EditText
+            <!--<EditText-->
+                <!--android:id="@+id/edt_input_psd"-->
+                <!--style="@style/edit_log"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:drawableLeft="@mipmap/icon_pwd"-->
+                <!--android:hint="@string/edit_input_psd" />-->
+
+            <com.ostak.justplayteacher.ui.view.CustomLogView
                 android:id="@+id/edt_input_psd"
-                style="@style/edit_log"
-                android:inputType="textPassword"
-                android:drawableLeft="@mipmap/icon_pwd"
-                android:hint="@string/edit_input_psd" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor"
+                app:editFocus="true"
+                app:editHint="@string/edit_input_psd"
+                app:inputType="psd"
+                app:input_mode="text"
+                app:right_txt_color="@color/color_main"
+                app:right_txt="@string/txt_get_code"
+                app:left_icon="@mipmap/icon_pwd" />
 
 
             <TextView

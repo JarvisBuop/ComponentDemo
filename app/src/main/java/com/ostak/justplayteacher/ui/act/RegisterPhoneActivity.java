@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplayteacher.R;
+import com.ostak.justplayteacher.ui.view.CustomLogView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,15 +22,15 @@ import butterknife.OnClick;
 
 public class RegisterPhoneActivity extends DBaseActivity {
     @BindView(R.id.edit_input_phone)
-    EditText editInputPhone;
+    CustomLogView editInputPhone;
     @BindView(R.id.edit_code)
-    EditText editCode;
-    @BindView(R.id.txt_validCode)
-    TextView txtValidCode;
+    CustomLogView editCode;
+    //    @BindView(R.id.txt_validCode)
+//    TextView txtValidCode;
     @BindView(R.id.edit_psd)
-    EditText editPsd;
+    CustomLogView editPsd;
     @BindView(R.id.edit_email)
-    EditText editEmail;
+    CustomLogView editEmail;
     @BindView(R.id.checkbox_user)
     CheckBox checkboxUser;
     @BindView(R.id.btn_register)
@@ -59,11 +58,9 @@ public class RegisterPhoneActivity extends DBaseActivity {
     }
 
 
-    @OnClick({R.id.txt_validCode, R.id.btn_register})
+    @OnClick({R.id.btn_register})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.txt_validCode:
-                break;
             case R.id.btn_register:
                 break;
         }

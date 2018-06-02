@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_stu"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.ostak.justplaystudent.ui.view.CustomTabView
+        app:log_tab_bg="log_bg"
+        app:log_txt_left="@string/txt_var_email"
+        app:log_txt_right="@string/txt_var_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/bg_white_alpha"
+        android:gravity="center_horizontal"
+        android:minHeight="@dimen/tab_log_content_height"
+        android:minWidth="@dimen/tab_width"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_nor_40dp"
+        android:paddingRight="@dimen/margin_nor_40dp">
+
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_input_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_phone_again"
+            app:inputType="text"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_phone"/>
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_code_again"
+            app:inputType="text"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_code"
+            app:right_txt="@string/txt_get_code"
+            app:right_txt_color="@color/color_main"/>
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_psd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_psd"
+            app:inputType="psd"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_pwd" />
+
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_nor_30dp"
+            android:layout_marginTop="@dimen/margin_nor"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_psd_again2"
+            app:inputType="psd"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_confirm_pwd" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLogView
+            android:id="@+id/edit_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_nor_30dp"
+            android:layout_marginTop="@dimen/margin_nor_30dp"
+            android:visibility="gone"
+            app:editFocus="true"
+            app:editHint="@string/edit_input_email_regis"
+            app:inputType="text"
+            app:input_mode="text"
+            app:left_icon="@mipmap/icon_email" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_nor_30dp"
+        android:background="@mipmap/bg_btn2"
+        android:gravity="center"
+        android:minWidth="300dp"
+        android:text="@string/txt_submit"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/font_size_bigger" />
+</LinearLayout>

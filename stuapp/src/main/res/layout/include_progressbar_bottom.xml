@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@mipmap/bg_player_bg"
+    android:background="@mipmap/player_bg"
     android:gravity="center_vertical">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:layout_width="@dimen/bottom_img_big"
             android:layout_height="@dimen/bottom_img_big"
             android:src="@mipmap/wy_logo"
-            app:civ_border_color="@color/goo_blue"
+            app:civ_border_color="@color/color_main_red"
             app:civ_border_width="2dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -27,7 +27,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="45dp"
             android:src="@mipmap/wy_logo"
-            app:civ_border_color="@color/goo_yellow"
+            app:civ_border_color="@color/color_main"
             app:civ_border_width="2dp" />
     </RelativeLayout>
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_nor"
             android:text="1111:1111"
-            android:textColor="@color/white"
+            android:textColor="@color/color_main"
             android:textSize="@dimen/dimen_size_14sp" />
     </LinearLayout>
 
@@ -66,21 +66,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:padding="@dimen/padding_nor_15"
-        android:src="@mipmap/icon_player_like" />
+        android:src="@mipmap/player_like" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:padding="@dimen/padding_nor_15"
-        android:src="@mipmap/icon_player_song" />
+        android:src="@mipmap/player_song" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:padding="@dimen/padding_nor_15"
-        android:src="@mipmap/icon_player_download" />
+        android:src="@mipmap/player_download" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -88,5 +88,5 @@
         android:layout_gravity="center_vertical"
         android:layout_marginRight="@dimen/margin_nor_15"
         android:padding="@dimen/padding_nor_15"
-        android:src="@mipmap/icon_player_full_screen" />
+        android:src="@mipmap/player_full_screen" />
 </LinearLayout>
