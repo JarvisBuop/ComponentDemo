@@ -28,10 +28,11 @@
             style="@style/text_nor_style_nopadding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:lineSpacingExtra="@dimen/line_extra"
             android:minLines="4"
             android:textColor="@color/text_nor"
-            tools:text="dfasfsdfaasf\nsadfas\ndfsdfsa\ndfasdf\nasdfsadfdsafasdfsdf" />
+            tools:text="dfasfsdfaasf\nsadfas\ndfsdfsa\ndfasdf\nasdfsadfds\nafasdfsdf" />
 
         <include layout="@layout/include_recyclerview" />
     </LinearLayout>

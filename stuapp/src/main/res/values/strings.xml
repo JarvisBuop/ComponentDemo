@@ -22,6 +22,7 @@
     <string name="try_to_play_msg">《try to play 用户注册协议》</string>
     <string name="txt_register">注  册</string>
     <string name="txt_submit">提  交</string>
+    <string name="txt_submit_order">提交订单</string>
     <string name="txt_complete">完  成</string>
     <string name="txt_register_more">更多注册方式</string>
     <string name="txt_send_email">发送邮件</string>
@@ -50,9 +51,20 @@
 
     <string name="line_txt_course">演奏级</string>
     <string name="line_txt_teacher">老师介绍</string>
+    <string name="line_txt_content">选择内容</string>
+    <string name="line_txt_pay">支付方式</string>
 
     <string name="txt_detail_label1">剩余可约课时</string>
     <string name="txt_detail_label2">关注他的学生</string>
     <string name="txt_detail_label3">累计小星星</string>
     <string name="txt_detail_label4">累计授课课时</string>
+
+    <string name="txt_lesson_count">授课价格</string>
+    <string name="txt_lesson_count_sel">请选择授课课时数量</string>
+    <string name="txt_lesson_sale_sel">* 订购课时可享受 95 折优惠</string>
+    <string name="txt_lesson_sale_middle">* 中级课程课时可用于预定中级及以下级别老师</string>
+
+    <string name="txt_time_10">10课时</string>
+    <string name="txt_time_20">20课时</string>
+    <string name="txt_time_30">30课时</string>
 </resources>
