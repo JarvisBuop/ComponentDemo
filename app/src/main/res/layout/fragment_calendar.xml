@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_nor"
                 android:layout_marginTop="@dimen/margin_nor"
-                android:text="保存时间" />
+                android:text="@string/txt_storage_time" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

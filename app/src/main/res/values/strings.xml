@@ -12,6 +12,7 @@
     <string name="txt_bind_phone">绑定手机号</string>
     <string name="txt_bind_phone_tips">*如果您拥有中国手机号请进行绑定,方便更好的通过教师审核</string>
     <string name="txt_skip">跳过</string>
+    <string name="txt_storage_time">保存时间</string>
 
 
     <string name="try_to_play_msg">《try to play 用户注册协议》</string>

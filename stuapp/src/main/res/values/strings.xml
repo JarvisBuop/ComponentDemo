@@ -15,6 +15,8 @@
     <string name="txt_bind_phone">绑定手机号</string>
     <string name="txt_bind_phone_tips">*如果您拥有中国手机号请进行绑定,方便更好的通过教师审核</string>
     <string name="txt_skip">跳过</string>
+    <string name="txt_storage_time">保存时间</string>
+    <string name="txt_next">下一步</string>
 
     <string name="txt_forgetpsd">忘记密码</string>
     <string name="txt_log">立 即 登 录</string>
@@ -53,6 +55,7 @@
     <string name="line_txt_teacher">老师介绍</string>
     <string name="line_txt_content">选择内容</string>
     <string name="line_txt_pay">支付方式</string>
+    <string name="line_txt_selectedtime">选择上课时间</string>
 
     <string name="txt_detail_label1">剩余可约课时</string>
     <string name="txt_detail_label2">关注他的学生</string>

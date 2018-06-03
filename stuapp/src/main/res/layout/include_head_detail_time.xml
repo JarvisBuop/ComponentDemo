@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="@dimen/img_coursetime_size"
+        android:layout_height="@dimen/img_coursetime_size"
+        android:src="@mipmap/wy_logo" />
+
+    <TextView
+        android:id="@+id/txt_course_name"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nor_20dp"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:layout_toRightOf="@id/img_show"
+        android:drawablePadding="@dimen/drawpadding"
+        android:textColor="@color/text_nor"
+        android:textSize="@dimen/dimen_size_20sp"
+        tools:text="AIM Song" />
+
+    <TextView
+        android:id="@+id/txt_course_age"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_course_name"
+        android:layout_marginLeft="@dimen/margin_nor"
+        android:layout_toRightOf="@id/txt_course_name"
+        android:textColor="@color/text_nor_gray"
+        tools:text="34岁" />
+
+    <TextView
+        android:id="@+id/txt_course_country"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_course_name"
+        android:layout_marginLeft="@dimen/margin_nor"
+        android:layout_toRightOf="@id/txt_course_age"
+        android:textColor="@color/text_nor_gray"
+        tools:text="34岁" />
+
+    <TextView
+        android:id="@+id/txt_course_level"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_course_country"
+        android:layout_marginLeft="@dimen/margin_nor"
+        android:layout_toRightOf="@id/txt_course_country"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_20sp"
+        tools:text="大师级" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_show"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_detail_label1"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_remain_count"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_20sp"
+                tools:text="50" />
+        </LinearLayout>
+
+        <View
+            style="@style/vertical_line_margin_px"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginRight="@dimen/margin_nor" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_detail_label2"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_remain_stu_num"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_20sp"
+                tools:text="50" />
+        </LinearLayout>
+
+        <View
+            style="@style/vertical_line_margin_px"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginRight="@dimen/margin_nor" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_detail_label3"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_remain_stars"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_20sp"
+                tools:text="50" />
+        </LinearLayout>
+
+        <View
+            style="@style/vertical_line_margin_px"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginRight="@dimen/margin_nor" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_detail_label4"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_remain_lessontime"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_20sp"
+                tools:text="50" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
