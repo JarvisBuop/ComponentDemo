@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_main_left"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_nor_gray"
+            tools:text="昵称" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_15"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_main_right"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_15"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="@color/text_nor_gray"
+            tools:text="昵称" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/padding_nor_15"
+            android:src="@mipmap/icon_right"
+            android:visibility="visible"
+            tools:rotation="90" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_px" />
+
+</LinearLayout>

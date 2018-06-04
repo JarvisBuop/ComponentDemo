@@ -20,6 +20,7 @@
             android:id="@+id/layout_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@mipmap/home_bg"
             android:layout_toRightOf="@id/left_tab">
 
         </FrameLayout>

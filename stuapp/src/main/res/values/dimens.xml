@@ -35,5 +35,9 @@
     <dimen name="img_course_size">180dp</dimen>
     <dimen name="img_coursetime_size">120dp</dimen>
 
+    <dimen name="btn_width">160dp</dimen>
+
     <dimen name="img_max_width">180dp</dimen>
+
+    <dimen name="img_recycler_height">350dp</dimen>
 </resources>

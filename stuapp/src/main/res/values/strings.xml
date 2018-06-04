@@ -55,7 +55,18 @@
     <string name="line_txt_teacher">老师介绍</string>
     <string name="line_txt_content">选择内容</string>
     <string name="line_txt_pay">支付方式</string>
+    <string name="line_txt_pay_msg">支付信息</string>
+    <string name="line_txt_hign">高级</string>
+    <string name="line_txt_middle">中级</string>
     <string name="line_txt_selectedtime">选择上课时间</string>
+    <string name="line_txt_selected_trytime">选择试课时间</string>
+    <string name="line_txt_already_time">已选上课时间</string>
+    <string name="line_txt_recommend_public">推荐公开课</string>
+    <string name="line_txt_public">公开课</string>
+    <string name="txt_upload_music">上传乐谱</string>
+    <string name="txt_upload_video">上传视频</string>
+    <string name="line_txt_centi">证书</string>
+    <string name="line_parent_msg">家长信息</string>
 
     <string name="txt_detail_label1">剩余可约课时</string>
     <string name="txt_detail_label2">关注他的学生</string>
@@ -70,4 +81,79 @@
     <string name="txt_time_10">10课时</string>
     <string name="txt_time_20">20课时</string>
     <string name="txt_time_30">30课时</string>
+
+    <string name="btn_settle">结算并提交预定信息</string>
+    <string name="txt_delete">删除</string>
+    <string name="txt_apply_lesson">提交试课申请</string>
+
+
+    <string name="txt_consult_study">课程学习</string>
+    <string name="txt_consult_serve">在线客服</string>
+    <string name="txt_consult_other">其他</string>
+    <string name="txt_updata">更新</string>
+    <string name="txt_public_lesson_present">立即预约</string>
+    <string name="txt_public_lesson_end">已结束</string>
+
+    <string name="txt_public_dialog">参与此课程需要扣除一节课时</string>
+    <string name="txt_comfirm_join">确认加入</string>
+    <string name="txt_cancel_think">再想想</string>
+
+    <string name="txt_pay_msg_phone">订购人手机: </string>
+    <string name="txt_pay_msg_way">支付方式: </string>
+    <string name="txt_pay_msg_money">订单金额: </string>
+    <string name="txt_pay_immedia">立即付款</string>
+    <string name="txt_cancal_order">超过时间订单将自动取消</string>
+
+    <string name="txt_edit_msg">编辑资料</string>
+
+    <string name="txt_my_order">我的订单</string>
+    <string name="txt_my_course">我的课程</string>
+    <string name="txt_my_lesson">上课提醒</string>
+    <string name="txt_my_book">课堂笔记本</string>
+    <string name="txt_my_consult">课程咨询</string>
+    <string name="txt_my_train">我的陪练</string>
+    <string name="txt_my_ward">推荐有奖/奖励细则</string>
+    <string name="txt_my_understand">了解我们 Try To Play</string>
+    <string name="txt_my_phone_consult">咨询电话: 400-000-000</string>
+    <string name="txt_my_phone_supervise">监督电话: 400-110-001</string>
+
+    <string name="txt_enter">进入教室</string>
+
+    <string name="txt_all">全 部</string>
+    <string name="txt_wait_pay">待 付 款</string>
+
+    <string name="txt_tab_middle">已上课</string>
+    <string name="txt_tab_left">待上课</string>
+    <string name="txt_tab_right">取消课程</string>
+
+    <string name="txt_select_file">选择教学资料上传</string>
+    <string name="txt_storage_file">保存资料到相册</string>
+
+    <string name="txt_live_top">课程已完成 会看直播内容 巩固学习</string>
+
+    <string name="txt_go_purchase">去购买</string>
+    <string name="txt_go_purchase_tips">请先购买课程,才能使用该功能哦</string>
+    <string name="txt_award_tips">每推荐一位朋友,满足奖励条件即可获赠10元课时</string>
+
+    <string name="txt_person_nick">昵称: </string>
+    <string name="txt_person_name">姓名: </string>
+    <string name="txt_person_age">年龄: </string>
+    <string name="txt_person_timelength">学琴时长: </string>
+    <string name="txt_person_instrument">所学乐器: </string>
+    <string name="txt_person_song">目前练习曲: </string>
+    <string name="txt_person_sign">是否教室执照: </string>
+    <string name="txt_person_pro">是否想走专业路线: </string>
+    <string name="txt_person_twoyear">希望未来两年内达到什么水平: </string>
+
+    <string name="txt_father">父亲信息</string>
+    <string name="txt_parent_phone">请输入父亲或母亲的手机号码</string>
+    <string name="txt_parent_idcard">请输入父亲或母亲的身份证号码</string>
+    <string name="txt_parent_passport">请输入父亲或母亲的护照号码</string>
+    <string name="txt_mother">母亲信息</string>
+    <string name="txt_contact">联系方式</string>
+    <string name="txt_idcard">身份证</string>
+    <string name="txt_passport">护照号</string>
+
+    <string name="txt_selected">选择他</string>
+    <string name="txt_attention">关注他</string>
 </resources>

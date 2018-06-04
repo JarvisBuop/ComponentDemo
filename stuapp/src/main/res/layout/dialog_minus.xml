@@ -1,51 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:minWidth="500dp"
-    android:minHeight="350dp"
     android:layout_gravity="center"
     android:background="@drawable/bg_rect_white"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:background="@color/bg_techer">
+    android:minHeight="350dp"
+    android:minWidth="500dp"
+    android:orientation="vertical">
 
     <TextView
         style="@style/text_nor_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/icon_course_time"
-        android:layout_marginTop="@dimen/margin_nor_30dp"
+        android:layout_margin="@dimen/margin_nor_30dp"
         android:drawablePadding="@dimen/drawpadding"
-        android:text="@string/makesure_star"
-        android:textColor="@color/text_nor"
+        android:text="@string/txt_public_dialog"
+        android:textColor="@color/text_nor_gray"
+        android:layout_weight="1"
         android:textSize="@dimen/dimen_size_20sp" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_nor_20dp"
-        android:layout_marginTop="@dimen/margin_nor_20dp"
-        android:src="@mipmap/icon_star" />
+    <View style="@style/horizontal_line_margin_px" />
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_nor">
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_nor_20dp">
 
         <Button
             android:id="@+id/btn_yes"
-            style="@style/btn_log_min_green"
+            style="@style/btn_log_min_red_selected"
             android:layout_marginLeft="@dimen/margin_nor_40dp"
             android:layout_marginRight="@dimen/margin_nor_20dp"
-            android:text="@string/txt_yes" />
+            android:text="@string/txt_comfirm_join" />
 
         <Button
             android:id="@+id/btn_no"
-            style="@style/btn_log_min_red"
+            style="@style/btn_log_min_orange_selected"
             android:layout_marginLeft="@dimen/margin_nor_20dp"
             android:layout_marginRight="@dimen/margin_nor_40dp"
-            android:text="@string/txt_no" />
+            android:text="@string/txt_cancel_think" />
     </LinearLayout>
 </LinearLayout>

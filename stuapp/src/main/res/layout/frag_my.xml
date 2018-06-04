@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_head_my" />
+
+            <View
+                style="@style/horizontal_line_margin_px"
+                android:layout_marginTop="@dimen/margin_nor" />
+
+
+            <LinearLayout
+                style="@style/main_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_pre_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_order"
+                        app:middleName="@string/txt_my_order" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/my_course"
+                        app:middleName="@string/txt_my_course" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_already_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_remind"
+                        app:middleName="@string/txt_my_lesson" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_note"
+                        app:middleName="@string/txt_my_book" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_pre_pratice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_consulting"
+                        app:middleName="@string/txt_my_consult" />
+                </LinearLayout>
+
+                <View style="@style/vertical_line_margin_px" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_practice"
+                        app:middleName="@string/txt_my_train" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_recommend"
+                        app:middleName="@string/txt_my_ward" />
+
+                    <com.ostak.justplaystudent.ui.view.CustomMyItem
+                        android:id="@+id/cm_my_publiclesson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@mipmap/mine_about"
+                        app:middleName="@string/txt_my_understand" />
+
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/mine_phone"
+                        android:padding="@dimen/padding_nor_20"
+                        android:text="@string/txt_my_phone_consult"
+                        android:textColor="@color/goo_green" />
+
+                    <TextView
+                        style="@style/text_nor_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/mine_supervision"
+                        android:padding="@dimen/padding_nor_20"
+                        android:text="@string/txt_my_phone_supervise"
+                        android:textColor="@color/goo_blue" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

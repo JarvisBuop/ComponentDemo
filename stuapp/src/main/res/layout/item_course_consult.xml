@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_nor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q: "
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:lineSpacingExtra="@dimen/line_extra"
+        android:textColor="@color/text_nor"
+        android:textSize="@dimen/dimen_size_18sp"
+        tools:text="sdfasdfasdfa\ndsfsdfasdfas\ndfasdfasdfasd\nf" />
+</LinearLayout>

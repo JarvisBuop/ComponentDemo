@@ -23,6 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="450dp"
             android:layout_weight="2"
+            android:backgroundTint="@color/text_nor_gray"
             android:background="@color/white" />
 
         <LinearLayout
@@ -38,6 +39,13 @@
                 android:text="已选择 n 课时"
                 android:textColor="@color/color_main"
                 android:textSize="@dimen/dimen_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_nor_gray"
+                android:textSize="@dimen/dimen_size_30sp"
+                tools:text="2018/08/29" />
 
             <include
                 layout="@layout/include_swipe_recyclerview"

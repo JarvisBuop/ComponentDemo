@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_nor">
+
+
+    <ImageView
+        android:id="@+id/img_my_icon"
+        android:layout_width="@dimen/img_max_width"
+        android:layout_height="@dimen/img_max_width"
+        android:src="@mipmap/wy_logo" />
+
+
+    <TextView
+        android:id="@+id/txt_course_name"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_course_level"
+        android:layout_margin="@dimen/margin_nor"
+        android:layout_toRightOf="@id/img_my_icon"
+        android:drawableRight="@mipmap/icon_female"
+        android:textColor="@color/text_nor"
+        android:textSize="@dimen/dimen_size_20sp"
+        tools:text="AIM Song" />
+
+    <TextView
+        android:id="@+id/txt_num"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_course_small_level"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:text="10"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_40sp" />
+
+
+    <TextView
+        android:id="@+id/txt_course_small_level"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_my_icon"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:layout_marginBottom="@dimen/margin_nor"
+        android:textColor="@color/text_nor_gray"
+        tools:text="@string/txt_lesson_count" />
+
+    <Button
+        style="@style/btn_log_min_multi_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/txt_edit_msg" />
+</RelativeLayout>

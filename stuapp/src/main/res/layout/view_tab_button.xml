@@ -2,10 +2,13 @@
 <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_radio_bg"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding_nor_15"
+    android:paddingRight="@dimen/padding_nor_15"
+    android:paddingTop="@dimen/padding_nor_15">
 
     <RadioButton
         android:id="@+id/radio_left"
@@ -13,19 +16,19 @@
         android:drawableLeft="@mipmap/nav_message"
         android:paddingLeft="@dimen/margin_nor_50dp"
         android:paddingRight="@dimen/margin_nor_50dp"
-        tools:text="@string/txt_var_email"
         tools:background="@drawable/bg_checkbox_tab_inner"
-        tools:checked="true" />
+        tools:checked="true"
+        tools:text="@string/txt_var_email" />
 
     <RadioButton
         android:id="@+id/radio_middle"
         style="@style/radio_main_tab"
         android:paddingLeft="@dimen/margin_nor_50dp"
         android:paddingRight="@dimen/margin_nor_50dp"
-        tools:text="@string/txt_var_phone"
         android:visibility="gone"
         tools:background="@drawable/bg_checkbox_tab"
-        tools:checked="true" />
+        tools:checked="true"
+        tools:text="@string/txt_var_phone" />
 
     <RadioButton
         android:id="@+id/radio_right"

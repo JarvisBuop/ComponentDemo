@@ -26,4 +26,6 @@
     <dimen name="bottom_img_layout">80dp</dimen>
     <dimen name="bottom_img_big">50dp</dimen>
     <dimen name="bottom_img_small">30dp</dimen>
+
+    <dimen name="img_my_size">180dp</dimen>
 </resources>

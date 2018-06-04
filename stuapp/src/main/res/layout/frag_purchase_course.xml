@@ -1,39 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <include layout="@layout/include_search_top" />
+
+    <android.support.v4.widget.NestedScrollView
         style="@style/main_padding_margin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <include
-            layout="@layout/include_head_detail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <com.ostak.justplaystudent.ui.view.CustomLineVie
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor_15"
-            app:line_txt="@string/line_txt_teacher" />
+            <include
+                layout="@layout/include_head_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor" />
 
-        <TextView
-            style="@style/text_nor_style_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:lineSpacingExtra="@dimen/line_extra"
-            android:minLines="4"
-            android:textColor="@color/text_nor"
-            tools:text="dfasfsdfaasf\nsadfas\ndfsdfsa\ndfasdf\nasdfsadfds\nafasdfsdf" />
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_15"
+                app:line_txt="@string/line_txt_teacher" />
 
-        <include layout="@layout/include_recyclerview" />
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/line_extra"
+                android:minLines="4"
+                android:textColor="@color/text_nor"
+                tools:text="dfasfsdfaasf\nsadfas\ndfsdfsa\ndfasdf\nasdfsadfds\nafasdfsdf" />
+
+            <include
+                layout="@layout/include_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_nor"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+                <!--此处图不全;-->
+                <CheckBox
+                    android:id="@+id/img_bottom_select"
+                    style="@style/checkbox_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_nor"
+                    android:text="@string/txt_selected" />
+
+                <CheckBox
+                    android:id="@+id/img_bottom_attention"
+                    style="@style/checkbox_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:text="@string/txt_attention" />
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_log_min_multi_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_nor"
+                android:text="@string/txt_public_lesson_present"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

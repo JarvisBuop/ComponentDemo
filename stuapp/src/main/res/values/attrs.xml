@@ -42,5 +42,26 @@
             <enum name="vertical" value="1" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="CustomMyItem">
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="middleName" format="string" />
+        <attr name="middleTxt_color" format="color" />
+        <attr name="middleTxt_dimen" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomPersonView">
+        <attr name="main_label" format="string"/>
+        <attr name="content_label" format="string"/>
+
+        <attr name="img_arrow" format="enum">
+            <enum name="arrow_nor" value="0"/>
+            <enum name="arrow_hide" value="1"/>
+            <enum name="arrow_down" value="2"/>
+        </attr>
+
+        <attr name="switch_gone" format="boolean"/>
+    </declare-styleable>
 </resources>
 

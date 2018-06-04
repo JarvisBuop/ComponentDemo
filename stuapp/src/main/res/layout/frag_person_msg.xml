@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_15">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/merge_person_msg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|top">
+
+                    <ImageView
+                        android:id="@+id/img_show_top"
+                        android:layout_width="@dimen/img_coursetime_size"
+                        android:layout_height="@dimen/img_coursetime_size"
+                        android:src="@mipmap/upload_default" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:line_txt="@string/line_txt_centi" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+
+                <Button
+                    style="@style/btn_log_min_multi_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_upload_video" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/view_group_txt_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_nor_15" />
+
+            </LinearLayout>
+
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:line_txt="@string/line_parent_msg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_white">
+
+                <RadioGroup
+                    android:id="@+id/rg_select_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_nor_15"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        style="@style/radio_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/bg_checkbox"
+                        android:drawablePadding="@dimen/drawpadding"
+                        android:text="@string/txt_father"
+                        android:textColor="@color/text_nor_gray"
+                        android:textSize="@dimen/dimen_size_20sp" />
+
+                    <RadioButton
+                        style="@style/radio_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/bg_checkbox"
+                        android:drawablePadding="@dimen/drawpadding"
+                        android:text="@string/txt_mother"
+                        android:textColor="@color/text_nor_gray"
+                        android:textSize="@dimen/dimen_size_20sp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_contact_label"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/rg_select_parent"
+                    android:layout_below="@id/rg_select_parent"
+                    android:text="@string/txt_contact"
+                    android:textColor="@color/text_nor_gray"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <EditText
+                    android:id="@+id/edit_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_contact_label"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/txt_contact_label"
+                    android:backgroundTint="@color/color_main"
+                    android:hint="@string/txt_parent_phone"
+                    android:minWidth="@dimen/input_width" />
+
+                <TextView
+                    android:id="@+id/txt_idcard_label"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/rg_select_parent"
+                    android:layout_below="@id/txt_contact_label"
+                    android:layout_marginTop="@dimen/margin_nor_20dp"
+                    android:text="@string/txt_idcard"
+                    android:textColor="@color/text_nor_gray"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <EditText
+                    android:id="@+id/edit_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_idcard_label"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/txt_contact_label"
+                    android:backgroundTint="@color/color_main"
+                    android:hint="@string/txt_parent_idcard"
+                    android:minWidth="@dimen/input_width" />
+
+                <TextView
+                    android:id="@+id/txt_passport_label"
+                    style="@style/text_nor_style_nopadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/rg_select_parent"
+                    android:layout_below="@id/txt_idcard_label"
+                    android:layout_marginTop="@dimen/margin_nor_20dp"
+                    android:text="@string/txt_passport"
+                    android:textColor="@color/text_nor_gray"
+                    android:textSize="@dimen/dimen_size_20sp" />
+
+                <EditText
+                    android:id="@+id/edit_passport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_passport_label"
+                    android:layout_marginLeft="@dimen/margin_nor"
+                    android:layout_toRightOf="@id/txt_contact_label"
+                    android:backgroundTint="@color/color_main"
+                    android:hint="@string/txt_parent_passport"
+                    android:minWidth="@dimen/input_width" />
+            </RelativeLayout>
+
+            <Button
+                style="@style/btn_log_min_multi_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/margin_nor"
+                android:text="@string/txt_updata" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

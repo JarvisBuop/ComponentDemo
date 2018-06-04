@@ -22,12 +22,12 @@
                 style="@style/main_padding_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_nor_15">
+                android:paddingTop="@dimen/padding_nor">
 
                 <ImageView
                     android:id="@+id/img_my_icon"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="@dimen/img_my_size"
+                    android:layout_height="@dimen/img_my_size"
                     android:layout_centerVertical="true"
                     android:src="@mipmap/wy_logo" />
 

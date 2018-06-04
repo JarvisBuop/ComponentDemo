@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_calendar_main" />
+
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:line_txt="@string/txt_upload_music" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_nor"
+                android:gravity="center_vertical">
+
+                <Button
+                    style="@style/btn_log_min_multi_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_upload_music" />
+
+                <include
+                    layout="@layout/include_recyclerview_ww"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_nor" />
+            </LinearLayout>
+
+            <View style="@style/horizontal_line_px" />
+
+            <Button
+                style="@style/btn_log_min_multi_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_20dp"
+                android:text="@string/txt_apply_lesson" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

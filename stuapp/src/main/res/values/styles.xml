@@ -42,6 +42,16 @@
         <item name="android:textSize">@dimen/dimen_size_20sp</item>
     </style>
 
+    <style name="btn_log_min_red_selected">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/alert_confrim_red</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main_red</item>
+        <item name="android:textSize">@dimen/dimen_size_20sp</item>
+    </style>
+
     <style name="btn_log_min_green">
         <item name="android:layout_width">150dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -62,14 +72,43 @@
         <item name="android:textSize">@dimen/dimen_size_20sp</item>
     </style>
 
-    <style name="btn_log_min_multi_color">
+    <style name="btn_log_min_orange_selected">
         <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/alert_confrim_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main</item>
+        <item name="android:textSize">@dimen/dimen_size_20sp</item>
+    </style>
+
+    <style name="btn_log_min_multi_color">
+        <item name="android:layout_width">@dimen/btn_width</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@mipmap/bg_btn_empty</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textColor">@color/color_main</item>
+        <item name="android:paddingLeft">@dimen/padding_nor</item>
+        <item name="android:paddingRight">@dimen/padding_nor</item>
         <item name="android:textSize">@dimen/dimen_size_20sp</item>
+    </style>
+
+    <style name="checkbox_selected">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/select_multi_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/color_main</item>
+        <item name="android:paddingLeft">@dimen/padding_nor</item>
+        <item name="android:paddingRight">@dimen/padding_nor</item>
+        <item name="android:textSize">@dimen/dimen_size_20sp</item>
+    </style>
+
+    <style name="btn_log_min_multi_color_gray" parent="btn_log_min_multi_color">
+        <item name="android:background">@mipmap/bg_empty1</item>
     </style>
 
     <style name="btn_log_min_yellow">
@@ -101,6 +140,7 @@
     </style>
     <!--nor-->
     <style name="text_nor_style">
+        <item name="android:drawablePadding">@dimen/drawpadding</item>
         <item name="android:textSize">@dimen/dimen_size_16sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:padding">10dp</item>
@@ -114,8 +154,17 @@
     </style>
 
 
+    <style name="text_big_style_nopadding">
+        <item name="android:textSize">@dimen/dimen_size_35sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <!--course head-->
     <style name="text_nor_style_nopadding">
+        <item name="android:drawablePadding">@dimen/drawpadding</item>
         <item name="android:textSize">@dimen/dimen_size_16sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
@@ -181,6 +230,19 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="radio_main_selected">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/color_main</item>
+        <item name="android:textSize">@dimen/dimen_size_18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/alert_confrim_multi_color</item>
     </style>
 
     <!--course_item-->

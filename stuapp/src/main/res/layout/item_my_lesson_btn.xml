@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_lesson_time"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_show"
+        android:drawableLeft="@mipmap/my_course"
+        android:text="初级课程2018/02/10"
+        android:textColor="@color/text_nor_gray" />
+
+    <TextView
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/m_tearch"
+        android:text="预约老师:MIKE"
+        android:textColor="@color/text_nor_gray" />
+
+    <TextView
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_show"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@mipmap/m_info"
+        android:text="10课时"
+        android:textColor="@color/text_nor_gray" />
+
+    <Button
+        style="@style/btn_log_min_multi_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_nor"
+        android:text="@string/txt_tab_right" />
+
+    <View
+        style="@style/horizontal_line_px"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        style="@style/vertical_line"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="@dimen/img_course_size"
+        android:layout_height="@dimen/img_course_size"
+        android:src="@mipmap/wy_logo" />
+
+    <TextView
+        android:id="@+id/txt_course_name"
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nor_20dp"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:layout_toRightOf="@id/img_show"
+        android:drawablePadding="@dimen/drawpadding"
+        android:textColor="@color/text_nor"
+        android:textSize="@dimen/dimen_size_20sp"
+        tools:text="AIM Song" />
+
+    <TextView
+        android:id="@+id/txt_course_age"
+        style="@style/text_nor_style_18size_colorblack_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:layout_below="@id/txt_course_name"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:textColor="@color/text_nor_gray"
+        tools:text="yingdf" />
+
+
+    <TextView
+        android:id="@+id/txt_course_school"
+        style="@style/text_nor_style_18size_colorblack_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:layout_below="@id/txt_course_age"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:textColor="@color/text_nor_gray"
+        tools:text="yingdf" />
+
+    <TextView
+        android:id="@+id/txt_course_pro"
+        style="@style/text_nor_style_18size_colorblack_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:layout_below="@id/txt_course_school"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:textColor="@color/text_nor_gray"
+        tools:text="yingdf" />
+
+    <TextView
+        android:id="@+id/txt_course_count"
+        style="@style/text_nor_style_18size_colorblack_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_course_name"
+        android:layout_below="@id/txt_course_pro"
+        android:layout_marginTop="@dimen/margin_nor"
+        android:textColor="@color/text_nor_gray"
+        tools:text="yingdf" />
+</RelativeLayout>

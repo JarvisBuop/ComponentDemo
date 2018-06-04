@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+
+    <RadioGroup
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/radio_main_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/txt_public_lesson_present"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            style="@style/radio_main_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:checked="false"
+            android:text="@string/txt_consult_study" />
+
+        <RadioButton
+            style="@style/radio_main_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:checked="false"
+            android:text="@string/txt_consult_serve" />
+
+        <RadioButton
+            style="@style/radio_main_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:checked="false"
+            android:text="@string/txt_consult_other" />
+    </RadioGroup>
+
+    <include
+        style="@style/main_padding_margin"
+        layout="@layout/include_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

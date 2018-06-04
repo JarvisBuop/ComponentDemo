@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_nor">
+
+    <LinearLayout
+        android:id="@+id/layout_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/my_course"
+            android:text="初级课程2018/02/10"
+            android:textColor="@color/text_nor_gray" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_20dp"
+            android:drawableLeft="@mipmap/m_tearch"
+            android:text="预约老师:MIKE"
+            android:textColor="@color/text_nor_gray" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor_20dp"
+            android:drawableLeft="@mipmap/m_info"
+            android:text="10课时"
+            android:textColor="@color/text_nor_gray" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/horizontal_line"
+        android:layout_below="@id/layout_subtitle"
+        android:layout_marginTop="@dimen/margin_nor_5dp" />
+
+    <TextView
+        style="@style/text_nor_style_nopadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_immedia_pay"
+        android:layout_toLeftOf="@+id/btn_immedia_pay"
+        android:padding="@dimen/padding_nor"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_26sp"
+        tools:text="3000" />
+
+    <Button
+        android:id="@+id/btn_immedia_pay"
+        style="@style/btn_log_min_multi_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line1"
+        android:layout_margin="@dimen/margin_nor_15"
+        android:padding="@dimen/padding_nor"
+        android:text="@string/txt_pay_immedia"
+        android:textColor="@color/color_main_red"
+        android:textSize="@dimen/dimen_size_26sp" />
+
+    <View
+        style="@style/horizontal_line"
+        android:layout_below="@+id/btn_immedia_pay" />
+
+</RelativeLayout>

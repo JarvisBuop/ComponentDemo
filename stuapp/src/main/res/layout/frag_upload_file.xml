@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top_enter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            style="@style/btn_log_min_multi_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_file" />
+
+        <View
+            style="@style/horizontal_line_px"
+            android:layout_margin="@dimen/padding_nor_15" />
+
+        <include
+            style="@style/main_padding_margin"
+            layout="@layout/include_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_recycler_height" />
+
+        <Button
+            style="@style/btn_log_min_multi_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            android:text="@string/txt_storage_file" />
+    </LinearLayout>
+</LinearLayout>

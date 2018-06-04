@@ -19,4 +19,9 @@
     <color name="bg_gray">#aaa</color>
 
     <color name="bg_white_alpha">#55ffffff</color>
+
+    <color name="goo_red">#FFC93437</color>
+    <color name="goo_blue">#FF375BF1</color>
+    <color name="goo_yellow">#FFF7D23E</color>
+    <color name="goo_green">#FF34A350</color>
 </resources>

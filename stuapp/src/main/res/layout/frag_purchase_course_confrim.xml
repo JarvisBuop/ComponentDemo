@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <LinearLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_head_comfrim" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:line_txt="@string/line_txt_already_time" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_nor_gray"
+            android:textSize="@dimen/dimen_size_18sp"
+            tools:text="已选择[3]课时" />
+
+        <include layout="@layout/include_recyclerview_ww" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            app:line_txt="@string/line_txt_pay" />
+
+        <CheckBox
+            style="@style/radio_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:button="@drawable/bg_checkbox"
+            android:text="剩余中级课时10" />
+
+        <Button
+            style="@style/btn_log_min_multi_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:text="@string/btn_settle"
+            android:textColor="@color/color_main" />
+    </LinearLayout>
+
+</LinearLayout>

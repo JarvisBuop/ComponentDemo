@@ -62,7 +62,6 @@ android {
             minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
-            debuggable true
         }
         release {
             minifyEnabled false //开启混淆
