@@ -8,50 +8,74 @@
 
     <include layout="@layout/include_search_top" />
 
-    <LinearLayout
-        style="@style/main_padding_margin"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <include layout="@layout/include_head_comfrim" />
-
-        <com.ostak.justplaystudent.ui.view.CustomLineVie
+        <LinearLayout
+            style="@style/main_padding_margin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:line_txt="@string/line_txt_already_time" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/text_nor_style_nopadding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_nor_gray"
-            android:textSize="@dimen/dimen_size_18sp"
-            tools:text="已选择[3]课时" />
+            <include layout="@layout/include_head_comfrim" />
 
-        <include layout="@layout/include_recyclerview_ww" />
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:line_txt="@string/line_txt_already_time" />
 
-        <com.ostak.justplaystudent.ui.view.CustomLineVie
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor_15"
-            app:line_txt="@string/line_txt_pay" />
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_nor_gray"
+                android:textSize="@dimen/dimen_size_18sp"
+                tools:text="已选择[3]课时" />
 
-        <CheckBox
-            style="@style/radio_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:button="@drawable/bg_checkbox"
-            android:text="剩余中级课时10" />
+            <include
+                android:id="@+id/layout_first"
+                layout="@layout/include_recyclerview_ww" />
 
-        <Button
-            style="@style/btn_log_min_multi_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_nor"
-            android:text="@string/btn_settle"
-            android:textColor="@color/color_main" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.ostak.justplaystudent.ui.view.CustomLineVie
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:line_txt="@string/line_txt_already_pratice_content" />
+
+                <include
+                    android:id="@+id/layout_second"
+                    layout="@layout/include_recyclerview_ww" />
+            </LinearLayout>
+
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor_15"
+                app:line_txt="@string/line_txt_pay" />
+
+            <CheckBox
+                style="@style/radio_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:button="@drawable/bg_checkbox"
+                tools:text="剩余中级课时10" />
+
+            <Button
+                style="@style/btn_log_min_multi_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nor"
+                android:text="@string/btn_settle"
+                android:textColor="@color/color_main" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

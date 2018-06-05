@@ -240,7 +240,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
      */
     protected void doReturnBack() {
         int count = getSupportFragmentManager().getBackStackEntryCount();
-        if (count <= 1 && isTaskRoot()) {
+        if (isReturnFinish(count) && isTaskRoot()) {
             if (mCloseWarned && !TextUtils.isEmpty(closeWarningHint)) {
                 if (isDoubleClick()) {
                     finish();
@@ -256,6 +256,10 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
                 mCurrentFragment.onBack();
             }
         }
+    }
+
+    protected boolean isReturnFinish(int count) {
+        return count <= 1;
     }
 
     private boolean isDoubleClick() {

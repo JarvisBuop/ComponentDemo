@@ -156,8 +156,11 @@ public class MyFragment extends MainBaseFragment {
                 enterLogic(new FragmentParam(myPersonMsgFragment, MyPersonMsgFragment.class, null));
                 break;
             case R.id.cm_my_pre_course:
+                //预定
+                mController.switchExistFrag(0);
                 break;
             case R.id.cm_my_time:
+                mController.switchExistFrag(2);
                 break;
             case R.id.cm_my_already_course:
                 MyAlreadyCourseFragment myAlreadyCourseFragment = MyAlreadyCourseFragment.newInstance(getContainerId());
@@ -170,8 +173,10 @@ public class MyFragment extends MainBaseFragment {
                 enterLogic(new FragmentParam(myCommentStuFragment, MyCommentStuFragment.class, null));
                 break;
             case R.id.cm_my_pre_pratice:
+                mController.switchExistFrag(1);
                 break;
             case R.id.cm_my_wallet:
+                mController.switchExistFrag(3);
                 break;
             case R.id.cm_my_star:
                 MyStarDetailFragment myStarDetailFragment = MyStarDetailFragment.newInstance(getContainerId());

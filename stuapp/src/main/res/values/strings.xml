@@ -61,12 +61,15 @@
     <string name="line_txt_selectedtime">选择上课时间</string>
     <string name="line_txt_selected_trytime">选择试课时间</string>
     <string name="line_txt_already_time">已选上课时间</string>
+    <string name="line_txt_already_praticetime">已选陪练时间</string>
+    <string name="line_txt_already_pratice_content">已选陪练内容</string>
     <string name="line_txt_recommend_public">推荐公开课</string>
     <string name="line_txt_public">公开课</string>
     <string name="txt_upload_music">上传乐谱</string>
     <string name="txt_upload_video">上传视频</string>
     <string name="line_txt_centi">证书</string>
     <string name="line_parent_msg">家长信息</string>
+    <string name="line_parent_content">选择内容</string>
 
     <string name="txt_detail_label1">剩余可约课时</string>
     <string name="txt_detail_label2">关注他的学生</string>
@@ -98,11 +101,17 @@
     <string name="txt_comfirm_join">确认加入</string>
     <string name="txt_cancel_think">再想想</string>
 
+    <string name="txt_pay_msg_num">订单编号: </string>
     <string name="txt_pay_msg_phone">订购人手机: </string>
     <string name="txt_pay_msg_way">支付方式: </string>
     <string name="txt_pay_msg_money">订单金额: </string>
+    <string name="txt_pay_msg_count">订单数量: </string>
     <string name="txt_pay_immedia">立即付款</string>
+    <string name="txt_pay_course">去订购课程</string>
+    <string name="txt_pay_call">拨打客服电话</string>
+    <string name="txt_pay_public">去大师公开课</string>
     <string name="txt_cancal_order">超过时间订单将自动取消</string>
+    <string name="txt_cancal_order2">您可以用来预定大师公开课和预定老师课程时间</string>
 
     <string name="txt_edit_msg">编辑资料</string>
 
@@ -156,4 +165,23 @@
 
     <string name="txt_selected">选择他</string>
     <string name="txt_attention">关注他</string>
+
+    <string name="time_remain">剩余可约课时</string>
+    <string name="time_total">累计授课课时</string>
+    <string name="time_atteantion_stu">关注他的学生</string>
+
+    <string name="time_selected">可选课时</string>
+    <string name="time_selected_time">选择上课时间</string>
+    <string name="time_selected_time_3month">* 只显示3个月的可选课时</string>
+
+    <string name="pratice_count">陪练价格: </string>
+    <string name="pratice_teach_count">请选择授课课时数量</string>
+    <string name="pratice_teach_count_tips">* 订购课时可享受95折优惠</string>
+    
+    <string name="pratice_fixed_price_80">80</string>
+    <string name="pratice_fixed_price_100">100</string>
+    <string name="pratice_fixed_price_30">/ 30分钟 X</string>
+    <string name="pratice_fixed_price_40">/ 40分钟 X</string>
+    <string name="pratice_fixed_price_complete_30">已经选择30分钟陪练</string>
+    <string name="pratice_fixed_price_complete_40">已经选择30分钟陪练</string>
 </resources>

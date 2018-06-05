@@ -36,6 +36,7 @@
     <dimen name="img_coursetime_size">120dp</dimen>
 
     <dimen name="btn_width">160dp</dimen>
+    <dimen name="btn_width_dir">180dp</dimen>
 
     <dimen name="img_max_width">180dp</dimen>
 

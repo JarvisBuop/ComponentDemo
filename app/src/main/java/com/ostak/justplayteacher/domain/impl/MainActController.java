@@ -12,4 +12,5 @@ public interface MainActController {
     //切换frag;
     void switchOtherFrag(int i,String s,FragmentParam t);
 
+    void switchExistFrag(int i);
 }

@@ -21,8 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/text_nor_gray"
-        android:textSize="@dimen/dimen_size_30sp"
-        android:textStyle="bold"
         tools:text="10am" />
 
     <TextView
@@ -31,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_nor_5dp"
         android:textColor="@color/text_nor_gray"
-        android:visibility="gone"
         tools:text="40分钟" />
 
     <TextView

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_search_top" />
+
+    <RelativeLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_head"
+            layout="@layout/include_head_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:id="@+id/layout_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_head"
+            app:line_txt="@string/line_parent_content" />
+
+        <TextView
+            android:id="@+id/txt_pratice_label"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_line"
+            android:text="@string/pratice_teach_count"
+            android:textColor="@color/text_nor_gray" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_line"
+            android:layout_marginLeft="@dimen/margin_nor_15"
+            android:layout_toRightOf="@id/txt_pratice_label"
+            android:text="@string/pratice_teach_count_tips"
+            android:textColor="@color/color_main_red" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_pratice_label"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_pratice_30_label"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pratice_fixed_price_80"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_30sp" />
+
+            <TextView
+                android:id="@+id/txt_pratice_30_label_right"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:text="@string/pratice_fixed_price_30"
+                android:textColor="@color/text_nor_gray"
+                android:textSize="@dimen/dimen_size_20sp" />
+
+
+            <com.ostak.justplaystudent.ui.view.CustomAddMinusView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_30"
+            android:layout_marginTop="@dimen/margin_nor_15">
+
+            <TextView
+                android:id="@+id/txt_pratice_40_label"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pratice_fixed_price_100"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/dimen_size_30sp" />
+
+            <TextView
+                android:id="@+id/txt_pratice_40_label_right"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:text="@string/pratice_fixed_price_40"
+                android:textColor="@color/text_nor_gray"
+                android:textSize="@dimen/dimen_size_20sp" />
+
+            <com.ostak.justplaystudent.ui.view.CustomAddMinusView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15" />
+        </LinearLayout>
+
+
+        <!--此处缺图;-->
+        <TextView
+            android:id="@+id/txt_already_30"
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_40"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            android:text="@string/pratice_fixed_price_complete_30"
+            android:textColor="@color/text_nor_gray" />
+
+        <TextView
+            style="@style/text_nor_style_nopadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txt_already_30"
+            android:layout_marginLeft="@dimen/margin_nor_15"
+            android:layout_toRightOf="@id/txt_already_30"
+            android:text="@string/pratice_fixed_price_complete_40"
+            android:textColor="@color/text_nor_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_already_30"
+            android:layout_marginTop="@dimen/margin_nor_15"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/include_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/btn_log_min_multi_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_submit_order"
+                android:textColor="@color/color_main" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

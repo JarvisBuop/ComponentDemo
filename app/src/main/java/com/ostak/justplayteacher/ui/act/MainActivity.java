@@ -101,15 +101,15 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        rgpLeft.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton radioButton = (RadioButton) findViewById(checkedId);
-                radioSetting(radioButton);
-                int tag = Integer.parseInt((String) radioButton.getTag());
-                showFragment(tag, String.valueOf(tag), arr[tag]);
-            }
-        });
+//        rgpLeft.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                RadioButton radioButton = (RadioButton) findViewById(checkedId);
+//                radioSetting(radioButton);
+//                int tag = Integer.parseInt((String) radioButton.getTag());
+//                showFragment(tag, String.valueOf(tag), arr[tag]);
+//            }
+//        });
     }
 
     @OnClick({R.id.img_circle, R.id.radio_one, R.id.radio_two, R.id.radio_three, R.id.radio_four, R.id.radio_five})
@@ -135,14 +135,35 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
         }
     }
 
-    private void showPointFrag(int tag){
-//        showFragment(tag, String.valueOf(tag), arr[tag]);
+    private int getRadioId(int tag) {
+        switch (tag) {
+            case 0:
+                return R.id.radio_one;
+            case 1:
+                return R.id.radio_two;
+            case 2:
+                return R.id.radio_three;
+            case 3:
+                return R.id.radio_four;
+            case 4:
+                return R.id.radio_five;
+        }
+        return R.id.radio_one;
+    }
+
+    private void showPointFrag(int tag) {
+        RadioButton radioButton = rgpLeft.findViewById(getRadioId(tag));
+        radioSetting(radioButton);
+        int tagStr = Integer.parseInt((String) radioButton.getTag());
+        showFragment(tagStr, String.valueOf(tag), arr[tag]);
     }
 
     private void radioSetting(RadioButton radioButton) {
         if (currentRbtn != null) {
             currentRbtn.setTextColor(getResources().getColor(R.color.text_nor_gray_alpha));
+            currentRbtn.setChecked(false);
         }
+        radioButton.setChecked(true);
         radioButton.setTextColor(getResources().getColor(R.color.color_main));
 
         this.currentRbtn = radioButton;
@@ -152,6 +173,11 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
     @Override
     public void switchOtherFrag(int i, String s, FragmentParam o) {
         pushFragmentToBackStack(o);
+    }
+
+    @Override
+    public void switchExistFrag(int i) {
+        showPointFrag(i);
     }
 
 
@@ -174,4 +200,8 @@ public class MainActivity extends DBaseExtendFragmentActivty implements MainActC
         }
     }
 
+    @Override
+    protected boolean isReturnFinish(int count) {
+        return count <= 5;
+    }
 }

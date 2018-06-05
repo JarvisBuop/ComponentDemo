@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_common_top" />
+
+    <LinearLayout
+        style="@style/main_padding_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_big_style_nopadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/margin_nor_20dp"
+            android:text="感谢您购买了30节大师级课程"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/dimen_size_40sp" />
+
+        <TextView
+            style="@style/text_big_style_nopadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor"
+            android:text="@string/txt_cancal_order2"
+            android:textSize="@dimen/dimen_size_30sp" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:line_txt="@string/line_txt_pay_msg" />
+
+        <LinearLayout
+            android:id="@+id/layout_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pay_msg_num"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:textColor="@color/text_nor_gray"
+                tools:text="@string/txt_pay_msg_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pay_msg_phone"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:textColor="@color/text_nor_gray"
+                tools:text="@string/txt_pay_msg_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pay_msg_way"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:textColor="@color/text_nor_gray"
+                tools:text="@string/txt_pay_msg_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pay_msg_count"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:textColor="@color/text_nor_gray"
+                tools:text="@string/txt_pay_msg_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_nor_25"
+            android:layout_marginLeft="@dimen/margin_nor"
+            android:layout_marginTop="@dimen/margin_nor">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pay_msg_money"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_nor_15"
+                android:textColor="@color/text_nor_gray"
+                tools:text="@string/txt_pay_msg_phone" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_line" />
+
+        <Button
+            style="@style/btn_log_min_multi_color"
+            android:layout_width="@dimen/btn_width_dir"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_nor_20dp"
+            android:text="@string/txt_pay_course" />
+
+        <Button
+            style="@style/btn_log_min_multi_color"
+            android:layout_width="@dimen/btn_width_dir"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_course_time_normal"
+            android:text="@string/txt_pay_public"
+            android:textColor="@color/text_nor_gray" />
+    </LinearLayout>
+
+</LinearLayout>

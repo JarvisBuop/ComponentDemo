@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_padding_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_nor_15">
+
+    <ImageView
+        android:id="@+id/img_person_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/wy_logo" />
+
+    <TextView
+        android:id="@+id/txt_person_name"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nor"
+        android:layout_toRightOf="@id/img_person_icon"
+        android:text="老师"
+        android:textColor="@color/text_nor"
+        android:textSize="@dimen/dimen_size_20sp" />
+
+    <TextView
+        android:id="@+id/txt_person_age"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_person_name"
+        android:layout_toRightOf="@id/txt_person_name"
+        android:textColor="@color/text_nor_gray"
+        tools:text="Mike" />
+
+    <TextView
+        android:id="@+id/txt_person_country"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_person_age"
+        android:layout_toRightOf="@id/txt_person_age"
+        android:textColor="@color/text_nor_gray"
+        tools:text="Mike" />
+
+    <TextView
+        android:id="@+id/txt_person_level"
+        style="@style/text_nor_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txt_person_country"
+        android:layout_toRightOf="@id/txt_person_country"
+        android:textColor="@color/color_main"
+        android:textSize="@dimen/dimen_size_18sp"
+        tools:text="Mike" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_person_name"
+        android:layout_below="@id/txt_person_name"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/time_remain"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_remain_time"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/color_main"
+                tools:text="50" />
+        </LinearLayout>
+
+        <View style="@style/vertical_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/time_atteantion_stu"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_release_time"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/color_main"
+                tools:text="50" />
+        </LinearLayout>
+
+        <View style="@style/vertical_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/time_total"
+                android:textColor="@color/text_nor_gray" />
+
+            <TextView
+                android:id="@+id/txt_teach_time"
+                style="@style/text_nor_style_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/color_main"
+                tools:text="50" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_person_icon">
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_nor"
+            android:layout_weight="2"
+            app:line_txt="@string/time_selected" />
+
+        <com.ostak.justplaystudent.ui.view.CustomLineVie
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:line_txt="@string/time_selected_time" />
+    </LinearLayout>
+
+</RelativeLayout>

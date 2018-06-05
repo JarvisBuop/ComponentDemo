@@ -264,6 +264,12 @@
         <item name="android:background">#ddd</item>
     </style>
 
+    <style name="vertical_line_px">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ddd</item>
+    </style>
+
     <style name="vertical_line_margin_px">
         <item name="android:layout_width">1px</item>
         <item name="android:layout_height">match_parent</item>
@@ -280,7 +286,7 @@
 
     <style name="horizontal_line_px">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">2px</item>
+        <item name="android:layout_height">1px</item>
         <item name="android:background">#eee</item>
     </style>
 

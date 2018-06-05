@@ -3,12 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <CheckBox
+        android:id="@+id/check_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/txt_lesson_time"
         style="@style/text_nor_style_nopadding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/img_show"
+        android:layout_toRightOf="@id/check_lesson"
         android:drawableLeft="@mipmap/my_course"
         android:text="初级课程2018/02/10"
         android:textColor="@color/text_nor_gray" />
@@ -17,6 +25,7 @@
         style="@style/text_nor_style_nopadding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txt_lesson_time"
         android:layout_centerVertical="true"
         android:drawableLeft="@mipmap/m_tearch"
         android:text="预约老师:MIKE"
@@ -27,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/img_show"
+        android:layout_alignLeft="@id/txt_lesson_time"
         android:layout_alignParentBottom="true"
         android:drawableLeft="@mipmap/m_info"
         android:text="10课时"
