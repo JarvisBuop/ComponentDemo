@@ -81,7 +81,7 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
         StringBuilder sb = new StringBuilder();
         if (!TextUtils.isEmpty(param.fragTag)) {
             sb.append(param.fragTag);
-        }else {
+        } else {
             sb.append(param.cls.toString());
         }
         return sb.toString();
@@ -125,11 +125,11 @@ public abstract class DBaseExtendFragmentActivty extends DBaseActivity {
             fragment.onEnter(param.data);
 
             FragmentTransaction ft = fm.beginTransaction();
+            if (mCurrentFragment != null) {
+                ft.hide(mCurrentFragment);
+            }
+            hideOtherStackFrag(ft);
             if (fragment.isAdded()) {
-                if (mCurrentFragment != null && mCurrentFragment != fragment) {
-                    ft.hide(mCurrentFragment);
-                }
-                hideOtherStackFrag(ft);
                 ft.show(fragment);
             } else {
                 ft.add(containerId, fragment, fragmentTag);

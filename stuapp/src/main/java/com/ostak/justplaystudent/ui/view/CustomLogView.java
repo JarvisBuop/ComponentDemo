@@ -93,7 +93,7 @@ public class CustomLogView extends RelativeLayout {
         editInput.setFocusableInTouchMode(aBoolean);
 
         int anInt = typedArray.getInt(R.styleable.CustomLogView_inputType, 0);
-        editInput.setInputType(anInt == 0 ? EditorInfo.TYPE_CLASS_TEXT :EditorInfo.TYPE_TEXT_VARIATION_PASSWORD);
+        editInput.setInputType(anInt == 0 ? EditorInfo.TYPE_CLASS_TEXT :EditorInfo.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
 
         editInput.setHint(string);
 

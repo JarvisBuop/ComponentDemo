@@ -18,7 +18,7 @@
         <com.ostak.justplaystudent.ui.view.CustomLineVie
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:line_txt="@string/line_txt_content"></com.ostak.justplaystudent.ui.view.CustomLineVie>
+            app:line_txt="@string/line_txt_content"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -93,6 +93,7 @@
         <include layout="@layout/include_pay" />
 
         <Button
+            android:id="@+id/btn_submit"
             style="@style/btn_log_min_multi_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

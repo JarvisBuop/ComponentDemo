@@ -58,4 +58,16 @@ public class CustomLineVie extends LinearLayout {
         mLayout.setOrientation(anInt == 0 ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
         typedArray.recycle();
     }
+
+    public void setTxtLine(String str) {
+        txtLine.setText(str);
+    }
+
+    public void setOrietation(boolean isHori){
+        if(isHori){
+            mLayout.setOrientation(LinearLayout.HORIZONTAL);
+        }else {
+            mLayout.setOrientation(LinearLayout.VERTICAL);
+        }
+    }
 }

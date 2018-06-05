@@ -32,7 +32,7 @@
     <dimen name="tab_width">550dp</dimen>
     <dimen name="tab_log_content_height">320dp</dimen>
 
-    <dimen name="img_course_size">180dp</dimen>
+    <dimen name="img_course_size">160dp</dimen>
     <dimen name="img_coursetime_size">120dp</dimen>
 
     <dimen name="btn_width">160dp</dimen>

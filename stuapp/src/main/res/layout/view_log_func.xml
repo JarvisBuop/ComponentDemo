@@ -6,8 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:clickable="true"
-    android:gravity="center"
-    tools:background="@color/bg_student">
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/img_log"

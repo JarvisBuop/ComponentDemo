@@ -13,18 +13,21 @@
     <RadioButton
         android:id="@+id/radio_left"
         style="@style/radio_main_tab"
+        android:checked="true"
         android:drawableLeft="@mipmap/nav_message"
         android:paddingLeft="@dimen/margin_nor_50dp"
         android:paddingRight="@dimen/margin_nor_50dp"
+        android:textColor="@color/color_main"
         tools:background="@drawable/bg_checkbox_tab_inner"
-        tools:checked="true"
         tools:text="@string/txt_var_email" />
 
     <RadioButton
         android:id="@+id/radio_middle"
         style="@style/radio_main_tab"
+        android:checked="false"
         android:paddingLeft="@dimen/margin_nor_50dp"
         android:paddingRight="@dimen/margin_nor_50dp"
+        android:textColor="@color/white"
         android:visibility="gone"
         tools:background="@drawable/bg_checkbox_tab"
         tools:checked="true"
@@ -33,10 +36,12 @@
     <RadioButton
         android:id="@+id/radio_right"
         style="@style/radio_main_tab"
+        android:checked="false"
         android:drawableLeft="@mipmap/nav_message"
         android:paddingLeft="@dimen/margin_nor_50dp"
         android:paddingRight="@dimen/margin_nor_50dp"
         android:text="@string/txt_var_phone"
+        android:textColor="@color/white"
         tools:background="@drawable/bg_checkbox_tab"
         tools:checked="true" />
 </RadioGroup>

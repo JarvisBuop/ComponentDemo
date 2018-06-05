@@ -37,6 +37,8 @@ public class CustomTabView extends LinearLayout {
 
     int mode = MODE_TAB_LOG;
 
+    RadioButton currentBtn = null;
+
     public CustomTabView(Context context) {
         this(context, null);
     }
@@ -70,6 +72,8 @@ public class CustomTabView extends LinearLayout {
         initView();
 
         typedArray.recycle();
+
+
     }
 
     private void initView() {
@@ -85,5 +89,35 @@ public class CustomTabView extends LinearLayout {
                 radioMiddle.setBackgroundResource(R.drawable.bg_checkbox_tab_inner);
                 break;
         }
+    }
+
+    public void setonCheckChangeListener(RadioGroup.OnCheckedChangeListener mListener) {
+        layoutRadioBg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton viewById = group.findViewById(checkedId);
+
+                switch (mode) {
+                    case MODE_TAB_LOG:
+                        if (currentBtn != null) {
+                            currentBtn.setTextColor(getContext().getResources().getColor(R.color.white));
+                        }
+                        viewById.setTextColor(getContext().getResources().getColor(R.color.color_main));
+                        break;
+                    case MODE_TAB_INNER:
+                        if (currentBtn != null) {
+                            currentBtn.setTextColor(getContext().getResources().getColor(R.color.white));
+                        }
+                        viewById.setTextColor(getContext().getResources().getColor(R.color.color_main));
+                        break;
+                }
+
+                if (mListener != null) {
+                    mListener.onCheckedChanged(group, checkedId);
+                }
+
+                currentBtn = viewById;
+            }
+        });
     }
 }

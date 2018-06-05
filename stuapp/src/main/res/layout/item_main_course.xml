@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_click"
+    android:layout_marginBottom="@dimen/margin_nor">
 
     <ImageView
         android:id="@+id/img_show"
@@ -36,18 +38,21 @@
 
 
     <Button
+        android:id="@+id/btn_course_tag"
         style="@style/btn_log_min_orange"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignLeft="@id/txt_course_name"
         android:layout_below="@id/txt_course_tips"
         android:layout_marginTop="@dimen/margin_nor"
+        android:gravity="center"
         android:paddingLeft="@dimen/margin_nor"
         android:paddingRight="@dimen/margin_nor"
         android:textSize="@dimen/dimen_size_16sp"
         tools:text="演奏级艺术家" />
 
     <TextView
+        android:id="@+id/txt_course_time"
         style="@style/text_nor_style_18size_colorblack_nopadding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

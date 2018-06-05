@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:orientation="vertical">
     <!--主页-我的课程-->
-    <LinearLayout
+
+    <include layout="@layout/include_search_top_nav" />
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <include layout="@layout/include_search_top_nav"/>
-
-        <android.support.v4.view.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
-
-        </android.support.v4.view.ViewPager>
-
-        <com.ostak.justplaystudent.ui.view.CustomLineVie
-            style="@style/main_padding_margin"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:line_txt="@string/line_txt_course" />
+            android:orientation="vertical">
 
-        <include
-            style="@style/main_padding_margin"
-            layout="@layout/include_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-</android.support.v4.widget.NestedScrollView>
+            </android.support.v4.view.ViewPager>
+
+            <com.ostak.justplaystudent.ui.view.CustomLineVie
+                style="@style/main_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:line_txt="@string/line_txt_course" />
+
+            <include
+                style="@style/main_padding_margin"
+                layout="@layout/include_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
