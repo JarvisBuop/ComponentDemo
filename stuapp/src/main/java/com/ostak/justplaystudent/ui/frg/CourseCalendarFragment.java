@@ -25,7 +25,7 @@ import butterknife.Unbinder;
 
 public class CourseCalendarFragment extends MainBaseFragment {
 
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
     Unbinder unbinder;
 

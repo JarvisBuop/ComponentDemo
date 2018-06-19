@@ -22,25 +22,25 @@ import butterknife.OnClick;
  */
 
 public class LogThirdActivity extends DBaseActivity {
-    @BindView(R.id.edit_input_name)
+    @BindView(R2.id.edit_input_name)
     CustomLogView editInputName;
-    @BindView(R.id.edit_input_psd)
+    @BindView(R2.id.edit_input_psd)
     CustomLogView editInputPsd;
-    @BindView(R.id.edit_input_psd_again)
+    @BindView(R2.id.edit_input_psd_again)
     CustomLogView editInputPsdAgain;
-    @BindView(R.id.checkbox_user)
+    @BindView(R2.id.checkbox_user)
     CheckBox checkboxUser;
-    @BindView(R.id.btn_register)
+    @BindView(R2.id.btn_register)
     Button btnRegister;
-    @BindView(R.id.txt_more_way)
+    @BindView(R2.id.txt_more_way)
     TextView txtMoreWay;
-    @BindView(R.id.img_winxin)
+    @BindView(R2.id.img_winxin)
     ImageView imgWinxin;
-    @BindView(R.id.img_qq)
+    @BindView(R2.id.img_qq)
     ImageView imgQq;
-    @BindView(R.id.img_weibo)
+    @BindView(R2.id.img_weibo)
     ImageView imgWeibo;
-    @BindView(R.id.img_wangyi)
+    @BindView(R2.id.img_wangyi)
     ImageView imgWangyi;
 
     @Override

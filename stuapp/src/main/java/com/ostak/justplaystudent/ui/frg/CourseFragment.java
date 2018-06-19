@@ -29,15 +29,15 @@ import butterknife.OnClick;
 
 public class CourseFragment extends MainBaseFragment {
 
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
 
     ArrayList mDataList = new ArrayList();

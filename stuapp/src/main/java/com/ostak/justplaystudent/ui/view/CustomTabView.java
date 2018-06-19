@@ -26,13 +26,13 @@ public class CustomTabView extends LinearLayout {
 
     private static final int MODE_TAB_LOG = 0;//外部的tab
     private static final int MODE_TAB_INNER = 1;//内部的tab;
-    @BindView(R.id.radio_left)
+    @BindView(R2.id.radio_left)
     RadioButton radioLeft;
-    @BindView(R.id.radio_right)
+    @BindView(R2.id.radio_right)
     RadioButton radioRight;
-    @BindView(R.id.radio_middle)
+    @BindView(R2.id.radio_middle)
     RadioButton radioMiddle;
-    @BindView(R.id.layout_radio_bg)
+    @BindView(R2.id.layout_radio_bg)
     RadioGroup layoutRadioBg;
 
     int mode = MODE_TAB_LOG;

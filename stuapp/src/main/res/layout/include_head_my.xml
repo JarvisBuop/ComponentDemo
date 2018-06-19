@@ -31,7 +31,7 @@
         style="@style/text_nor_style_nopadding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/txt_course_small_level"
+        android:layout_above="@+id/txt_course_small_level"
         android:layout_alignLeft="@id/txt_course_name"
         android:text="10"
         android:textColor="@color/color_main"

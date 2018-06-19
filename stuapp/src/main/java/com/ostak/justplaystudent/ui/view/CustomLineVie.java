@@ -22,11 +22,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomLineVie extends LinearLayout {
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView txtLine;
-    @BindView(R.id.line_horizental)
+    @BindView(R2.id.line_horizental)
     View lineHorizental;
-    @BindView(R.id.layout_view)
+    @BindView(R2.id.layout_view)
     LinearLayout mLayout;
 
     public CustomLineVie(Context context) {

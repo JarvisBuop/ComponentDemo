@@ -1,1 +1,1 @@
-include ':app', ':uikit', ':stuapp'
+include ':app', ':uikit', ':stuapp', ':teaapp'

@@ -46,7 +46,7 @@ public class CoursePurchaseLessonFragment extends MainBaseFragment {
     }
 
 
-    @OnClick(R.id.btn_submit)
+    @OnClick(R2.id.btn_submit)
     public void onViewClicked() {
         CourseCalendarFragment purchaseLessonFragment = CourseCalendarFragment.newInstance(getContainerId());
         purchaseLessonFragment.setMainActController(mController);

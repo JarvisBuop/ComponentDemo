@@ -1,25 +1,5 @@
 apply plugin: 'com.android.application'
-
-
-Properties properties = new Properties();
-properties.load(project.rootProject.file("local.properties").newDataInputStream());
-
-def static getGitVersion() {
-    def cmd = 'git rev-list HEAD --count'
-    try {
-        return cmd.execute().text.trim().toInteger()
-    } catch (Throwable th) {
-        return "";
-    }
-}
-
-def static getBuildTime() {
-    try {
-        return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"));
-    } catch (Throwable th) {
-        return new Date().toLocaleString();
-    }
-}
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -33,8 +13,8 @@ android {
     defaultConfig {
         applicationId "com.ostak.justplayteacher"
         minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion  rootProject.ext.targetSdkVersion
-        versionCode getGitVersion()
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
 
         multiDexEnabled true
@@ -58,7 +38,7 @@ android {
     }
 
     buildTypes {
-        debug{
+        debug {
             minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
@@ -67,11 +47,11 @@ android {
             minifyEnabled false //开启混淆
             shrinkResources false //压缩资源
             zipAlignEnabled false //是否优化apk文件，将apk文件中未压缩的数据在4个字节边界上对齐
-            signingConfig signingConfigs.myConfig
+//            signingConfig signingConfigs.myConfig
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        //todo 3.0之后;each , outputFile -> all,outputFileName
+        /*//todo 3.0之后;each , outputFile -> all,outputFileName
         android.applicationVariants.all { variant ->    //批量修改Apk名字
             variant.outputs.all { output ->
                 def outputFile = output.outputFile
@@ -97,59 +77,20 @@ android {
                     outputFileName = fileName;
                 }
             }
-        }
+        }*/
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':uikit')
-//
-//    //todo app系统库的依赖;
-    implementation "com.android.support.constraint:constraint-layout:${rootProject.constraintVersion}"
-    implementation "com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"
-    implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:palette-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:transition:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //分包;
-    implementation "com.android.support:multidex:$rootProject.multidexVersion"
-//
-//    //todo 基本功能库的依赖
-    //RxJava;
-    //RxAndroid;
-    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
-    //gson解析
-    implementation "com.google.code.gson:gson:${rootProject.gsonVersion}"
-    //dagger
-//    compile 'com.google.dagger:dagger:2.14.1'
-//    annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
-    //下载框架retrofit;
-    implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${rootProject.retrofitVersion}"//对序列化和反序列化的转化;
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.retrofitVersion}"//对Call对象的转化为Observe对象
-    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.okhttp_logging_interceptor}"
-//
-//    //todo 常用工具库的依赖
-    //butterknife
-    implementation "com.jakewharton:butterknife:${rootProject.butterKnifeVersion}"
-    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.butterKnifeVersion}"
-    implementation "com.jakewharton:disklrucache:${rootProject.cacheVersion}"
+    api "com.android.support:multidex:$rootProject.multidexVersion"
 
-    implementation("com.github.bumptech.glide:glide:${rootProject.glideVersion}") {
-        exclude group: "com.android.support"
+    //公共组件;
+    implementation project(path: ':uikit')
+
+    if (!isModule.toBoolean()) {
+        implementation project(path: ':stuapp')
+        implementation project(path: ':teaapp')
     }
-    annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.glideVersion}"
-    implementation "com.blankj:utilcode:$rootProject.blackVersion"
-    implementation "de.hdodenhof:circleimageview:$rootProject.circleimgVersion"
-//
-//    //todo EventBus 事件总线;
-    implementation "org.greenrobot:eventbus:${rootProject.eventBusVersion}"
-
-    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
-    implementation "com.google.guava:guava:$rootProject.guava"
 }

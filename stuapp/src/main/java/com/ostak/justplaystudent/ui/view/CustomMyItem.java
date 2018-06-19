@@ -23,11 +23,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomMyItem extends RelativeLayout {
-    @BindView(R.id.img_left_icon)
+    @BindView(R2.id.img_left_icon)
     ImageView imgLeftIcon;
-    @BindView(R.id.txt_middle_content)
+    @BindView(R2.id.txt_middle_content)
     TextView txtMiddleContent;
-    @BindView(R.id.img_right_icon)
+    @BindView(R2.id.img_right_icon)
     ImageView imgRightIcon;
 
     public CustomMyItem(Context context) {

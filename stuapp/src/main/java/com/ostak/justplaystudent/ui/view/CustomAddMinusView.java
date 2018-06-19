@@ -19,11 +19,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomAddMinusView extends LinearLayout {
-    @BindView(R.id.txt_minus)
+    @BindView(R2.id.txt_minus)
     TextView txtMinus;
-    @BindView(R.id.txt_content)
+    @BindView(R2.id.txt_content)
     TextView txtContent;
-    @BindView(R.id.txt_add)
+    @BindView(R2.id.txt_add)
     TextView txtAdd;
 
     int contentInt = 0;

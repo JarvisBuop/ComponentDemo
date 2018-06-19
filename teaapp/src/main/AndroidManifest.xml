@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jarvisdong.teaapp">
+    <!--集成化需要合并的清单文件;-->
+    <application>
+        <!--集成化得某个组件中的界面;-->
+        <activity android:name=".ui.act.LogActivity" />
+        <activity android:name=".ui.act.BindPhoneActivity" />
+        <activity android:name=".ui.act.MainTeaActivity" />
+        <activity android:name=".ui.act.RegisterActivity" />
+        <activity android:name=".ui.act.RegisterPhoneActivity" />
+        <activity android:name=".ui.act.TestAct" />
+    </application>
+
+</manifest>

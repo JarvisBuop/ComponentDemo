@@ -23,13 +23,13 @@ import butterknife.ButterKnife;
 
 public class CustomPersonView extends LinearLayout {
     private final int arrowMode;
-    @BindView(R.id.txt_main_left)
+    @BindView(R2.id.txt_main_left)
     TextView txtMainLeft;
-    @BindView(R.id.switch_person)
+    @BindView(R2.id.switch_person)
     SwitchCompat switchPerson;
-    @BindView(R.id.txt_main_right)
+    @BindView(R2.id.txt_main_right)
     TextView txtMainRight;
-    @BindView(R.id.img_arrow)
+    @BindView(R2.id.img_arrow)
     ImageView imgArrow;
 
     public CustomPersonView(Context context) {

@@ -37,15 +37,15 @@ public class CustomLogView extends RelativeLayout {
 
     private static final int MODE_TXT = 0;
     private static final int MODE_ARROW = 1;
-    @BindView(R.id.img_log)
+    @BindView(R2.id.img_log)
     ImageView imgLog;
-    @BindView(R.id.edit_input)
+    @BindView(R2.id.edit_input)
     EditText editInput;
-    @BindView(R.id.txt_validCode)
+    @BindView(R2.id.txt_validCode)
     TextView txtValidCode;
-    @BindView(R.id.img_arrow)
+    @BindView(R2.id.img_arrow)
     ImageView imgArrow;
-    @BindView(R.id.layout_input)
+    @BindView(R2.id.layout_input)
     View layout;
 
     int mode = MODE_TXT;
@@ -80,29 +80,33 @@ public class CustomLogView extends RelativeLayout {
         LayoutInflater.from(context).inflate(R.layout.view_log_func, this, true);
         ButterKnife.bind(this, this);
 
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.CustomLogView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLogView);
 
         boolean aBoolean = typedArray.getBoolean(R.styleable.CustomLogView_editFocus, true);
         String string = typedArray.getString(R.styleable.CustomLogView_editHint);
         int resourceId = typedArray.getResourceId(R.styleable.CustomLogView_left_icon, 0);
         mode = typedArray.getInt(R.styleable.CustomLogView_input_mode, MODE_TXT);
         String rightString = typedArray.getString(R.styleable.CustomLogView_right_txt);
-        int rightColor = typedArray.getColor(R.styleable.CustomLogView_right_txt_color,context.getResources().getColor(R.color.color_main));
+        int rightColor = typedArray.getColor(R.styleable.CustomLogView_right_txt_color, context.getResources().getColor(R.color.color_main));
 
-        editInput.setFocusable(aBoolean);
-        editInput.setFocusableInTouchMode(aBoolean);
+        if (editInput != null) {
+            editInput.setFocusable(aBoolean);
+            editInput.setFocusableInTouchMode(aBoolean);
 
-        int anInt = typedArray.getInt(R.styleable.CustomLogView_inputType, 0);
-        editInput.setInputType(anInt == 0 ? EditorInfo.TYPE_CLASS_TEXT :EditorInfo.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            int anInt = typedArray.getInt(R.styleable.CustomLogView_inputType, 0);
+            editInput.setInputType(anInt == 0 ? EditorInfo.TYPE_CLASS_TEXT : EditorInfo.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
 
-        editInput.setHint(string);
+            editInput.setHint(string);
+        }
 
-        if (resourceId != 0) {
+        if (resourceId != 0 && imgLog != null) {
             imgLog.setImageResource(resourceId);
         }
 
-        txtValidCode.setText(rightString);
-        txtValidCode.setTextColor(rightColor);
+        if (txtValidCode != null) {
+            txtValidCode.setText(rightString);
+            txtValidCode.setTextColor(rightColor);
+        }
         initMode();
         typedArray.recycle();
 
@@ -110,6 +114,7 @@ public class CustomLogView extends RelativeLayout {
     }
 
     private void initMode() {
+        if (txtValidCode == null || imgArrow == null) return;
         switch (mode) {
             case MODE_TXT:
                 txtValidCode.setVisibility(VISIBLE);

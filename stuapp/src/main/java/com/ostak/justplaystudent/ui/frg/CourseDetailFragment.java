@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
  */
 
 public class CourseDetailFragment extends MainBaseFragment {
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView mRecycler;
 
     CommonAdapter mAdapter;

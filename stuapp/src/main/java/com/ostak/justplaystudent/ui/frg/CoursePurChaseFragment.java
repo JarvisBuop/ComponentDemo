@@ -32,21 +32,21 @@ import butterknife.ButterKnife;
 
 public class CoursePurChaseFragment extends MainBaseFragment {
 
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.img_msg)
+    @BindView(R2.id.img_msg)
     ImageView imgMsg;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.img_quit)
+    @BindView(R2.id.img_quit)
     ImageView imgQuit;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.swipe)
+    @BindView(R2.id.swipe)
     SwipeRefreshLayout swipe;
 
     QuickFuncAdapter mAdapter;

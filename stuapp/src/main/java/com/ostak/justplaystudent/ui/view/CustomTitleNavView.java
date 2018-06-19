@@ -23,17 +23,17 @@ import butterknife.OnClick;
  */
 
 public class CustomTitleNavView extends LinearLayout {
-    @BindView(R.id.btn_nav1)
+    @BindView(R2.id.btn_nav1)
     Button btnNav1;
-    @BindView(R.id.img_nav1)
+    @BindView(R2.id.img_nav1)
     ImageView imgNav1;
-    @BindView(R.id.btn_nav2)
+    @BindView(R2.id.btn_nav2)
     Button btnNav2;
-    @BindView(R.id.img_nav2)
+    @BindView(R2.id.img_nav2)
     ImageView imgNav2;
-    @BindView(R.id.btn_nav3)
+    @BindView(R2.id.btn_nav3)
     Button btnNav3;
-    @BindView(R.id.img_nav3)
+    @BindView(R2.id.img_nav3)
     ImageView imgNav3;
 
     public CustomTitleNavView(Context context) {

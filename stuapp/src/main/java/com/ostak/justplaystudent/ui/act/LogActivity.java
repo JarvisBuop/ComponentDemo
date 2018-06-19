@@ -20,15 +20,15 @@ import butterknife.OnClick;
  */
 
 public class LogActivity extends DBaseActivity {
-    @BindView(R.id.edit_input_name)
+    @BindView(R2.id.edit_input_name)
     CustomLogView editInputName;
-    @BindView(R.id.edt_input_psd)
+    @BindView(R2.id.edt_input_psd)
     CustomLogView edtInputPsd;
-    @BindView(R.id.txt_forget_psd)
+    @BindView(R2.id.txt_forget_psd)
     TextView txtForgetPsd;
-    @BindView(R.id.btn_login)
+    @BindView(R2.id.btn_login)
     Button btnLogin;
-    @BindView(R.id.txt_goto_regis)
+    @BindView(R2.id.txt_goto_regis)
     TextView txtGotoRegis;
 
     @Override
@@ -56,7 +56,7 @@ public class LogActivity extends DBaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
-                startActivity(new Intent(mContext,MainActivity.class));
+                startActivity(new Intent(mContext,MainStuActivity.class));
                 finish();
                 break;
             case R.id.txt_goto_regis:
