@@ -66,6 +66,7 @@ dependencies {
     //todo 常用工具库的依赖
     //butterknife
     api "com.jakewharton:butterknife:${rootProject.butterKnifeVersion}"
+    //    组件化中的自动生成编译器,必须放在组件中;
     annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.butterKnifeVersion}"
 
     api "com.jakewharton:disklrucache:${rootProject.cacheVersion}"

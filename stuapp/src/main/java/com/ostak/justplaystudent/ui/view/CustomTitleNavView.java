@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,11 +38,11 @@ public class CustomTitleNavView extends LinearLayout {
     ImageView imgNav3;
 
     public CustomTitleNavView(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public CustomTitleNavView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+        this(context, attrs, 0);
     }
 
     public CustomTitleNavView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -57,22 +58,20 @@ public class CustomTitleNavView extends LinearLayout {
     }
 
 
-    @OnClick({R.id.btn_nav1, R.id.btn_nav2, R.id.btn_nav3})
+    @OnClick({R2.id.btn_nav1, R2.id.btn_nav2, R2.id.btn_nav3})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_nav1:
-                selectPlace(0);
-                break;
-            case R.id.btn_nav2:
-                selectPlace(1);
-                break;
-            case R.id.btn_nav3:
-                selectPlace(2);
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_nav1) {
+            selectPlace(0);
+        } else if (id == R.id.btn_nav2) {
+            selectPlace(1);
+        } else if (id == R.id.btn_nav3) {
+            selectPlace(2);
         }
     }
 
     public void selectPlace(int pos) {
+        if(imgNav1 == null || imgNav2 == null || imgNav3 == null) return;
         switch (pos) {
             case 0:
                 imgNav1.setVisibility(VISIBLE);

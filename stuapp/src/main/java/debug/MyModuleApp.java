@@ -9,7 +9,7 @@ import com.jarvisdong.uikit.base.BaseApplication;
 
 /**
  * Created by JarvisDong on 2018/6/1.
- * OverView:
+ * OverView: 组件化的app, 集成化会被删除 ;
  */
 
 public class MyModuleApp extends BaseApplication {

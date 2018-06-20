@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,9 +23,9 @@ import butterknife.ButterKnife;
 
 public class CustomDataView extends LinearLayout {
 
-    @BindView(R.id.txt_data_content)
+    @BindView(R2.id.txt_data_content)
     TextView txtDataContent;
-    @BindView(R.id.img_data_select)
+    @BindView(R2.id.img_data_select)
     ImageView imgDataSelect;
 
     public CustomDataView(Context context) {

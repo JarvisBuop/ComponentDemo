@@ -13,8 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jarvisdong.teaapp.MyApp;
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -34,41 +33,41 @@ import butterknife.Unbinder;
 
 public class OrderCourseFragment2 extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.img_msg)
+    @BindView(R2.id.img_msg)
     ImageView imgMsg;
-    @BindView(R.id.img_quit)
+    @BindView(R2.id.img_quit)
     ImageView imgQuit;
-    @BindView(R.id.img_person_icon)
+    @BindView(R2.id.img_person_icon)
     ImageView imgPersonIcon;
-    @BindView(R.id.txt_person_name)
+    @BindView(R2.id.txt_person_name)
     TextView txtPersonName;
-    @BindView(R.id.txt_person_age)
+    @BindView(R2.id.txt_person_age)
     TextView txtPersonAge;
-    @BindView(R.id.txt_person_country)
+    @BindView(R2.id.txt_person_country)
     TextView txtPersonCountry;
-    @BindView(R.id.txt_person_level)
+    @BindView(R2.id.txt_person_level)
     TextView txtPersonLevel;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.swipe)
+    @BindView(R2.id.swipe)
     SwipeRefreshLayout swipe;
-    @BindView(R.id.txt_remain_time)
+    @BindView(R2.id.txt_remain_time)
     TextView txtRemainTime;
-    @BindView(R.id.txt_release_time)
+    @BindView(R2.id.txt_release_time)
     TextView txtReleaseTime;
     Unbinder unbinder;
 
-    @BindView(R.id.txt_line1)
+    @BindView(R2.id.txt_line1)
     View lineView1;
-    @BindView(R.id.txt_line2)
+    @BindView(R2.id.txt_line2)
     View lineView2;
-    @BindView(R.id.btn_time_45)
+    @BindView(R2.id.btn_time_45)
     Button btn45;
-    @BindView(R.id.btn_time_30)
+    @BindView(R2.id.btn_time_30)
     Button btn30;
 
     ArrayList mDataList = new ArrayList();
@@ -98,7 +97,7 @@ public class OrderCourseFragment2 extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        txtTitle.setText(MyApp.getAppInstansce().getResources().getString(R.string.radio_text3));
+        txtTitle.setText(getActivity().getResources().getString(R.string.radio_text3));
         lineSetting(false);
 
 
@@ -113,9 +112,9 @@ public class OrderCourseFragment2 extends MainBaseFragment {
     }
 
     public void lineSetting(boolean isSingle) {
-        ((TextView) lineView1.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_time));
-        ((TextView) lineView2.findViewById(R.id.txt_line1)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_coursetime));
-        ((TextView) lineView2.findViewById(R.id.txt_line2)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_selectecd_time));
+        ((TextView) lineView1.findViewById(R.id.txt_line)).setText(getActivity().getResources().getString(R.string.line_txt_selectecd_time));
+        ((TextView) lineView2.findViewById(R.id.txt_line1)).setText(getActivity().getResources().getString(R.string.line_txt_selectecd_coursetime));
+        ((TextView) lineView2.findViewById(R.id.txt_line2)).setText(getActivity().getResources().getString(R.string.line_txt_selectecd_time));
         if (isSingle) {
             lineView1.setVisibility(View.VISIBLE);
             lineView2.setVisibility(View.GONE);
@@ -161,15 +160,5 @@ public class OrderCourseFragment2 extends MainBaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @OnClick({R.id.img_msg, R.id.img_quit})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_msg:
-                break;
-            case R.id.img_quit:
-                break;
-        }
     }
 }

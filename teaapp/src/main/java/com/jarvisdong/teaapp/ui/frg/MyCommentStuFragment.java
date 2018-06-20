@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.frg.dialog.DialogGiftCompleteFragment;
 import com.jarvisdong.teaapp.ui.frg.dialog.DialogGiftFragment;
 import com.jarvisdong.teaapp.ui.view.CustomSeekViewGroup;
@@ -28,41 +29,41 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyCommentStuFragment extends MainBaseFragment {
 
-    @BindView(R.id.img_back)
+    @BindView(R2.id.img_back)
     ImageView imgBack;
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.img_close)
+    @BindView(R2.id.img_close)
     ImageView imgClose;
-    @BindView(R.id.img_circle)
+    @BindView(R2.id.img_circle)
     CircleImageView imgCircle;
-    @BindView(R.id.txt_show_name)
+    @BindView(R2.id.txt_show_name)
     TextView txtShowName;
-    @BindView(R.id.seekbar_total)
+    @BindView(R2.id.seekbar_total)
     CustomSeekViewGroup seekbarTotal;
-    @BindView(R.id.seekbar_skill)
+    @BindView(R2.id.seekbar_skill)
     CustomSeekViewGroup seekbarSkill;
-    @BindView(R.id.seekbar_proficiency)
+    @BindView(R2.id.seekbar_proficiency)
     CustomSeekViewGroup seekbarProficiency;
-    @BindView(R.id.seekbar_emotion)
+    @BindView(R2.id.seekbar_emotion)
     CustomSeekViewGroup seekbarEmotion;
-    @BindView(R.id.seekbar_serious)
+    @BindView(R2.id.seekbar_serious)
     CustomSeekViewGroup seekbarSerious;
-    @BindView(R.id.txt_averager_content)
+    @BindView(R2.id.txt_averager_content)
     TextView txtAveragerContent;
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView viewLine;
-    @BindView(R.id.txt_comment_content)
+    @BindView(R2.id.txt_comment_content)
     TextView txtCommentContent;
-    @BindView(R.id.img_audio_play)
+    @BindView(R2.id.img_audio_play)
     ImageView imgAudioPlay;
-    @BindView(R.id.txt_audio_play)
+    @BindView(R2.id.txt_audio_play)
     TextView txtAudioPlay;
-    @BindView(R.id.txt_audio_record)
+    @BindView(R2.id.txt_audio_record)
     TextView txtAudioRecord;
-    @BindView(R.id.cbox_star)
+    @BindView(R2.id.cbox_star)
     CheckBox cboxStar;
-    @BindView(R.id.btn_submit_star)
+    @BindView(R2.id.btn_submit_star)
     Button btnSubmitStar;
     Unbinder unbinder;
 
@@ -90,7 +91,7 @@ public class MyCommentStuFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        viewLine.setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_msg_comment));
+        viewLine.setText(getActivity().getResources().getString(R.string.line_txt_msg_comment));
     }
 
     @Override
@@ -99,20 +100,13 @@ public class MyCommentStuFragment extends MainBaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.img_back, R.id.img_close, R.id.txt_audio_record, R.id.btn_submit_star})
+    @OnClick({R2.id.img_back, R2.id.img_close, R2.id.txt_audio_record, R2.id.btn_submit_star})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_back:
-                break;
-            case R.id.img_close:
-                break;
-            case R.id.txt_audio_record:
-                break;
-            case R.id.btn_submit_star:
-                DialogGiftFragment dialogGiftFragment = DialogGiftFragment.newInstance();
-                dialogGiftFragment.setTargetParent(this);
-                dialogGiftFragment.show(getChildFragmentManager(), DialogGiftFragment.class.toString());
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_submit_star) {
+            DialogGiftFragment dialogGiftFragment = DialogGiftFragment.newInstance();
+            dialogGiftFragment.setTargetParent(this);
+            dialogGiftFragment.show(getChildFragmentManager(), DialogGiftFragment.class.toString());
         }
     }
 

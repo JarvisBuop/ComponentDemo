@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,16 +47,19 @@ public class CustomLineVie extends LinearLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLineVie);
 
         String string = typedArray.getString(R.styleable.CustomLineVie_line_txt);
-        txtLine.setText(string);
+        if (txtLine != null) {
+            txtLine.setText(string);
+        }
 
         int color = typedArray.getColor(R.styleable.CustomLineVie_line_color, 0);
-        if (color != 0) {
+        if (color != 0 && txtLine != null) {
             lineHorizental.setBackgroundColor(color);
             txtLine.setTextColor(color);
         }
 
         int anInt = typedArray.getInt(R.styleable.CustomLineVie_line_oritation, 0);
-        mLayout.setOrientation(anInt == 0 ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
+        if (mLayout != null)
+            mLayout.setOrientation(anInt == 0 ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
         typedArray.recycle();
     }
 
@@ -63,10 +67,10 @@ public class CustomLineVie extends LinearLayout {
         txtLine.setText(str);
     }
 
-    public void setOrietation(boolean isHori){
-        if(isHori){
+    public void setOrietation(boolean isHori) {
+        if (isHori) {
             mLayout.setOrientation(LinearLayout.HORIZONTAL);
-        }else {
+        } else {
             mLayout.setOrientation(LinearLayout.VERTICAL);
         }
     }

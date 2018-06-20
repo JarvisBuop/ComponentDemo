@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by JarvisDong on 2018/5/26.
@@ -31,45 +31,45 @@ import butterknife.OnClick;
 
 public class WalletFragment extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.img_msg)
+    @BindView(R2.id.img_msg)
     ImageView imgMsg;
-    @BindView(R.id.img_quit)
+    @BindView(R2.id.img_quit)
     ImageView imgQuit;
-    @BindView(R.id.img_wallet_icon)
+    @BindView(R2.id.img_wallet_icon)
     ImageView imgWalletIcon;
-    @BindView(R.id.txt_wallet_total_label)
+    @BindView(R2.id.txt_wallet_total_label)
     TextView txtWalletTotalLabel;
-    @BindView(R.id.txt_wallet_total)
+    @BindView(R2.id.txt_wallet_total)
     TextView txtWalletTotal;
-    @BindView(R.id.txt_wallet_withdraw_label)
+    @BindView(R2.id.txt_wallet_withdraw_label)
     TextView txtWalletWithdrawLabel;
-    @BindView(R.id.txt_wallet_withdraw)
+    @BindView(R2.id.txt_wallet_withdraw)
     TextView txtWalletWithdraw;
-    @BindView(R.id.line1)
+    @BindView(R2.id.line1)
     View viewLine1;
-    @BindView(R.id.line2)
+    @BindView(R2.id.line2)
     View viewLine2;
-    @BindView(R.id.txt_wallet_provider)
+    @BindView(R2.id.txt_wallet_provider)
     TextView txtWalletProvider;
-    @BindView(R.id.txt_wallet_current)
+    @BindView(R2.id.txt_wallet_current)
     TextView txtWalletCurrent;
-    @BindView(R.id.txt_wallet_bank)
+    @BindView(R2.id.txt_wallet_bank)
     TextView txtWalletBank;
-    @BindView(R.id.txt_wallet_bank_name)
+    @BindView(R2.id.txt_wallet_bank_name)
     TextView txtWalletBankName;
-    @BindView(R.id.txt_wallet_bank_phone)
+    @BindView(R2.id.txt_wallet_bank_phone)
     TextView txtWalletBankPhone;
-    @BindView(R.id.txt_wallet_bank_card)
+    @BindView(R2.id.txt_wallet_bank_card)
     TextView txtWalletBankCard;
-    @BindView(R.id.btn_apply)
+    @BindView(R2.id.btn_apply)
     Button btnApply;
-    @BindView(R.id.txt_history)
+    @BindView(R2.id.txt_history)
     TextView txtHistory;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
 
     CommonAdapter mAdapter;
@@ -99,8 +99,8 @@ public class WalletFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        ((TextView)viewLine1.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_cash));
-        ((TextView)viewLine2.findViewById(R.id.txt_line)).setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_operate_record));
+        ((TextView)viewLine1.findViewById(R.id.txt_line)).setText(getActivity().getResources().getString(R.string.line_txt_cash));
+        ((TextView)viewLine2.findViewById(R.id.txt_line)).setText(getActivity().getResources().getString(R.string.line_txt_operate_record));
         initRecycler();
 
         initFakeData();
@@ -126,17 +126,4 @@ public class WalletFragment extends MainBaseFragment {
         recyclerView.setAdapter(mAdapter);
     }
 
-    @OnClick({R.id.img_msg, R.id.img_quit, R.id.btn_apply, R.id.txt_history})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_msg:
-                break;
-            case R.id.img_quit:
-                break;
-            case R.id.btn_apply:
-                break;
-            case R.id.txt_history:
-                break;
-        }
-    }
 }

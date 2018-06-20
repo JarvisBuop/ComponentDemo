@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.view.CustomLogView;
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 
@@ -21,19 +22,19 @@ import butterknife.OnClick;
  */
 
 public class RegisterPhoneActivity extends DBaseActivity {
-    @BindView(R.id.edit_input_phone)
+    @BindView(R2.id.edit_input_phone)
     CustomLogView editInputPhone;
-    @BindView(R.id.edit_code)
+    @BindView(R2.id.edit_code)
     CustomLogView editCode;
     //    @BindView(R.id.txt_validCode)
 //    TextView txtValidCode;
-    @BindView(R.id.edit_psd)
+    @BindView(R2.id.edit_psd)
     CustomLogView editPsd;
-    @BindView(R.id.edit_email)
+    @BindView(R2.id.edit_email)
     CustomLogView editEmail;
-    @BindView(R.id.checkbox_user)
+    @BindView(R2.id.checkbox_user)
     CheckBox checkboxUser;
-    @BindView(R.id.btn_register)
+    @BindView(R2.id.btn_register)
     Button btnRegister;
 
     @Override
@@ -58,11 +59,10 @@ public class RegisterPhoneActivity extends DBaseActivity {
     }
 
 
-    @OnClick({R.id.btn_register})
+    @OnClick({R2.id.btn_register})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_register:
-                break;
+        if(view.getId()== R.id.btn_register){
+
         }
     }
 }

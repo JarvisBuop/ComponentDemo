@@ -7,6 +7,7 @@ import android.widget.RadioGroup;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.ui.view.CustomLogView;
 import com.ostak.justplaystudent.ui.view.CustomTabView;
 
@@ -56,13 +57,10 @@ public class ForgetPsdAct extends DBaseActivity {
         tabTop.setonCheckChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId) {
-                    case R.id.radio_left:
-                        showLeft(true);
-                        break;
-                    case R.id.radio_right:
-                        showLeft(false);
-                        break;
+                if (checkedId == R.id.radio_left) {
+                    showLeft(true);
+                } else if (checkedId == R.id.radio_right) {
+                    showLeft(false);
                 }
             }
         });
@@ -76,7 +74,7 @@ public class ForgetPsdAct extends DBaseActivity {
             editAgain.setVisibility(View.VISIBLE);
 
             editEmail.setVisibility(View.GONE);
-        }else {
+        } else {
             editInputPhone.setVisibility(View.GONE);
             editCode.setVisibility(View.GONE);
             editPsd.setVisibility(View.GONE);

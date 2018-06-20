@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,11 +22,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomGroupTxtImg extends RelativeLayout {
-    @BindView(R.id.img_show_top)
+    @BindView(R2.id.img_show_top)
     ImageView imgShowTop;
-    @BindView(R.id.txt_show_bottom)
+    @BindView(R2.id.txt_show_bottom)
     TextView txtShowBottom;
-    @BindView(R.id.layout_group)
+    @BindView(R2.id.layout_group)
     LinearLayout layoutGroup;
 
     public CustomGroupTxtImg(Context context) {

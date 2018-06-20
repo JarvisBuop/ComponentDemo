@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

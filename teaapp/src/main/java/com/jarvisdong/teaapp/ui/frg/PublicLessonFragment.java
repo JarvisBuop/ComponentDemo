@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 
@@ -19,7 +20,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -31,20 +31,20 @@ public class PublicLessonFragment extends MainBaseFragment {
 
 
     Unbinder unbinder;
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
 
-    @BindView(R.id.part_one)
+    @BindView(R2.id.part_one)
     View part1;
-    @BindView(R.id.part_two)
+    @BindView(R2.id.part_two)
     View part2;
 
     TextView part1Left;
@@ -138,16 +138,5 @@ public class PublicLessonFragment extends MainBaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-
-    @OnClick({R.id.btn_setting_lesson, R.id.btn_setting_practice})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_setting_lesson:
-                break;
-            case R.id.btn_setting_practice:
-                break;
-        }
     }
 }

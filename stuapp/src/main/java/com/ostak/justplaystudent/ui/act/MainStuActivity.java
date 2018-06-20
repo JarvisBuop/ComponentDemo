@@ -12,6 +12,7 @@ import com.jarvisdong.uikit.baseui.DBaseExtendFragmentActivty;
 import com.jarvisdong.uikit.baseui.DBaseFragment;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.domain.MainActController;
 import com.ostak.justplaystudent.ui.frg.CourseFragment;
 import com.ostak.justplaystudent.ui.frg.CoursePublicFragment;
@@ -103,26 +104,21 @@ public class MainStuActivity extends DBaseExtendFragmentActivty implements MainA
 
     }
 
-    @OnClick({R.id.img_circle, R.id.radio_one, R.id.radio_two, R.id.radio_three, R.id.radio_four, R.id.radio_five})
+    @OnClick({R2.id.img_circle, R2.id.radio_one, R2.id.radio_two, R2.id.radio_three, R2.id.radio_four, R2.id.radio_five})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_circle:
-                break;
-            case R.id.radio_one:
-                showPointFrag(0);
-                break;
-            case R.id.radio_two:
-                showPointFrag(1);
-                break;
-            case R.id.radio_three:
-                showPointFrag(2);
-                break;
-            case R.id.radio_four:
-                showPointFrag(3);
-                break;
-            case R.id.radio_five:
-                showPointFrag(4);
-                break;
+        int id = view.getId();
+        if(id == R.id.img_circle){
+
+        }else if(id == R.id.radio_one){
+            showPointFrag(0);
+        }else if(id == R.id.radio_two){
+            showPointFrag(1);
+        }else if(id == R.id.radio_three){
+            showPointFrag(2);
+        }else if(id == R.id.radio_four){
+            showPointFrag(3);
+        }else if(id == R.id.radio_five){
+            showPointFrag(4);
         }
     }
 

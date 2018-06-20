@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.ui.view.CustomLogView;
 
 import butterknife.BindView;
@@ -52,19 +54,21 @@ public class LogActivity extends DBaseActivity {
 
     }
 
-    @OnClick({R.id.btn_login, R.id.txt_goto_regis,R.id.txt_forget_psd})
+    @OnClick({R2.id.btn_login, R2.id.txt_goto_regis, R2.id.txt_forget_psd, R2.id.txt_click_intent})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_login:
-                startActivity(new Intent(mContext,MainStuActivity.class));
-                finish();
-                break;
-            case R.id.txt_goto_regis:
-                startActivity(new Intent(mContext,LogThirdActivity.class));
-                break;
-            case R.id.txt_forget_psd:
-                startActivity(new Intent(mContext,ForgetPsdAct.class));
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_login) {
+            startActivity(new Intent(mContext, MainStuActivity.class));
+        } else if (id == R.id.txt_goto_regis) {
+            startActivity(new Intent(mContext, LogThirdActivity.class));
+        } else if (id == R.id.txt_forget_psd) {
+            startActivity(new Intent(mContext, ForgetPsdAct.class));
+        } else if (id == R.id.txt_click_intent) {
+            /**
+             * 多组件通信中:
+             * 注意多个组件中的布局名称不能相同,否则出现 {@link NoSuchFieldError} 错误;
+             */
+            ARouter.getInstance().build("/tea/log").navigation();
         }
     }
 }

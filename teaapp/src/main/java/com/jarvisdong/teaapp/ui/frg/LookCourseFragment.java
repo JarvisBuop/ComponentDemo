@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 
@@ -32,39 +33,39 @@ import butterknife.Unbinder;
 
 public class LookCourseFragment extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
-    @BindView(R.id.img_coursefile_icon)
+    @BindView(R2.id.img_coursefile_icon)
     ImageView imgCoursefileIcon;
-    @BindView(R.id.txt_coursefile_name)
+    @BindView(R2.id.txt_coursefile_name)
     TextView txtCoursefileName;
-    @BindView(R.id.txt_coursefile_level_label)
+    @BindView(R2.id.txt_coursefile_level_label)
     TextView txtCoursefileLevelLabel;
-    @BindView(R.id.txt_coursefile_level)
+    @BindView(R2.id.txt_coursefile_level)
     TextView txtCoursefileLevel;
-    @BindView(R.id.txt_coursefile_reserve_label)
+    @BindView(R2.id.txt_coursefile_reserve_label)
     TextView txtCoursefileReserveLabel;
-    @BindView(R.id.txt_coursefile_reserve)
+    @BindView(R2.id.txt_coursefile_reserve)
     TextView txtCoursefileReserve;
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView txtLine;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-//    @BindView(R.id.swipe)
+//    @BindView(R2.id.swipe)
 //    SwipeRefreshLayout swipe;
-    @BindView(R.id.btn_left_remind)
+    @BindView(R2.id.btn_left_remind)
     Button btnLeftRemind;
-    @BindView(R.id.btn_right_printf)
+    @BindView(R2.id.btn_right_printf)
     Button btnRightPrintf;
-    @BindView(R.id.btn_right_storage)
+    @BindView(R2.id.btn_right_storage)
     Button btnRightStorage;
     Unbinder unbinder;
 
@@ -93,7 +94,7 @@ public class LookCourseFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        txtLine.setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_stu_book));
+        txtLine.setText(getActivity().getResources().getString(R.string.line_txt_stu_book));
 
         initRecycler();
 

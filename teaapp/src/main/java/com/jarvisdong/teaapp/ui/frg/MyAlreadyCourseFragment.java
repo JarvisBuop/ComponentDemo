@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.view.CustomCourseTime;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
@@ -32,35 +33,35 @@ import butterknife.Unbinder;
 
 public class MyAlreadyCourseFragment extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
-    @BindView(R.id.img_star_icon)
+    @BindView(R2.id.img_star_icon)
     ImageView imgStarIcon;
-    @BindView(R.id.txt_star_name)
+    @BindView(R2.id.txt_star_name)
     TextView txtStarName;
-    @BindView(R.id.txt_star_age)
+    @BindView(R2.id.txt_star_age)
     TextView txtStarAge;
-    @BindView(R.id.txt_star_remain)
+    @BindView(R2.id.txt_star_remain)
     TextView txtStarRemain;
-    @BindView(R.id.txt_star_time)
+    @BindView(R2.id.txt_star_time)
     TextView txtStarTime;
-    @BindView(R.id.custom_course_time_main)
+    @BindView(R2.id.custom_course_time_main)
     CustomCourseTime customCourseTimeMain;
-    @BindView(R.id.custom_course_time_1)
+    @BindView(R2.id.custom_course_time_1)
     CustomCourseTime customCourseTime1;
-    @BindView(R.id.custom_course_time_2)
+    @BindView(R2.id.custom_course_time_2)
     CustomCourseTime customCourseTime2;
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView txtLine;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
     Unbinder unbinder;
 
@@ -91,7 +92,7 @@ public class MyAlreadyCourseFragment extends MainBaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        txtLine.setText(MyApp.getAppInstansce().getResources().getString(R.string.line_txt_course_wait));
+        txtLine.setText(getActivity().getResources().getString(R.string.line_txt_course_wait));
 
         initRecycler();
 

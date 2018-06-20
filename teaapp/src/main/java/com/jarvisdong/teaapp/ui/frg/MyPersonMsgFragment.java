@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.view.CustomGroupTxtImg;
 import com.jarvisdong.teaapp.ui.view.CustomSpannable;
 import com.jarvisdong.teaapp.ui.view.CustomUploadFile;
@@ -19,7 +20,6 @@ import com.jarvisdong.teaapp.ui.view.CustomUploadFileStyle2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -29,49 +29,49 @@ import butterknife.Unbinder;
 
 public class MyPersonMsgFragment extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.txt_msg_num)
+    @BindView(R2.id.txt_msg_num)
     TextView txtMsgNum;
-    @BindView(R.id.layout_msg)
+    @BindView(R2.id.layout_msg)
     FrameLayout layoutMsg;
-    @BindView(R.id.layout_quit)
+    @BindView(R2.id.layout_quit)
     FrameLayout layoutQuit;
-    @BindView(R.id.img_female)
+    @BindView(R2.id.img_female)
     ImageView imgFemale;
-    @BindView(R.id.edit_input_name)
+    @BindView(R2.id.edit_input_name)
     EditText editInputName;
-    @BindView(R.id.edit_input_phone)
+    @BindView(R2.id.edit_input_phone)
     EditText editInputPhone;
-    @BindView(R.id.edit_input_email)
+    @BindView(R2.id.edit_input_email)
     EditText editInputEmail;
-    @BindView(R.id.edit_input_age)
+    @BindView(R2.id.edit_input_age)
     EditText editInputAge;
-    @BindView(R.id.edit_input_techschool)
+    @BindView(R2.id.edit_input_techschool)
     EditText editInputTechschool;
-    @BindView(R.id.edit_input_graduteschool)
+    @BindView(R2.id.edit_input_graduteschool)
     EditText editInputGraduteschool;
-    @BindView(R.id.spannable_country)
+    @BindView(R2.id.spannable_country)
     CustomSpannable spannableCountry;
-    @BindView(R.id.spannable_time_tech)
+    @BindView(R2.id.spannable_time_tech)
     CustomSpannable spannableTimeTech;
-    @BindView(R.id.upload_file_head)
+    @BindView(R2.id.upload_file_head)
     CustomGroupTxtImg uploadFileHead;
-    @BindView(R.id.upload_file_teacher)
+    @BindView(R2.id.upload_file_teacher)
     CustomUploadFile uploadFileTeacher;
-    @BindView(R.id.upload_file_person)
+    @BindView(R2.id.upload_file_person)
     CustomUploadFile uploadFilePerson;
-    @BindView(R.id.upload_file_otherfile)
+    @BindView(R2.id.upload_file_otherfile)
     CustomUploadFile uploadFileOtherfile;
-    @BindView(R.id.upload_style2_recommend)
+    @BindView(R2.id.upload_style2_recommend)
     CustomUploadFileStyle2 uploadStyle2Recommend;
-    @BindView(R.id.upload_style2_idcard)
+    @BindView(R2.id.upload_style2_idcard)
     CustomUploadFileStyle2 uploadStyle2Idcard;
-    @BindView(R.id.upload_style2_passport)
+    @BindView(R2.id.upload_style2_passport)
     CustomUploadFileStyle2 uploadStyle2Passport;
-    @BindView(R.id.btn_updata)
+    @BindView(R2.id.btn_updata)
     Button btnUpdata;
     Unbinder unbinder;
 
@@ -100,18 +100,5 @@ public class MyPersonMsgFragment extends MainBaseFragment {
     @Override
     protected void processLogic(Bundle savedInstanceState) {
     }
-
-    @OnClick({R.id.img_msg, R.id.img_quit, R.id.btn_updata})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_msg:
-                break;
-            case R.id.img_quit:
-                break;
-            case R.id.btn_updata:
-                break;
-        }
-    }
-
 
 }

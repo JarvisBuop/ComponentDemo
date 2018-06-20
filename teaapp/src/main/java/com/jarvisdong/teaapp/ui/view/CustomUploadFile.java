@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,19 +24,19 @@ import butterknife.ButterKnife;
  */
 
 public class CustomUploadFile extends LinearLayout {
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView txtLine;
-    @BindView(R.id.txt_ifnot_mark)
+    @BindView(R2.id.txt_ifnot_mark)
     TextView txtMarkTitle;
-    @BindView(R.id.btn_switch)
+    @BindView(R2.id.btn_switch)
     SwitchCompat btnSwitch;
-    @BindView(R.id.btn_selected_file)
+    @BindView(R2.id.btn_selected_file)
     Button btnSelectedFile;
-    @BindView(R.id.layout_first)
+    @BindView(R2.id.layout_first)
     CustomGroupTxtImg layoutFirst;
-    @BindView(R.id.layout_second)
+    @BindView(R2.id.layout_second)
     CustomGroupTxtImg layoutSecond;
-    @BindView(R.id.layout_selected)
+    @BindView(R2.id.layout_selected)
     View layoutSelected;
 
     public CustomUploadFile(Context context) {

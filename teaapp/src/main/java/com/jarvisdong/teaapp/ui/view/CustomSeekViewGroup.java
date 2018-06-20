@@ -12,6 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,11 +26,11 @@ import butterknife.ButterKnife;
 
 public class CustomSeekViewGroup extends LinearLayout {
 
-    @BindView(R.id.txt_left_tips)
+    @BindView(R2.id.txt_left_tips)
     TextView txtLeftTips;
-    @BindView(R.id.seekbar_content)
+    @BindView(R2.id.seekbar_content)
     SeekBar seekbarContent;
-    @BindView(R.id.txt_right_content)
+    @BindView(R2.id.txt_right_content)
     TextView txtRightContent;
 
     public CustomSeekViewGroup(Context context) {

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.QuickFuncAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.jarvisdong.uikit.adapter.wrapper.LoadMoreWrapper;
@@ -27,7 +28,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -39,17 +39,17 @@ import butterknife.Unbinder;
 
 public class CourseFragment extends MainBaseFragment {
 
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.edit_search)
+    @BindView(R2.id.edit_search)
     EditText editSearch;
-    @BindView(R.id.img_msg)
+    @BindView(R2.id.img_msg)
     ImageView imgMsg;
-    @BindView(R.id.img_quit)
+    @BindView(R2.id.img_quit)
     ImageView imgQuit;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.swipe)
+    @BindView(R2.id.swipe)
     SwipeRefreshLayout swipe;
     Unbinder unbinder;
 
@@ -85,7 +85,7 @@ public class CourseFragment extends MainBaseFragment {
         initRecycler();
         if (getmDataIn() != null && getmDataIn() instanceof String) {
             String tag = (String) getmDataIn();
-            txtTitle.setText(MyApp.getAppInstansce().getString(tag.equals("1") ? R.string.radio_text2 : R.string.radio_text1));
+            txtTitle.setText(getActivity().getString(tag.equals("1") ? R.string.radio_text2 : R.string.radio_text1));
         }
         loadDatas(false);
     }
@@ -121,7 +121,7 @@ public class CourseFragment extends MainBaseFragment {
         txtHeadRight.setText("取消课程 >");
         String count = mDataLists.size() + "";
         SpannableStringBuilder ssb = new SpannableStringBuilder("共计" + count + "次公开课");
-        ssb.setSpan(new ForegroundColorSpan(MyApp.getAppInstansce().getResources().getColor(R.color.color_main)),
+        ssb.setSpan(new ForegroundColorSpan(getActivity().getResources().getColor(R.color.color_main)),
                 2, count.length() + 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtHeadLeft.setText(ssb);
 
@@ -198,15 +198,5 @@ public class CourseFragment extends MainBaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @OnClick({R.id.img_msg, R.id.img_quit})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_msg:
-                break;
-            case R.id.img_quit:
-                break;
-        }
     }
 }

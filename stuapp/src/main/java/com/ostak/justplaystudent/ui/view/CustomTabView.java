@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

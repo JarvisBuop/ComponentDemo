@@ -15,12 +15,12 @@ import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by JarvisDong on 2018/6/5.
@@ -96,13 +96,4 @@ public class CourseFragment extends MainBaseFragment {
 
     }
 
-    @OnClick({R.id.layout_msg, R.id.layout_quit})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.layout_msg:
-                break;
-            case R.id.layout_quit:
-                break;
-        }
-    }
 }

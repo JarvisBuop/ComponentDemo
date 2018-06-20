@@ -17,6 +17,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.util.JustPlayUtils;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
@@ -32,11 +33,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomSpannable extends LinearLayout {
-    @BindView(R.id.txt_span)
+    @BindView(R2.id.txt_span)
     TextView txtSpan;
-    @BindView(R.id.img_span)
+    @BindView(R2.id.img_span)
     ImageView imgSpan;
-    @BindView(R.id.layout_span)
+    @BindView(R2.id.layout_span)
     LinearLayout layoutSpan;
 
     PopupWindow popupWindow = null;

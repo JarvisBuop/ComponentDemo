@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import java.util.ArrayList;
 

@@ -39,8 +39,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
-                        <com.ostak.justplayteacher.ui.view.CustomGroupTxtImg
+                        <com.jarvisdong.teaapp.ui.view.CustomGroupTxtImg
                             android:id="@+id/upload_file_head"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -51,7 +50,7 @@
                     </FrameLayout>
                 </LinearLayout>
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFile
                     android:id="@+id/upload_file_teacher"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,7 +60,7 @@
                     app:txt_topline="@string/line_txt_centificate"
                     app:txt_toptitle="@string/txt_person_ifnot_tech_license" />
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFile
                     android:id="@+id/upload_file_person"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -71,7 +70,7 @@
                     app:txt_topline="@string/line_txt_file_video"
                     app:txt_toptitle="@string/txt_person_ifnot_person_perform" />
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFile
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFile
                     android:id="@+id/upload_file_otherfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,7 +81,7 @@
                     app:layout_ifnot="false"
                     app:txt_topline="@string/line_txt_file_other" />
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFileStyle2
                     android:id="@+id/upload_style2_recommend"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -94,7 +93,7 @@
                     app:txt_thing="false"
                     app:txt_topline2="@string/line_txt_msg_recommend" />
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFileStyle2
                     android:id="@+id/upload_style2_idcard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -106,7 +105,7 @@
                     app:txt_thing="true"
                     app:txt_topline2="@string/line_txt_msg_card" />
 
-                <com.ostak.justplayteacher.ui.view.CustomUploadFileStyle2
+                <com.jarvisdong.teaapp.ui.view.CustomUploadFileStyle2
                     android:id="@+id/upload_style2_passport"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

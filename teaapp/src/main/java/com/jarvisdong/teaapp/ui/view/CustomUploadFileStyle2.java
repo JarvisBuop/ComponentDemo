@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,21 +22,21 @@ import butterknife.ButterKnife;
  */
 
 public class CustomUploadFileStyle2 extends LinearLayout {
-    @BindView(R.id.txt_line)
+    @BindView(R2.id.txt_line)
     TextView txtLine;
-    @BindView(R.id.txt_label1)
+    @BindView(R2.id.txt_label1)
     TextView txtLabel1;
-    @BindView(R.id.edt_upload_num)
+    @BindView(R2.id.edt_upload_num)
     EditText edtUploadNum;
-    @BindView(R.id.txt_label2)
+    @BindView(R2.id.txt_label2)
     TextView txtLabel2;
-    @BindView(R.id.btn_selected_file)
+    @BindView(R2.id.btn_selected_file)
     Button btnSelectedFile;
-    @BindView(R.id.layout_first)
+    @BindView(R2.id.layout_first)
     CustomGroupTxtImg layoutFirst;
-    @BindView(R.id.layout_second)
+    @BindView(R2.id.layout_second)
     CustomGroupTxtImg layoutSecond;
-    @BindView(R.id.txt_upload_thing)
+    @BindView(R2.id.txt_upload_thing)
     TextView txtUploadThing;
 
     public CustomUploadFileStyle2(Context context) {

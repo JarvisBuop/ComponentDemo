@@ -18,6 +18,7 @@ import com.jarvisdong.uikit.adapter.itemanager.ItemViewDelegate;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.jarvisdong.uikit.baseui.manager.FragmentParam;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.ui.view.CustomLineVie;
 
 import java.util.ArrayList;

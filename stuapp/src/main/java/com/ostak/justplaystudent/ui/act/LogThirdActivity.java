@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.ui.view.CustomLogView;
 
 import butterknife.BindView;
@@ -64,23 +65,13 @@ public class LogThirdActivity extends DBaseActivity {
 
     }
 
-    @OnClick({R.id.btn_register, R.id.txt_more_way, R.id.img_winxin, R.id.img_qq, R.id.img_weibo, R.id.img_wangyi})
+    @OnClick({R2.id.btn_register, R2.id.txt_more_way, R2.id.img_winxin, R2.id.img_qq, R2.id.img_weibo, R2.id.img_wangyi})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_register:
-                startActivity(new Intent(mContext,Register2Act.class));
-                break;
-            case R.id.txt_more_way:
-                startActivity(new Intent(mContext,RegisterAct.class));
-                break;
-            case R.id.img_winxin:
-                break;
-            case R.id.img_qq:
-                break;
-            case R.id.img_weibo:
-                break;
-            case R.id.img_wangyi:
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_register) {
+            startActivity(new Intent(mContext, Register2Act.class));
+        } else if (id == R.id.txt_more_way) {
+            startActivity(new Intent(mContext, RegisterAct.class));
         }
     }
 }

@@ -146,35 +146,40 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_pre_course"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_mine_course"
                         app:middleName="@string/txt_my_item_course" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_mine_time"
                         app:middleName="@string/txt_my_item_mytime" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_already_course"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_mine_already_course"
                         app:middleName="@string/txt_my_item_completedcourse" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_comment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_comment_score"
                         app:middleName="@string/txt_my_item_score" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_pre_pratice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -190,21 +195,23 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
                         android:id="@+id/cm_my_wallet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_mine_wallet"
                         app:middleName="@string/txt_my_item_wallet" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_star"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:leftIcon="@mipmap/icon_mine_star"
                         app:middleName="@string/txt_my_item_star" />
 
-                    <com.ostak.justplayteacher.ui.view.CustomMyItem
+                    <com.jarvisdong.teaapp.ui.view.CustomMyItem
+
                         android:id="@+id/cm_my_publiclesson"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

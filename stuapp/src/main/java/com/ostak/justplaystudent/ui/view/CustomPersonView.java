@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

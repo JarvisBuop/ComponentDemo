@@ -30,7 +30,7 @@ import static com.jarvisdong.uikit.util.NotNullUtil.checkNotNull;
 
 
 /**
- * @param //返回内容
+ * @param //返回内容 应该放入common 库中;
  */
 public class CucConnectConfig {
     private CompositeDisposable mDisposables;
@@ -165,14 +165,16 @@ public class CucConnectConfig {
     public static <T extends Object> void getCommonServiceInvoke(@Nullable Context mContext, BaseConcreateContract.BaseConcreateViewer mViewer,
                                                                  UseCaseHandler mUseCaseHandler, CommonUseCase mCommonUseCase,
                                                                  CommonUseCase.RequestValues useCaseRequest, IEventListener<CommonHttpResult<T>> mListener) {
-        mViewer.setLoadingIndicator(true, mContext == null ? MyApp.getAppInstansce().getString(R.string.please_wait) : mContext.getString(R.string.please_wait));
+        if (mContext != null) {
+            mViewer.setLoadingIndicator(true, mContext.getString(R.string.please_wait));
+        }
         mUseCaseHandler.execute(mCommonUseCase, useCaseRequest, new UseCase.UseCaseCallback<CommonUseCase.ResponseValues>() {
 
             @Override
             public void onSuccess(CommonUseCase.ResponseValues response) {
                 mViewer.setLoadingIndicator(false, "");
                 if (mListener != null) {
-                    mListener.callbackChild(null, 0, (CommonHttpResult<T>) response.getLoadData(),0,null);
+                    mListener.callbackChild(null, 0, (CommonHttpResult<T>) response.getLoadData(), 0, null);
                 }
             }
 

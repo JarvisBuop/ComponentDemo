@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.util.JustPlayUtils;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
@@ -37,15 +38,15 @@ public class CustomLogView extends RelativeLayout {
 
     private static final int MODE_TXT = 0;
     private static final int MODE_ARROW = 1;
-    @BindView(R.id.img_log)
+    @BindView(R2.id.img_log)
     ImageView imgLog;
-    @BindView(R.id.edit_input)
+    @BindView(R2.id.edit_input)
     EditText editInput;
-    @BindView(R.id.txt_validCode)
+    @BindView(R2.id.txt_validCode)
     TextView txtValidCode;
-    @BindView(R.id.img_arrow)
+    @BindView(R2.id.img_arrow)
     ImageView imgArrow;
-    @BindView(R.id.layout_input)
+    @BindView(R2.id.layout_input)
     View layout;
 
     int mode = MODE_TXT;

@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.view.CustomLogView;
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 
@@ -18,16 +20,16 @@ import butterknife.OnClick;
  * @Description:
  * @see:
  */
-
+@Route(path = "/tea/log")
 public class LogActivity extends DBaseActivity {
-    @BindView(R.id.edt_input_email)
+    @BindView(R2.id.edt_input_email)
     CustomLogView edtInputEmail;
-    @BindView(R.id.edt_input_psd)
+    @BindView(R2.id.edt_input_psd)
     CustomLogView edtInputPsd;
 
     @Override
     public int getContentViewId() {
-        return R.layout.activity_log_dir;
+        return R.layout.activity_log_dir_tea;
     }
 
     @Override
@@ -46,20 +48,17 @@ public class LogActivity extends DBaseActivity {
     }
 
 
-    @OnClick({R.id.txt_forget_psd, R.id.btn_login, R.id.txt_goto_regis})
+    @OnClick({R2.id.txt_forget_psd, R2.id.btn_login, R2.id.txt_goto_regis})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.txt_forget_psd:
-                startActivity(new Intent(this,BindPhoneActivity.class));
-                break;
-            case R.id.btn_login:
-                startActivity(new Intent(this,MainTeaActivity.class));
-                finish();
-                break;
-            case R.id.txt_goto_regis:
-                Intent intent = new Intent(this,RegisterActivity.class);
-                startActivity(intent);
-                break;
+        int id = view.getId();
+        if (id == R.id.txt_forget_psd) {
+            startActivity(new Intent(this, BindPhoneActivity.class));
+        } else if (id == R.id.btn_login) {
+            startActivity(new Intent(this, MainTeaActivity.class));
+            finish();
+        } else if (id == R.id.txt_goto_regis) {
+            Intent intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
         }
     }
 }

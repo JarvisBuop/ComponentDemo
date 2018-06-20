@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,11 +20,11 @@ import butterknife.ButterKnife;
  */
 
 public class CustomCourseTime extends RelativeLayout {
-    @BindView(R.id.txt_show_label)
+    @BindView(R2.id.txt_show_label)
     TextView txtShowLabel;
-    @BindView(R.id.txt_show_time)
+    @BindView(R2.id.txt_show_time)
     TextView txtShowTime;
-    @BindView(R.id.txt_show_level)
+    @BindView(R2.id.txt_show_level)
     TextView txtShowLevel;
 
     public CustomCourseTime(Context context) {

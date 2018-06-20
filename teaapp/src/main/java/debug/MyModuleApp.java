@@ -14,6 +14,7 @@ import io.reactivex.functions.Consumer;
 
 /**
  * Created by JarvisDong on 2018/5/19.
+ * 组件化使用的app
  */
 
 public class MyModuleApp extends BaseApplication {

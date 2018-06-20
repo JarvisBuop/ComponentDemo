@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 
@@ -19,7 +20,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
@@ -31,19 +31,19 @@ import butterknife.Unbinder;
 
 public class MineCourseFragment extends MainBaseFragment {
 
-    @BindView(R.id.img_back)
+    @BindView(R2.id.img_back)
     ImageView imgBack;
-    @BindView(R.id.txt_title)
+    @BindView(R2.id.txt_title)
     TextView txtTitle;
-    @BindView(R.id.img_close)
+    @BindView(R2.id.img_close)
     ImageView imgClose;
-    @BindView(R.id.txt_left_count)
+    @BindView(R2.id.txt_left_count)
     TextView txtLeftCount;
-    @BindView(R.id.txt_right_total)
+    @BindView(R2.id.txt_right_total)
     TextView txtRightTotal;
-    @BindView(R.id.recycler_view)
+    @BindView(R2.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.swipe)
+    @BindView(R2.id.swipe)
     SwipeRefreshLayout swipe;
     Unbinder unbinder;
 
@@ -118,13 +118,4 @@ public class MineCourseFragment extends MainBaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.img_back, R.id.img_close})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.img_back:
-                break;
-            case R.id.img_close:
-                break;
-        }
-    }
 }

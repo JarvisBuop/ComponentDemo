@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.view.CustomLogView;
 import com.jarvisdong.uikit.baseui.DBaseActivity;
 
@@ -21,13 +22,13 @@ import butterknife.OnClick;
  */
 
 public class RegisterActivity extends DBaseActivity {
-    @BindView(R.id.edit_input_email)
+    @BindView(R2.id.edit_input_email)
     CustomLogView editInputEmail;
-    @BindView(R.id.edit_input_psd)
+    @BindView(R2.id.edit_input_psd)
     CustomLogView editInputPsd;
-    @BindView(R.id.edit_input_psd_again)
+    @BindView(R2.id.edit_input_psd_again)
     CustomLogView editInputPsdAgain;
-    @BindView(R.id.checkbox_user)
+    @BindView(R2.id.checkbox_user)
     CheckBox checkboxUser;
 
     @Override
@@ -52,22 +53,13 @@ public class RegisterActivity extends DBaseActivity {
     }
 
 
-    @OnClick({R.id.btn_register, R.id.txt_more_way, R.id.img_winxin, R.id.img_qq, R.id.img_weibo, R.id.img_wangyi})
+    @OnClick({R2.id.btn_register, R2.id.txt_more_way, R2.id.img_winxin, R2.id.img_qq, R2.id.img_weibo, R2.id.img_wangyi})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_register:
-                break;
-            case R.id.txt_more_way:
-                startActivity(new Intent(this,RegisterPhoneActivity.class));
-                break;
-            case R.id.img_winxin:
-                break;
-            case R.id.img_qq:
-                break;
-            case R.id.img_weibo:
-                break;
-            case R.id.img_wangyi:
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_register) {
+
+        } else if (id == R.id.txt_more_way) {
+            startActivity(new Intent(this, RegisterPhoneActivity.class));
         }
     }
 }

@@ -131,4 +131,7 @@ dependencies {
 
 
     implementation project(path: ':uikit')
+    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.arouter_compiler"
+//    组件化中的自动生成编译器,必须放在组件中;
+    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.butterKnifeVersion}"
 }

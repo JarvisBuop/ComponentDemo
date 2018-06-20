@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jarvisdong.teaapp.R;
+import com.jarvisdong.teaapp.R2;
 import com.jarvisdong.teaapp.ui.frg.MyCommentStuFragment;
 
 import butterknife.OnClick;
@@ -40,15 +41,14 @@ public class DialogGiftFragment extends BaseDialogFragment {
         this.mTarget = mTarget;
     }
 
-    @OnClick({R.id.btn_yes, R.id.btn_no})
+    @OnClick({R2.id.btn_yes, R2.id.btn_no})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_yes:
-                dismiss();
-                mTarget.completeStar();
-                break;
-            case R.id.btn_no:
-                break;
+        int id = view.getId();
+        if (id == R.id.btn_yes) {
+            dismiss();
+            mTarget.completeStar();
+        } else if (id == R.id.btn_no) {
+
         }
     }
 }

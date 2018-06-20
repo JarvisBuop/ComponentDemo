@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.jarvisdong.uikit.adapter.CommonAdapter;
 import com.jarvisdong.uikit.adapter.itemanager.ViewHolder;
 import com.ostak.justplaystudent.R;
+import com.ostak.justplaystudent.R2;
 import com.ostak.justplaystudent.util.JustPlayUtils;
 
 import java.util.ArrayList;
